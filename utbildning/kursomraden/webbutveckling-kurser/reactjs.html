@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="sv">
+<head>
+  <title>ReactJS</title>
+  <link rel="alternate" hreflang="sv" href="reactjs.html" />
+  <link rel="alternate" hreflang="en" href="../../../en/education/categories/web-development-courses/reactjs.html" />
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../../../styles/styles.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Lora">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+      window.cookieconsent_options = {
+          link: '/integritet',
+          theme: 'dark-bottom',
+          learnMore: 'Mer info',
+          dismiss: 'Jag förstår!',
+          message: 'Denna site använder cookies för att göra din upplevelse så smidig som möjligt.'
+      };
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111891505-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111891505-1');
+  </script>
+
+  <meta property="og:title" content="ReactJS" />
+  <meta property="og:description" content="" />
+    <meta property="og:url" content="http://localhost:8080/utbildning/kursomraden/webbutveckling-kurser/reactjs" />
+      <meta property="og:image" content="http://localhost:8080/images/Edument_logo-share.jpg" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="section-education page_education_categories_category_course">
+
+<!-- Modal background cover -->
+<div id="modal-collapse" class="modal-background"></div>
+
+  <header>
+    <nav class="navbar navbar-edument-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+        <div class="side-menu-wrapper">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../../../index.html"></a>
+          </div>
+        </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-top">
+            <ul class="nav navbar-nav pull-right">
+                    <li class="active"><a href="../../../utbildning.html">Utbildning <span class="sr-only">(current)</span></a></li>
+                    <li><a href="../../../codebuddy.html">CodeBuddy</a></li>
+                    <li><a href="../../../koncept-och-produktutveckling.html">Koncept- och produktutveckling</a></li>
+                    <li><a href="../../../om-oss.html">Om oss</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+      <a class="langlink hidden-xs" href="../../../en/education/categories/web-development-courses/reactjs.html">
+          <img src="https://media.graphcms.com/yfxSIxmAQ2WotdoDVewy"/>
+      </a>
+      <div class="mobilehamburger visible-xs"></div>
+    </nav>
+
+    <nav class="navbar navbar-edument-submenu hidden-xs">
+      <div class="navbar-inner sub-menu">
+          <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse submenu" id="navbar-collapse-submenu">
+              <ul class="nav navbar-nav">
+                      <li><a href="../../kursomraden.html">Kursområden</a></li>
+                      <li class="active"><a href="../../kurser.html">Kurser <span class="sr-only">(current)</span></a></li>
+                      <li><a href="../../events.html">Event</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </nav>
+
+    <nav class="visible-xs mobilenav">
+      <a class="langlink" href="../../../en/education/categories/web-development-courses/reactjs.html">
+          <img src="https://media.graphcms.com/yfxSIxmAQ2WotdoDVewy"/>
+      </a>
+      <ul>
+            <li class="mobtop">
+                <a href="../../../utbildning.html">Utbildning <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../kursomraden.html">Kursområden <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a class="active" href="../../kurser.html">Kurser <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../events.html">Event <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../codebuddy.html">CodeBuddy <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../koncept-och-produktutveckling.html">Koncept- och produktutveckling <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../om-oss.html">Om oss <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../../artiklar.html">Blogg <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../vara-experter.html">Vårt team <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../karriar.html">Karriär <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content">
+    <main>
+      <div class="hero" style="background-image:url(https://media.graphcms.com/tAKfzZ7VT7S0IERnBQN6)">
+    <div class="container">
+        <h1><span data-contentid="master-eduhero-herotext" data-contenttype="TEXT">
+                  Sök bland alla våra kurser
+              </span></h1>
+
+        <form action="http://localhost:8080/utbildning/kurser/sokning" method="GET">
+            <div class="row course-search">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="q" placeholder="Sök bland alla våra kurser" value="">
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-default"><span data-contentid="master-eduhero-searchbuttontext" data-contenttype="TEXT">
+                  Sök
+              </span></button>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+      <div class="container">
+        <div class="row main-content-row">
+            <div class="col-sm-8 main-content-column">
+
+              <div class="breadcrumbs">
+                      <span><a href="../../../utbildning.html">Utbildning</a></span>
+                      <span><a href="../../kurser.html">Kurser</a></span>
+                      <span><a href="../webbutveckling-kurser.html">Webbutveckling</a></span>
+                      <span>ReactJS</span>
+              </div>
+
+              <div class="course-introduction">
+    <h1>ReactJS</h1>
+    <div class="course-details">
+        <p><p>Reacts huvudsakliga idé är denna; om vi renderar om istället för att uppdatera så blir koden lättare att både skriva och resonera kring. Det förväntade prestandafallet uteblir tack vare sinnrik användning av virtual DOM, som resulterar i att bara de nödvändiga uppdateringarna faktiskt utförs under motorhuven.</p>
+<p>Precis som React så föddes även Redux ur tankarna kring funktionell programmering. Redux lagrar all state i appen i ett enda objekt, vilket kombinerat med ett enkelriktat dataflöde gör att en förvånansvärt stor del av din kodbas förvandlas till "rena" funktioner, utan sidoeffekter. Resultatet blir en kodbas som både är mindre komplicerad samt lättare att resonera kring.</p>
+<p>Den tredje delen i treenigheten är React Router, som ger din React-app en routing-lösning baserad på den beprövade designen i Embers router. I denna kurs får du dels lära dig dessa tre bibliotek, men framför allt får du en förståelse om de bakomliggande idéerna och varför de är så framgångsrika.</p></p>
+    </div>
+
+</div>
+
+<h2><span data-contentid="education-course-target" data-contenttype="TEXT">
+                  Målgrupp
+              </span></h2>
+<p>Frontend-utvecklare som vill lära sig ett nytt, kraftfullt sätt att bygga webappar.</p>
+
+
+<h2><span data-contentid="education-course-prereq" data-contenttype="TEXT">
+                  Förhandskunskaper
+              </span></h2>
+<p>En god grundförståelse för HTML, CSS och JavaScript, motsvarande innehållet i våra kurser <strong>HTML5</strong>, <strong>CSS3</strong>, och <strong>Modern JavaScript</strong>.</p>
+
+
+    <div class="graphcmsrich">
+        <p><strong>Dag 1</strong></p>
+<ul>
+  <li>Introduktion
+    <ul>
+      <li>JavaScripts flexibilitet</li>
+      <li>Funktionell programmering</li>
+      <li>Vad är React?</li>
+      <li>Utvecklingsmiljö</li>
+    </ul>
+  </li>
+  <li>React, level 1
+    <ul>
+      <li>Rendera en komponent</li>
+      <li>Kombinera komponenter</li>
+      <li>Kommunikation mellan komponenter</li>
+    </ul>
+  </li>
+  <li>Redux, level 1
+    <ul>
+      <li>Flux och Redux</li>
+      <li>Reducers</li>
+      <li>Store</li>
+    </ul>
+  </li>
+  <li>React och Redux tillsammans
+    <ul>
+      <li>Koppla in state till komponenter</li>
+      <li>Låta komponenter uppdatera state</li>
+    </ul>
+  </li>
+</ul>
+<h2><strong>Dag 2</strong></h2>
+<ul>
+  <li>React-Router
+    <ul>
+      <li>Definiera routes</li>
+      <li>Länkar och dynamisk navigering</li>
+      <li>Routes och Redux</li>
+    </ul>
+  </li>
+  <li>React, level 2
+    <ul>
+      <li>Klass-syntax</li>
+      <li>Spara state i komponenten</li>
+      <li>Komponentens livscykel</li>
+      <li>Mixins</li>
+    </ul>
+  </li>
+  <li>Redux, level 2
+    <ul>
+      <li>Kombinera reducers</li>
+      <li>Middlewares</li>
+      <li>Asynkrona action creators</li>
+      <li>Utvecklingsverktyg för Redux</li>
+    </ul>
+  </li>
+  <li>I ett större sammanhang
+    <ul>
+      <li>Serverrendering</li>
+      <li>Rendera till annat än DOM:en</li>
+      <li>Enhetstesta React-kod</li>
+      <li>Övrigt i ekosysteme</li>
+    </ul>
+  </li>
+</ul>
+    </div>
+
+            </div>
+            <div class="col-sm-4 side-content-column">
+              <div class="text-center">
+    <a href="reactjs/boka.html" class="actionlink top-book-button"><span data-contentid="education-course-side-book" data-contenttype="TEXT">
+                  BOKA
+              </span></a>
+</div>
+
+<div class="content">
+    <h3><span data-contentid="education-course-side-info" data-contenttype="TEXT">
+                  Kursinformation 
+              </span></h3>
+    <div>
+        <b><span data-contentid="education-course-side-code" data-contenttype="TEXT">
+                  Kurskod:
+              </span></b>
+        <span>T273</span>
+    </div>
+    <div>
+        <b><span data-contentid="education-course-side-duration" data-contenttype="TEXT">
+                  Kurslängd:
+              </span></b>
+        <span>
+          2
+          <span data-contentid="education-course-side-days" data-contenttype="TEXT">
+                  dagar
+              </span>
+        </span>
+    </div>
+    <div>
+        <b><span data-contentid="education-course-side-price" data-contenttype="TEXT">
+                  Pris:
+              </span></b>
+        <span>19 500<span data-contentid="sek" data-contenttype="TEXT">
+                   SEK
+              </span></span>
+    </div>
+        <div>
+            <b><span data-contentid="education-course-side-language" data-contenttype="TEXT">
+                  Språk:
+              </span></b>
+              <span>Engelska <span>
+        </div>
+
+        <h3><span data-contentid="education-course-side-schedule" data-contenttype="TEXT">
+                  Kurs schema 
+              </span></h3>
+            <div class="schedule-location">
+                <b>Göteborg </b>
+                    <div class="schedule">
+                        <span>26 apr 2018</span>
+                        <a class="actionlink book_now_button" href="reactjs/boka%3Fdp=G%25C3%25B6teborg%2520-20180426.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>11 jun 2018</span>
+                        <a class="actionlink book_now_button" href="reactjs/boka%3Fdp=G%25C3%25B6teborg%2520-20180611.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>30 aug 2018</span>
+                        <a class="actionlink book_now_button" href="reactjs/boka%3Fdp=G%25C3%25B6teborg%2520-20180830.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+            </div>
+            <div class="schedule-location">
+                <b>Malmö</b>
+                    <div class="schedule">
+                        <span>22 feb 2018</span>
+                        <a class="actionlink book_now_button" href="reactjs/boka%3Fdp=Malm%25C3%25B6-20180222.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>5 nov 2018</span>
+                        <a class="actionlink book_now_button" href="reactjs/boka%3Fdp=Malm%25C3%25B6-20181105.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+            </div>
+            <div class="schedule-location">
+                <b>Stockholm</b>
+                    <div class="schedule">
+                        <span>10 apr 2018</span>
+                        <a class="actionlink book_now_button" href="reactjs/boka%3Fdp=Stockholm-20180410.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>16 apr 2018</span>
+                        <a class="actionlink book_now_button" href="reactjs/boka%3Fdp=Stockholm-20180416.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+            </div>
+
+
+        <h3><span data-contentid="education-course-side-teachers" data-contenttype="TEXT">
+                  Lärare
+              </span></h3>
+        <div class="teachers">
+                <div class="teacher-info">
+                        <a href="../../../vara-experter/carl-masak.html" title="Läs mer Carl Mäsak">
+                            <div><img src="https://media.graphcms.com/wTa8ha1hRdm0tlNEfOgq" alt="Carl Mäsak"></div>
+                            Carl Mäsak
+                        </a>
+                </div>
+                <div class="teacher-info">
+                        <a href="../../../vara-experter/david-waller.html" title="Läs mer David Waller">
+                            <div><img src="https://media.graphcms.com/DXYVOViETVejAGb4mkcd" alt="David Waller"></div>
+                            David Waller
+                        </a>
+                </div>
+        </div>
+
+    <div class="course-side-share">
+        <h3><span data-contentid="education-course-side-share" data-contenttype="TEXT">
+                  Dela
+              </span></h3>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&source=Edument+AB&url=http://localhost:8080/utbildning/kursomraden/webbutveckling-kurser/reactjs&title=undefined&summary=" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt=""></a>
+        <a href="http://www.twitter.com/share?url=http://localhost:8080/utbildning/kursomraden/webbutveckling-kurser/reactjs" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="undefined"></a>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http://localhost:8080/utbildning/kursomraden/webbutveckling-kurser/reactjs" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="undefined"></a>
+    </div>
+
+
+
+    <h3><span data-contentid="education-course-side-contact-us" data-contenttype="TEXT">
+                  Kontakta oss för mer information
+              </span></h3>
+    <span><span data-contentid="education-course-side-phone" data-contenttype="TEXT">
+                  040 61 70 720
+              </span></span>
+    <br>
+    <a href="mailto:info@edument.se" data-id-href="content.text.education-course-side-mailto"><span data-contentid="education-course-side-mailto" data-contenttype="TEXT">
+                  info@edument.se
+              </span></a>
+    <br>
+    <br>
+    <br>
+    <span><span data-contentid="education-course-side-vat" data-contenttype="TEXT">
+                  Alla priser är exkl. moms
+              </span></span>
+</div>
+
+            </div>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-content">
+      <div class="row newsletter-subscription">
+        <div class="col-md-6">
+              <h2><span data-contentid="master-footer-subscribe-headline" data-contenttype="TEXT">
+                  Nyheter från Edument
+              </span></h2>
+              <p><span data-contentid="master-footer-subscribe-description" data-contenttype="TEXT">
+                  Prenumerera på vårt nyhetsbrev och ta del av våra tips, trendspaningar och kurser.
+              </span></p>
+          </div>
+          <div class="col-md-6 subscription-right">
+              <div class="subscription-feedback">
+                  <span data-contentid="master-footer-subscribe-feedback" data-contenttype="TEXT">
+                  Prenumererar...
+              </span>
+              </div>
+              <form class="subscription-form">
+                  <input type="email" value="" name="EMAIL" class="subscriber-email" placeholder="epostadress" required>
+                  <input type="submit" value="Prenumerera" name="subscribe" class="actionlink">
+               </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h2><span data-contentid="master-footer-contact-us" data-contenttype="TEXT">
+                  Kontakta oss
+              </span></h2>
+            Tel: <span data-contentid="master-phone" data-contenttype="TEXT">
+                  040 - 61 70 720
+              </span><br>
+            <a href="mailto:info@edument.se" data-id-href="content.text.master-mailto-info">info@edument.se</a><br>
+          </div>
+          <div class="col-md-5">
+            <h2><span data-contentid="master-footer-visit-us" data-contenttype="TEXT">
+                  Besök oss
+              </span></h2>
+            <div class="col-md-5 addresslist">
+              <ul data-contentid="master-address-helsingborg data-contenttype="LIST">
+          <li>Helsingborgskontoret</li><li>Sundstorget 5</li><li>252 21 Helsingborg</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument/@56.0484963,12.687333,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Se karta
+              </span></i></a>
+            </div>
+            <div class="col-md-7 addresslist">
+              <ul data-contentid="master-address-malmo data-contenttype="LIST">
+          <li>Malmökontoret</li><li>Stora varvsgatan 6A</li><li>211 19 Malmö</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument+AB/@55.6122624,12.9895262,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Se karta
+              </span></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2><span data-contentid="master-footer-follow-us" data-contenttype="TEXT">
+                  Följ oss
+              </span></h2>
+            <div class="follow-us">
+              <a target="_blank" href="https://www.linkedin.com/company/edument-ab"><img class="social" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linkedin logo"></a>
+              <a target="_blank" href="https://www.instagram.com/edument/"><img class="social" src="https://media.graphcms.com/3b8PshtAQGCKfiHNawk4" alt="Instagram logo"></a>
+              <a target="_blank" href="https://www.facebook.com/EdumentAB/"><img class="social" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+              <a target="_blank" href="https://twitter.com/edument"><img class="social" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <span data-contentid="master-footer-copyright" data-contenttype="TEXT">
+                  Copyright © Edument AB. Alla rättigheter reserverade.
+              </span>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../partners-och-aterforsaljare.html"><span data-contentid="master-footer-partners-link-text" data-contenttype="TEXT">
+                  Partners & återförsäljare
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../villkor.html"><span data-contentid="master-footer-termcond-link-text" data-contenttype="TEXT">
+                  Villkor
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../integritet.html"><span data-contentid="master-footer-privacy-link-text" data-contenttype="TEXT">
+                  Integritet
+              </span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="../../../scripts/newsletter-subscription.js"></script>
+  <script type="text/javascript" src="../../../scripts/shrink-menu.js"></script>
+  <script type="text/javascript" src="../../../scripts/expander.js"></script>
+
+  <!-- Apsis Tracking code for www.edument.se -->
+  <script type='text/javascript'>
+    var psSite = 'e285ed6809';
+    (function() {
+    var AL = document.createElement('script'); AL.type = 'text/javascript'; AL.async = true;
+    AL.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tr.apsislead.com/al_v2.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(AL, s)
+    })();
+  </script>
+  <noscript><img src='http://tr.apsislead.com/?id=e285ed6809' style='border:0;display:none;'></noscript>
+  <!-- End Tracking code -->
+
+</body>
+</html>

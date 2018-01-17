@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="sv">
+<head>
+  <title>Edument AB</title>
+  <link rel="alternate" hreflang="sv" href="css-selektorer-ar-onda-och-js-ar-botemedlet.html" />
+  <link rel="alternate" hreflang="en" href="../en/articles/css-selectors-are-evil-and-js-is-the-cure.html" />
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../styles/styles.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Lora">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+      window.cookieconsent_options = {
+          link: '/integritet',
+          theme: 'dark-bottom',
+          learnMore: 'Mer info',
+          dismiss: 'Jag förstår!',
+          message: 'Denna site använder cookies för att göra din upplevelse så smidig som möjligt.'
+      };
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111891505-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111891505-1');
+  </script>
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@edument">
+      <meta name="twitter:title" content="">
+      <meta name="twitter:description" content="">
+      <meta name="twitter:image" content="/images/Edument_logo-share.jpg">
+  <meta property="og:title" content="Edument AB" />
+  <meta property="og:description" content="" />
+    <meta property="og:url" content="http://localhost:8080/artiklar/css-selektorer-ar-onda-och-js-ar-botemedlet" />
+      <meta property="og:image" content="http://localhost:8080/images/Edument_logo-share.jpg" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="section-start page_news_details">
+
+<!-- Modal background cover -->
+<div id="modal-collapse" class="modal-background"></div>
+
+  <header>
+    <nav class="navbar navbar-edument-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+        <div class="side-menu-wrapper">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../index.html"></a>
+          </div>
+        </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-top">
+            <ul class="nav navbar-nav pull-right">
+                    <li><a href="../utbildning.html">Utbildning</a></li>
+                    <li><a href="../codebuddy.html">CodeBuddy</a></li>
+                    <li><a href="../koncept-och-produktutveckling.html">Koncept- och produktutveckling</a></li>
+                    <li class="active"><a href="../om-oss.html">Om oss <span class="sr-only">(current)</span></a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+      <a class="langlink hidden-xs" href="../en/articles/css-selectors-are-evil-and-js-is-the-cure.html">
+          <img src="https://media.graphcms.com/yfxSIxmAQ2WotdoDVewy"/>
+      </a>
+      <div class="mobilehamburger visible-xs"></div>
+    </nav>
+
+    <nav class="navbar navbar-edument-submenu hidden-xs">
+      <div class="navbar-inner sub-menu">
+          <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse submenu" id="navbar-collapse-submenu">
+              <ul class="nav navbar-nav">
+                      <li class="active"><a href="../artiklar.html">Blogg <span class="sr-only">(current)</span></a></li>
+                      <li><a href="../vara-experter.html">Vårt team</a></li>
+                      <li><a href="../karriar.html">Karriär</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </nav>
+
+    <nav class="visible-xs mobilenav">
+      <a class="langlink" href="../en/articles/css-selectors-are-evil-and-js-is-the-cure.html">
+          <img src="https://media.graphcms.com/yfxSIxmAQ2WotdoDVewy"/>
+      </a>
+      <ul>
+            <li class="mobtop">
+                <a href="../utbildning.html">Utbildning <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../utbildning/kursomraden.html">Kursområden <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../utbildning/kurser.html">Kurser <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../utbildning/events.html">Event <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../codebuddy.html">CodeBuddy <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../koncept-och-produktutveckling.html">Koncept- och produktutveckling <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../om-oss.html">Om oss <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a class="active" href="../artiklar.html">Blogg <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../vara-experter.html">Vårt team <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../karriar.html">Karriär <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content">
+    <main>
+      
+
+      <div class="container">
+        <div class="row main-content-row">
+            <div class="col-sm-9 main-content-column">
+
+              <div class="breadcrumbs">
+                      <span><a href="../om-oss.html">Om oss</a></span>
+                      <span><a href="../artiklar.html">Blogg</a></span>
+                      <span></span>
+              </div>
+
+              <div class="news-details">
+        <span>10 jan 2018</span>
+        <h1></h1>
+
+        <div class="graphcmsrich"></div>
+
+            <div class="authorlist">
+                    <div class="teacher-info">
+                        <a href="../vara-experter/david-waller.html" title="Läs mer David Waller">
+                            <div><img src="https://media.graphcms.com/DXYVOViETVejAGb4mkcd"/></div>
+                            David Waller
+                        </a>
+                    </div>
+            </div>
+        <div>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&source=Edument+AB&url=undefined&title=&summary=" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt=""></a>
+            <a href="http://www.twitter.com/share?url=undefined" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="undefined"></a>
+            <a href="http://www.facebook.com/sharer/sharer.php?u=undefined" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="undefined"></a>
+        </div>
+    </div>
+
+            </div>
+            <div class="col-sm-3 side-content-column">
+              <div class="right-hand-column">
+
+
+    <h2><span data-contentid="right-hand-column-news" data-contenttype="TEXT">
+                  Nyheter
+              </span></h2>
+
+        <h3>Topp 5 Podcasts i julstöket</h3>
+        <p>Vi på Edument vill&nbsp;tacka för detta året och önska dig en riktigt God Jul och ett Gott nytt År med vår topp 5 podcasts lista!<br>
+</p>
+        <a href="topp-5-podcasts-i-jul.html"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Läs mer >
+              </span></a>
+        <h3>Att ge kurser för EC i totalt tre år, jag var tveksam!</h3>
+        <p>Att få frågan om att ge kurser för EC i totalt tre år, jag var jag tveksam. Jag gillar inte att prata framför andra, även om jag verkar lugn så skakar jag inombords men jag utmanade mig själv.&nbsp;</p>
+        <a href="utamana-sig-sjalv-larare.html"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Läs mer >
+              </span></a>
+        <h3>Hur skapar man en kurs?</h3>
+        <p>Jag har alltid beundrat mina kollegor arbete de har lagt till att skapa bra och givande kurser, jag föreställde mig att det var en utmanande och tidskrävande uppgift. Jag kan se meningen med det nu, för helt plötsligt utvecklar jag en kurs.</p>
+        <a href="skapa-en-egen-kurs.html"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Läs mer >
+              </span></a>
+        <h3>Hur arbetar vi agilt?</h3>
+        <p>Att arbeta Agilt kan vara svårt att greppa och det är ett område som kan vara svårt att navigera i. Hur arbetar vi agilt i våra utvecklingsprocesser, vilka rutiner och lärdomar har vi?&nbsp;</p>
+        <a href="hur-arbetar-man-agilt.html"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Läs mer >
+              </span></a>
+        <h3>Varför är TypeScript värt att kika närmare på?</h3>
+        <p>TypeScript är ett “superset” av JavaScript; ett program skrivet i &nbsp;JavaScript är redan giltig TypeScript-kod. Förutom sin vanliga kod kan &nbsp;man dessutom lägga till typ-annoteringar, och deklarera variabler som &nbsp;“string”, “number”, etc.</p>
+        <a href="Varfor-ar-TypeScript-vart-att-kika-narmare-pa.html"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Läs mer >
+              </span></a>
+</div>
+
+            </div>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-content">
+      <div class="row newsletter-subscription">
+        <div class="col-md-6">
+              <h2><span data-contentid="master-footer-subscribe-headline" data-contenttype="TEXT">
+                  Nyheter från Edument
+              </span></h2>
+              <p><span data-contentid="master-footer-subscribe-description" data-contenttype="TEXT">
+                  Prenumerera på vårt nyhetsbrev och ta del av våra tips, trendspaningar och kurser.
+              </span></p>
+          </div>
+          <div class="col-md-6 subscription-right">
+              <div class="subscription-feedback">
+                  <span data-contentid="master-footer-subscribe-feedback" data-contenttype="TEXT">
+                  Prenumererar...
+              </span>
+              </div>
+              <form class="subscription-form">
+                  <input type="email" value="" name="EMAIL" class="subscriber-email" placeholder="epostadress" required>
+                  <input type="submit" value="Prenumerera" name="subscribe" class="actionlink">
+               </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h2><span data-contentid="master-footer-contact-us" data-contenttype="TEXT">
+                  Kontakta oss
+              </span></h2>
+            Tel: <span data-contentid="master-phone" data-contenttype="TEXT">
+                  040 - 61 70 720
+              </span><br>
+            <a href="mailto:info@edument.se" data-id-href="content.text.master-mailto-info">info@edument.se</a><br>
+          </div>
+          <div class="col-md-5">
+            <h2><span data-contentid="master-footer-visit-us" data-contenttype="TEXT">
+                  Besök oss
+              </span></h2>
+            <div class="col-md-5 addresslist">
+              <ul data-contentid="master-address-helsingborg data-contenttype="LIST">
+          <li>Helsingborgskontoret</li><li>Sundstorget 5</li><li>252 21 Helsingborg</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument/@56.0484963,12.687333,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Se karta
+              </span></i></a>
+            </div>
+            <div class="col-md-7 addresslist">
+              <ul data-contentid="master-address-malmo data-contenttype="LIST">
+          <li>Malmökontoret</li><li>Stora varvsgatan 6A</li><li>211 19 Malmö</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument+AB/@55.6122624,12.9895262,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Se karta
+              </span></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2><span data-contentid="master-footer-follow-us" data-contenttype="TEXT">
+                  Följ oss
+              </span></h2>
+            <div class="follow-us">
+              <a target="_blank" href="https://www.linkedin.com/company/edument-ab"><img class="social" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linkedin logo"></a>
+              <a target="_blank" href="https://www.instagram.com/edument/"><img class="social" src="https://media.graphcms.com/3b8PshtAQGCKfiHNawk4" alt="Instagram logo"></a>
+              <a target="_blank" href="https://www.facebook.com/EdumentAB/"><img class="social" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+              <a target="_blank" href="https://twitter.com/edument"><img class="social" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <span data-contentid="master-footer-copyright" data-contenttype="TEXT">
+                  Copyright © Edument AB. Alla rättigheter reserverade.
+              </span>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../partners-och-aterforsaljare.html"><span data-contentid="master-footer-partners-link-text" data-contenttype="TEXT">
+                  Partners & återförsäljare
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../villkor.html"><span data-contentid="master-footer-termcond-link-text" data-contenttype="TEXT">
+                  Villkor
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../integritet.html"><span data-contentid="master-footer-privacy-link-text" data-contenttype="TEXT">
+                  Integritet
+              </span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="../scripts/newsletter-subscription.js"></script>
+  <script type="text/javascript" src="../scripts/shrink-menu.js"></script>
+  <script type="text/javascript" src="../scripts/expander.js"></script>
+
+  <!-- Apsis Tracking code for www.edument.se -->
+  <script type='text/javascript'>
+    var psSite = 'e285ed6809';
+    (function() {
+    var AL = document.createElement('script'); AL.type = 'text/javascript'; AL.async = true;
+    AL.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tr.apsislead.com/al_v2.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(AL, s)
+    })();
+  </script>
+  <noscript><img src='http://tr.apsislead.com/?id=e285ed6809' style='border:0;display:none;'></noscript>
+  <!-- End Tracking code -->
+
+</body>
+</html>

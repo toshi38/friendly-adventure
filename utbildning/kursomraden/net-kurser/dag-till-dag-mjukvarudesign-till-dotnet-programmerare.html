@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="sv">
+<head>
+  <title>Day to day software design for .Net programmers</title>
+  <link rel="alternate" hreflang="sv" href="dag-till-dag-mjukvarudesign-till-dotnet-programmerare.html" />
+  <link rel="alternate" hreflang="en" href="../../../en/education/categories/dotnet-courses/day-to-day-software-design-for-dotnet-programmers.html" />
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../../../styles/styles.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Lora">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+      window.cookieconsent_options = {
+          link: '/integritet',
+          theme: 'dark-bottom',
+          learnMore: 'Mer info',
+          dismiss: 'Jag förstår!',
+          message: 'Denna site använder cookies för att göra din upplevelse så smidig som möjligt.'
+      };
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111891505-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111891505-1');
+  </script>
+
+  <meta property="og:title" content="Day to day software design for .Net programmers" />
+  <meta property="og:description" content="" />
+    <meta property="og:url" content="http://localhost:8080/utbildning/kursomraden/net-kurser/dag-till-dag-mjukvarudesign-till-dotnet-programmerare" />
+      <meta property="og:image" content="http://localhost:8080/images/Edument_logo-share.jpg" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="section-education page_education_categories_category_course">
+
+<!-- Modal background cover -->
+<div id="modal-collapse" class="modal-background"></div>
+
+  <header>
+    <nav class="navbar navbar-edument-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+        <div class="side-menu-wrapper">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../../../index.html"></a>
+          </div>
+        </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-top">
+            <ul class="nav navbar-nav pull-right">
+                    <li class="active"><a href="../../../utbildning.html">Utbildning <span class="sr-only">(current)</span></a></li>
+                    <li><a href="../../../codebuddy.html">CodeBuddy</a></li>
+                    <li><a href="../../../koncept-och-produktutveckling.html">Koncept- och produktutveckling</a></li>
+                    <li><a href="../../../om-oss.html">Om oss</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+      <a class="langlink hidden-xs" href="../../../en/education/categories/dotnet-courses/day-to-day-software-design-for-dotnet-programmers.html">
+          <img src="https://media.graphcms.com/yfxSIxmAQ2WotdoDVewy"/>
+      </a>
+      <div class="mobilehamburger visible-xs"></div>
+    </nav>
+
+    <nav class="navbar navbar-edument-submenu hidden-xs">
+      <div class="navbar-inner sub-menu">
+          <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse submenu" id="navbar-collapse-submenu">
+              <ul class="nav navbar-nav">
+                      <li><a href="../../kursomraden.html">Kursområden</a></li>
+                      <li class="active"><a href="../../kurser.html">Kurser <span class="sr-only">(current)</span></a></li>
+                      <li><a href="../../events.html">Event</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </nav>
+
+    <nav class="visible-xs mobilenav">
+      <a class="langlink" href="../../../en/education/categories/dotnet-courses/day-to-day-software-design-for-dotnet-programmers.html">
+          <img src="https://media.graphcms.com/yfxSIxmAQ2WotdoDVewy"/>
+      </a>
+      <ul>
+            <li class="mobtop">
+                <a href="../../../utbildning.html">Utbildning <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../kursomraden.html">Kursområden <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a class="active" href="../../kurser.html">Kurser <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../events.html">Event <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../codebuddy.html">CodeBuddy <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../koncept-och-produktutveckling.html">Koncept- och produktutveckling <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../om-oss.html">Om oss <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../../artiklar.html">Blogg <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../vara-experter.html">Vårt team <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../karriar.html">Karriär <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content">
+    <main>
+      <div class="hero" style="background-image:url(https://media.graphcms.com/tAKfzZ7VT7S0IERnBQN6)">
+    <div class="container">
+        <h1><span data-contentid="master-eduhero-herotext" data-contenttype="TEXT">
+                  Sök bland alla våra kurser
+              </span></h1>
+
+        <form action="http://localhost:8080/utbildning/kurser/sokning" method="GET">
+            <div class="row course-search">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="q" placeholder="Sök bland alla våra kurser" value="">
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-default"><span data-contentid="master-eduhero-searchbuttontext" data-contenttype="TEXT">
+                  Sök
+              </span></button>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+      <div class="container">
+        <div class="row main-content-row">
+            <div class="col-sm-8 main-content-column">
+
+              <div class="breadcrumbs">
+                      <span><a href="../../../utbildning.html">Utbildning</a></span>
+                      <span><a href="../../kurser.html">Kurser</a></span>
+                      <span><a href="../net-kurser.html">.Net</a></span>
+                      <span>Day to day software design for .Net programmers</span>
+              </div>
+
+              <div class="course-introduction">
+    <h1>Day to day software design for .Net programmers</h1>
+        <div class="coming-soon"><span data-contentid="education-course-coming-soon" data-contenttype="TEXT">
+                  Kommer snart
+              </span></div>
+    <div class="course-details">
+        <p><p>Varje dag gör programvarutekniker alla typer av små designbeslut. Programvarararkitekter kan bestämma systemets höga organisation och dess viktiga abstraktioner - men programvara av hög kvalitet beror på dem som genomför det, och gör bra val också. Individuellt är dessa val små, men de har en stor inverkan på programkvaliteten.<br>
+</p>
+<p>Det är inte lätt att göra alla dessa små men viktiga designalternativ - inte på något sätt eftersom det finns så många faktorer. Hur fungerar modern maskinvara faktiskt? Vad gör CLR med .Net bytecode? Har inkapsling och abstraktion en kostnad? Hur påverkar insamlingsföretagets beteende program? Vilka datastrukturer är lämpliga i vilka situationer? Hur kan vi faktiskt använda OO effektivt? När är mutable och oföränderliga mönster föredraget? Hur kan programvaran vara utökbar och komposibel? Hur ska datum och tid hanteras?<br>
+</p>
+<p>Det finns kurser som lär dig programarkitektur på hög nivå, andra som lär dig hur du använder ett programmeringsspråk och dess bibliotek effektivt och täcker ännu mer specifika ramar eller verktyg. Istället tar kursen de gritty, knepiga, dagliga val som utvecklare förväntas göra, eftersom de går om den heroiska uppgiften att omvandla vanligtvis odefinierade och ständigt föränderliga behov till arbetsprogramvara som löser problem. Det jonglera ett dussin ämnen. Eftersom det är exakt vad bra mjukvaruutvecklare måste göra.</p></p>
+    </div>
+
+        <ul class="tagList">
+                <li>.NET</li>
+                <li>C#</li>
+        </ul>
+</div>
+
+<h2><span data-contentid="education-course-target" data-contenttype="TEXT">
+                  Målgrupp
+              </span></h2>
+<p>Du är redan en anständig C # programmerare - men du vet att det finns mer att programvara än att skriva koden.</p>
+<p><br></p>
+<p>Du vet att du måste göra dussintals små beslut i ditt dagliga arbete: om prestationsfraktioner, datastrukturer och OO-design. Och du vill fördjupa dina kunskaper inom en rad områden för att hjälpa dig att fatta bättre beslut.</p>
+<p><br></p>
+
+
+<h2><span data-contentid="education-course-prereq" data-contenttype="TEXT">
+                  Förhandskunskaper
+              </span></h2>
+<p>Kursen förutsätter att deltagare kan följa och skriva kod med moderna C # språkfunktioner, inklusive Linq och Lambda uttryck. Att ta vår C # Intermediate kurs är lämplig förberedelse, annars borde du ha minst de färdigheter som omfattas av C # Intermediate kursen.</p>
+
+
+    <div class="graphcmsrich">
+        <p>&nbsp;<strong>Day 1</strong></p>
+<h3><strong>The environment we build for</strong></h3>
+<p>It's important to understand what we're running on, and what we're building in terms of. This section takes a deep dive down to the hardware, and then back up through the .NET CLR.</p>
+<ul>
+  <li>CPU essentials: pipelining, micro-ops, branches, data dependencies, instruction level parallelism</li>
+  <li>Memory essentials: virtual memory, CPU caches, cache lines</li>
+  <li>The nature of .Net IL and JIT compilation</li>
+  <li>The cost of calls: inlining, interface call optimization, lambdas</li>
+  <li>Cost of field accesses</li>
+  <li>Cost of exceptions</li>
+</ul>
+<h3><strong>Garbage Collection and Resource Management</strong></h3>
+<p>Programs need to store information as they execute. Managing memory is a decades-old problem. The CLR offers garbage collection, which takes away many potential opportunities for mistakes - but is certainly not magical. In this section its behavior and expectations are considered, along with the need to manage things that have limited lifetime, but are not good to leave to the GC.</p>
+<ul>
+  <li>Exploring the stack</li>
+  <li>Exploring the heap</li>
+  <li>Value types vs. reference types</li>
+  <li>The challenge garbage collection takes on</li>
+  <li>The illusion of resizing</li>
+  <li>Boxing and unboxing</li>
+  <li>The effect of generational GC</li>
+  <li>The large object heap</li>
+  <li>Local to heap promotion</li>
+  <li>Finalizers</li>
+  <li>The disposable pattern</li>
+</ul>
+<h3><strong>Day 2</strong></h3>
+<h3><strong>Selecting Data Structures</strong></h3>
+<p>There are a huge number of built-in data types in the .Net framework. Many are useful, but rarely used. Furthermore, there are a number of data structures not found in the class library that are incredibly useful, can be built with relative ease or found on NuGet, and are widely recognized and formalized. Choosing appropriate data structures is a huge part of effective program design.</p>
+<ul>
+  <li>A quick guide to time complexity</li>
+  <li>A small guide to space complexity</li>
+  <li>The importance of constant factors</li>
+  <li>Choosing appropriate numeric types</li>
+  <li>List vs. Array</li>
+  <li>When to turn to linked lists, queues, and stacks</li>
+  <li>Dictionaries, and making objects suitable for use as keys</li>
+  <li>When bits are enough</li>
+  <li>Trees</li>
+  <li>Graphs</li>
+</ul>
+<h3><strong>Object orientation</strong></h3>
+<p>The idea of objects has been around for decades, yet understanding of their power is still very unevenly distributed. Programming languages giving the illusion that classes are really just containers for procedures or useful for building record types has not helped matters. In this section we'll look at how objects can be used more effectively, and how understanding messaging is at the heart of good OO design.</p>
+<ul>
+  <li>The origins of object orientation</li>
+  <li>Encapsulation, messaging, and late binding</li>
+  <li>Method-first object design</li>
+  <li>The importance of invariants</li>
+  <li>Introducing late binding</li>
+  <li>Tell, don't ask</li>
+  <li>Testing</li>
+  <li>Properties: the good and the bad</li>
+  <li>OO and performance</li>
+</ul>
+<h3><strong>Mutability, Immutability, and what lies between</strong></h3>
+<p>For years, imperative programming - centered around manipulating state - has been contrasted with functional programming - centered around computing values. The former is sometimes said to perform better and be easier to learn, while the latter is said to produce code that is easier to reason about, compose, and parallelize. Both have something to offer.</p>
+<ul>
+  <li>Mutability: the good and the bad</li>
+  <li>Immutability: the good and the bad</li>
+  <li>Value objects</li>
+  <li>Study: Linq queries vs. imperative code</li>
+  <li>The immutable collections, and when to consider them</li>
+  <li>Persistent data structures</li>
+</ul>
+<h3><strong>Day 3</strong></h3>
+<h3><strong>Extensibility and Composability</strong></h3>
+<p>Over time, needs change. We have to grow our software, and we'd like to try and minimize risk as we do so. Since changing working code is risky, we tend to prefer designs that allow extension without modification. We sometimes also need designs that let us compose building blocks together in a safe and simple way. This section considers some strategies for achieving these goals.</p>
+<ul>
+  <li>Examples of extensibility</li>
+  <li>Examples of composability</li>
+  <li>Inheritance vs. composition</li>
+  <li>Inversion of control</li>
+  <li>A composable approach</li>
+</ul>
+<h3><strong>Coping with, and tolerating, failures</strong></h3>
+<p>Our software often must work with inherently unreliable components. Networks can fail, we can be handed corrupt data, databases can pick us as transaction deadlock victims, and so forth. How can we cope?</p>
+<ul>
+  <li>Sources of failure</li>
+  <li>Exceptions: when to use them and when to avoid them</li>
+  <li>Domain exceptions</li>
+  <li>Validation: domain and UI</li>
+  <li>Kinds of exception handler</li>
+  <li>Transient failures and retries</li>
+  <li>Persist stuff early</li>
+</ul>
+<h3><strong>Working with time</strong></h3>
+<p>Time is a gnarly domain. Humans talk plenty about dates and times, but often without precision and relying on context to resolve ambiguities. To make things worse, the .Net date/time API makes it all to easy for these ambiguities to make their way into software - often leading to difficult bugs. How can we do better?</p>
+<ul>
+  <li>Instantaneous time and elapsed time</li>
+  <li>DateTime and TimeSpan</li>
+  <li>Local times, timezones, and DST</li>
+  <li>The pain of DateTime.Now</li>
+  <li>Floating dates and times</li>
+  <li>NodaTime</li>
+  <li>Scheduling</li>
+  <li>Sending messages to the future</li>
+</ul>
+<h3><strong>Measuring and logging</strong></h3>
+<p>Feedback loops are essential to a designer. These can occur at many levels. Key to all of them is ensuring the data obtained is reliable and complete enough.</p>
+<ul>
+  <li>Feedback cycles and staying on course</li>
+  <li>Benchmarking and its pitfalls</li>
+  <li>Profiling time and memory</li>
+  <li>Performance counters</li>
+  <li>A few thoughts on logging</li>
+</ul>
+<h3><strong>Warning signs</strong></h3>
+<p>After looking at a bunch of ideas for producing good designs, we'll spend a little time considering some problems to be on the watch for.</p>
+<ul>
+  <li>Changes touching many places in the code</li>
+  <li>ThingyManager, DoodahService, getters/setters everywhere, etc.</li>
+  <li>Comment deodorant</li>
+  <li>Surprise mutation</li>
+  <li>Repeated mistakes</li>
+  <li>Fear</li>
+</ul>
+    </div>
+
+            </div>
+            <div class="col-sm-4 side-content-column">
+              <div class="text-center">
+    <a href="dag-till-dag-mjukvarudesign-till-dotnet-programmerare/boka.html" class="actionlink top-book-button"><span data-contentid="education-course-side-book" data-contenttype="TEXT">
+                  BOKA
+              </span></a>
+</div>
+
+<div class="content">
+    <h3><span data-contentid="education-course-side-info" data-contenttype="TEXT">
+                  Kursinformation 
+              </span></h3>
+    <div>
+        <b><span data-contentid="education-course-side-code" data-contenttype="TEXT">
+                  Kurskod:
+              </span></b>
+        <span>T332</span>
+    </div>
+    <div>
+        <b><span data-contentid="education-course-side-duration" data-contenttype="TEXT">
+                  Kurslängd:
+              </span></b>
+        <span>
+          3
+          <span data-contentid="education-course-side-days" data-contenttype="TEXT">
+                  dagar
+              </span>
+        </span>
+    </div>
+    <div>
+        <b><span data-contentid="education-course-side-price" data-contenttype="TEXT">
+                  Pris:
+              </span></b>
+        <span>26 000<span data-contentid="sek" data-contenttype="TEXT">
+                   SEK
+              </span></span>
+    </div>
+        <div>
+            <b><span data-contentid="education-course-side-language" data-contenttype="TEXT">
+                  Språk:
+              </span></b>
+              <span>Engelska <span>
+        </div>
+
+        <h3><span data-contentid="education-course-side-schedule" data-contenttype="TEXT">
+                  Kurs schema 
+              </span></h3>
+            <div class="schedule-location">
+                <b>Stockholm</b>
+                    <div class="schedule">
+                        <span>22 jan 2018</span>
+                        <a class="actionlink book_now_button" href="dag-till-dag-mjukvarudesign-till-dotnet-programmerare/boka%3Fdp=Stockholm-20180122.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>22 jan 2018</span>
+                        <a class="actionlink book_now_button" href="dag-till-dag-mjukvarudesign-till-dotnet-programmerare/boka%3Fdp=Stockholm-20180122.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>5 feb 2018</span>
+                        <a class="actionlink book_now_button" href="dag-till-dag-mjukvarudesign-till-dotnet-programmerare/boka%3Fdp=Stockholm-20180205.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>19 feb 2018</span>
+                        <a class="actionlink book_now_button" href="dag-till-dag-mjukvarudesign-till-dotnet-programmerare/boka%3Fdp=Stockholm-20180219.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>24 sep 2018</span>
+                        <a class="actionlink book_now_button" href="dag-till-dag-mjukvarudesign-till-dotnet-programmerare/boka%3Fdp=Stockholm-20180924.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+            </div>
+
+
+        <h3><span data-contentid="education-course-side-teachers" data-contenttype="TEXT">
+                  Lärare
+              </span></h3>
+        <div class="teachers">
+                <div class="teacher-info">
+                        <a href="../../../vara-experter/jonathan-worthington.html" title="Läs mer Jonathan Worthington">
+                            <div><img src="https://media.graphcms.com/ooHLlWVFTyR8BpseyEVb" alt="Jonathan Worthington"></div>
+                            Jonathan Worthington
+                        </a>
+                </div>
+        </div>
+
+    <div class="course-side-share">
+        <h3><span data-contentid="education-course-side-share" data-contenttype="TEXT">
+                  Dela
+              </span></h3>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&source=Edument+AB&url=http://localhost:8080/utbildning/kursomraden/net-kurser/dag-till-dag-mjukvarudesign-till-dotnet-programmerare&title=undefined&summary=" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt=""></a>
+        <a href="http://www.twitter.com/share?url=http://localhost:8080/utbildning/kursomraden/net-kurser/dag-till-dag-mjukvarudesign-till-dotnet-programmerare" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="undefined"></a>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http://localhost:8080/utbildning/kursomraden/net-kurser/dag-till-dag-mjukvarudesign-till-dotnet-programmerare" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="undefined"></a>
+    </div>
+
+
+
+    <h3><span data-contentid="education-course-side-contact-us" data-contenttype="TEXT">
+                  Kontakta oss för mer information
+              </span></h3>
+    <span><span data-contentid="education-course-side-phone" data-contenttype="TEXT">
+                  040 61 70 720
+              </span></span>
+    <br>
+    <a href="mailto:info@edument.se" data-id-href="content.text.education-course-side-mailto"><span data-contentid="education-course-side-mailto" data-contenttype="TEXT">
+                  info@edument.se
+              </span></a>
+    <br>
+    <br>
+    <br>
+    <span><span data-contentid="education-course-side-vat" data-contenttype="TEXT">
+                  Alla priser är exkl. moms
+              </span></span>
+</div>
+
+            </div>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-content">
+      <div class="row newsletter-subscription">
+        <div class="col-md-6">
+              <h2><span data-contentid="master-footer-subscribe-headline" data-contenttype="TEXT">
+                  Nyheter från Edument
+              </span></h2>
+              <p><span data-contentid="master-footer-subscribe-description" data-contenttype="TEXT">
+                  Prenumerera på vårt nyhetsbrev och ta del av våra tips, trendspaningar och kurser.
+              </span></p>
+          </div>
+          <div class="col-md-6 subscription-right">
+              <div class="subscription-feedback">
+                  <span data-contentid="master-footer-subscribe-feedback" data-contenttype="TEXT">
+                  Prenumererar...
+              </span>
+              </div>
+              <form class="subscription-form">
+                  <input type="email" value="" name="EMAIL" class="subscriber-email" placeholder="epostadress" required>
+                  <input type="submit" value="Prenumerera" name="subscribe" class="actionlink">
+               </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h2><span data-contentid="master-footer-contact-us" data-contenttype="TEXT">
+                  Kontakta oss
+              </span></h2>
+            Tel: <span data-contentid="master-phone" data-contenttype="TEXT">
+                  040 - 61 70 720
+              </span><br>
+            <a href="mailto:info@edument.se" data-id-href="content.text.master-mailto-info">info@edument.se</a><br>
+          </div>
+          <div class="col-md-5">
+            <h2><span data-contentid="master-footer-visit-us" data-contenttype="TEXT">
+                  Besök oss
+              </span></h2>
+            <div class="col-md-5 addresslist">
+              <ul data-contentid="master-address-helsingborg data-contenttype="LIST">
+          <li>Helsingborgskontoret</li><li>Sundstorget 5</li><li>252 21 Helsingborg</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument/@56.0484963,12.687333,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Se karta
+              </span></i></a>
+            </div>
+            <div class="col-md-7 addresslist">
+              <ul data-contentid="master-address-malmo data-contenttype="LIST">
+          <li>Malmökontoret</li><li>Stora varvsgatan 6A</li><li>211 19 Malmö</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument+AB/@55.6122624,12.9895262,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Se karta
+              </span></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2><span data-contentid="master-footer-follow-us" data-contenttype="TEXT">
+                  Följ oss
+              </span></h2>
+            <div class="follow-us">
+              <a target="_blank" href="https://www.linkedin.com/company/edument-ab"><img class="social" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linkedin logo"></a>
+              <a target="_blank" href="https://www.instagram.com/edument/"><img class="social" src="https://media.graphcms.com/3b8PshtAQGCKfiHNawk4" alt="Instagram logo"></a>
+              <a target="_blank" href="https://www.facebook.com/EdumentAB/"><img class="social" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+              <a target="_blank" href="https://twitter.com/edument"><img class="social" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <span data-contentid="master-footer-copyright" data-contenttype="TEXT">
+                  Copyright © Edument AB. Alla rättigheter reserverade.
+              </span>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../partners-och-aterforsaljare.html"><span data-contentid="master-footer-partners-link-text" data-contenttype="TEXT">
+                  Partners & återförsäljare
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../villkor.html"><span data-contentid="master-footer-termcond-link-text" data-contenttype="TEXT">
+                  Villkor
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../integritet.html"><span data-contentid="master-footer-privacy-link-text" data-contenttype="TEXT">
+                  Integritet
+              </span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="../../../scripts/newsletter-subscription.js"></script>
+  <script type="text/javascript" src="../../../scripts/shrink-menu.js"></script>
+  <script type="text/javascript" src="../../../scripts/expander.js"></script>
+
+  <!-- Apsis Tracking code for www.edument.se -->
+  <script type='text/javascript'>
+    var psSite = 'e285ed6809';
+    (function() {
+    var AL = document.createElement('script'); AL.type = 'text/javascript'; AL.async = true;
+    AL.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tr.apsislead.com/al_v2.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(AL, s)
+    })();
+  </script>
+  <noscript><img src='http://tr.apsislead.com/?id=e285ed6809' style='border:0;display:none;'></noscript>
+  <!-- End Tracking code -->
+
+</body>
+</html>

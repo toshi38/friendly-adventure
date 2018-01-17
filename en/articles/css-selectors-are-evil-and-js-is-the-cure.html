@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+  <title>CSS selectors are evil and JS is the solution</title>
+  <link rel="alternate" hreflang="en" href="css-selectors-are-evil-and-js-is-the-cure.html" />
+  <link rel="alternate" hreflang="sv" href="../../artiklar/css-selektorer-ar-onda-och-js-ar-botemedlet.html" />
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="&lt;p&gt;A pragmatic demonstration of the drawbacks with CSS selectors, and how inline styles through JS solves these problems&lt;/p&gt;">
+
+  <link rel="stylesheet" href="../../styles/styles.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Lora">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+      window.cookieconsent_options = {
+          link: '/en/privacy',
+          theme: 'dark-bottom',
+          learnMore: 'More info',
+          dismiss: 'Got it!',
+          message: 'This website uses cookies to ensure you get the best experience.'
+      };
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111891505-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111891505-1');
+  </script>
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@edument">
+      <meta name="twitter:title" content="CSS selectors are evil and JS is the solution">
+      <meta name="twitter:description" content="&lt;p&gt;A pragmatic demonstration of the drawbacks with CSS selectors, and how inline styles through JS solves these problems&lt;/p&gt;">
+      <meta name="twitter:image" content="/images/Edument_logo-share.jpg">
+  <meta property="og:title" content="CSS selectors are evil and JS is the solution" />
+  <meta property="og:description" content="&lt;p&gt;A pragmatic demonstration of the drawbacks with CSS selectors, and how inline styles through JS solves these problems&lt;/p&gt;" />
+    <meta property="og:url" content="http://localhost:8080/en/articles/css-selectors-are-evil-and-js-is-the-cure" />
+      <meta property="og:image" content="http://localhost:8080/images/Edument_logo-share.jpg" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="section-start page_news_details">
+
+<!-- Modal background cover -->
+<div id="modal-collapse" class="modal-background"></div>
+
+  <header>
+    <nav class="navbar navbar-edument-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+        <div class="side-menu-wrapper">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../../en.1.html"></a>
+          </div>
+        </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-top">
+            <ul class="nav navbar-nav pull-right">
+                    <li><a href="../education.html">Education</a></li>
+                    <li><a href="../codebuddy.html">CodeBuddy</a></li>
+                    <li><a href="../concept-and-product-development.html">Concept &amp; Product Development</a></li>
+                    <li class="active"><a href="../about.html">About us <span class="sr-only">(current)</span></a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+      <a class="langlink hidden-xs" href="../../artiklar/css-selektorer-ar-onda-och-js-ar-botemedlet.html">
+          <img src="https://media.graphcms.com/4FSF3OtzRk2bJv1kFkiD"/>
+      </a>
+      <div class="mobilehamburger visible-xs"></div>
+    </nav>
+
+    <nav class="navbar navbar-edument-submenu hidden-xs">
+      <div class="navbar-inner sub-menu">
+          <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse submenu" id="navbar-collapse-submenu">
+              <ul class="nav navbar-nav">
+                      <li class="active"><a href="../articles.html">Blog <span class="sr-only">(current)</span></a></li>
+                      <li><a href="../experts.html">Our Team</a></li>
+                      <li><a href="../join-us.html">Join us</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </nav>
+
+    <nav class="visible-xs mobilenav">
+      <a class="langlink" href="../../artiklar/css-selektorer-ar-onda-och-js-ar-botemedlet.html">
+          <img src="https://media.graphcms.com/4FSF3OtzRk2bJv1kFkiD"/>
+      </a>
+      <ul>
+            <li class="mobtop">
+                <a href="../education.html">Education <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../education/categories.html">Categories <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../education/courses.html">Courses <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../education/events.html">Events <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../codebuddy.html">CodeBuddy <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../concept-and-product-development.html">Concept &amp; Product Development <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../about.html">About us <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a class="active" href="../articles.html">Blog <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../experts.html">Our Team <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../join-us.html">Join us <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content">
+    <main>
+      
+
+      <div class="container">
+        <div class="row main-content-row">
+            <div class="col-sm-9 main-content-column">
+
+              <div class="breadcrumbs">
+                      <span><a href="../about.html">About us</a></span>
+                      <span><a href="../articles.html">Blog</a></span>
+                      <span>CSS selectors are evil and JS is the solution</span>
+              </div>
+
+              <div class="news-details">
+        <span>10 Jan 2018</span>
+        <h1>CSS selectors are evil and JS is the solution</h1>
+
+        <div class="graphcmsrich"><h3>The premise</h3>
+<p>In this blog post we'll demonstrate...</p>
+<ul>
+  <li>why CSS inherently doesn't scale</li>
+  <li>how BEM is a partial solution</li>
+  <li>how inline styles through JS is a (nearly) full solution</li>
+</ul>
+<p>Towards the end we'll use React as a vehicle for our example, but the concepts apply equally well to Angular or any other modern JS framework. We won't use any "CSSinJS library".</p>
+<p>A small caveat: according to many, what we're describing in this post isn't strictly CSSinJS, but inline styles via JS. However at this stage the distinction doesn't matter much, so if you came here because you're curious about CSSinJS, by all means read on!</p>
+<h3>Our example</h3>
+<p>Imagine we have a complex webapp with lots of styling. We now want to add a new UI concept; an <strong>explanation box</strong>, meant to be shown inside a bigger context to explain some related concept.</p>
+<p>Here's what it should look like:</p>
+<figure><img src="https://media.graphcms.com/DLcXvGbGTDGeKHcbTkMV" alt="cssinjsbox.png"/></figure>
+<p>Disregarding styling, here's the markup:</p>
+<pre><code>&lt;div&gt;<br>
+ &nbsp;&lt;h2&gt;Did you know?&lt;/h2&gt;<br>
+ &nbsp;&lt;p&gt;Ozelots hate maccaws!&lt;/p&gt;<br>
+&lt;/div&gt;</code></pre>
+<p>We want to apply these styles to the <strong>explanation box</strong> <code>div</code>:</p>
+<pre><code>border-radius: 15px;<br>
+padding: 10px;<br>
+border: 2px solid springgreen;<br>
+background-color: moccasin;<br>
+color: magenta;</code></pre>
+<p>And inside the box we want these styles for the <strong>explanation headline</strong> <code>h2</code>:</p>
+<pre><code>font-weight: normal;<br>
+letter-spacing: 5px;<br>
+padding-left: 15px;<br>
+font-style: italic;<br>
+font-size: 14px;</code></pre>
+<p>As an added spice, also imagine these styles being applied to <strong>every </strong><code><strong>h2</strong></code> in our app:</p>
+<pre><code>font-family: Verdana;<br>
+font-size: 16px;</code></pre>
+<p>Now let's start exploring how to add these styles to our markup!</p>
+<h3>Take 0 - inline styles</h3>
+<p>The most primitive solution is to simply shove all needed style rules into the <code>style</code> prop of every explanation box:</p>
+<pre><code>&lt;div style="border-radius: 15px; padding: 10px; border: 2px solid springgreen; background-color: moccasin; color: magenta;"&gt;<br>
+ &nbsp;&nbsp;&nbsp;&lt;h2 style="font-family: Verdana; font-size: 14px; font-weight: normal; letter-spacing: 5px; padding-left: 15px; font-style: italic;"&gt;Did you know?&lt;/h2&gt;<br>
+ &nbsp;&nbsp;&nbsp;&lt;p&gt;Ozelots hate maccaws!&lt;/p&gt;<br>
+ &nbsp;&lt;/div&gt;</code></pre>
+<p>This is of course a horrible solution since</p>
+<ul>
+  <li>the HTML becomes super-bloated and unreadable</li>
+  <li>the styles can't be reused</li>
+  <li>we'd be repeating "theme rules" (like the <code>moccasin</code> background color) all over the place</li>
+</ul>
+<h3>Take 1 - stylesheet with selectors</h3>
+<p>To counter the above we always put our styles in a separate CSS file, using <strong>selectors</strong> to direct <strong>where they are applied</strong>.</p>
+<p>In order to be able to target explanation boxes we can <strong>introduce a class name</strong> to the markup:</p>
+<pre><code>&lt;div class="explanationBox"&gt;<br>
+ &nbsp;&lt;h2&gt;Did you know?&lt;/h2&gt;<br>
+ &nbsp;&lt;p&gt;Ozelots hate maccaws!&lt;/p&gt;<br>
+&lt;/div&gt;</code></pre>
+<p>In a separate CSS file we can now <strong>apply the box styles</strong> like this:</p>
+<pre><code>.explanationBox {<br>
+ &nbsp;border-radius: 15px;<br>
+ &nbsp;padding: 10px;<br>
+ &nbsp;border: 2px solid springgreen;<br>
+ &nbsp;background-color: moccasin;<br>
+ &nbsp;color: magenta;<br>
+}</code></pre>
+<p>We style the <strong>explanation headline</strong> by using a <strong>child combinator</strong> in the selector:</p>
+<pre><code>.explanationBox &gt; h2 {<br>
+ &nbsp;font-weight: normal;<br>
+ &nbsp;letter-spacing: 5px;<br>
+ &nbsp;padding-left: 15px;<br>
+ &nbsp;font-style: italic;<br>
+ &nbsp;font-size: 14px;<br>
+}</code></pre>
+<p>The <strong>generic </strong><code><strong>h2</strong></code><strong> styles</strong> would get their own selector:</p>
+<pre><code>h2 {<br>
+ &nbsp;font-family: Verdana;<br>
+ &nbsp;font-size: 16px;<br>
+}</code></pre>
+<p>Note that both of these later selectors will have an opinion about the <code>font-size</code> of our explanation headline, but since <code>.explanationBox &gt; h2</code> is more specific than <code>h2</code>, the former will win.</p>
+<h3>Unanswerable question 1 - the unknown killer problem</h3>
+<p>With our styles in a CSS file, we now have the following situation:</p>
+<figure><img src="https://media.graphcms.com/d45z5AMwRnK95xidH4Ty" alt="cssinjs-selector.svg"/></figure>
+<p>The rule blobs are connected with their respective target elements via <strong>selectors</strong>. While they work fine for our simple example, they <strong>don't scale well</strong>. As the app grows it is very easy to end up in a messy situation where we are scared to change both HTML and CSS, in fear of some selector somewhere breaking.</p>
+<p>Even in our small example the main reasons for the unscalability are easy to demonstrate.</p>
+<p>Look again at our HTML...</p>
+<pre><code>&lt;div class="explanationBox"&gt;<br>
+ &nbsp;&lt;h2&gt;Did you know?&lt;/h2&gt;<br>
+ &nbsp;&lt;p&gt;Ozelots hate maccaws!&lt;/p&gt;<br>
+&lt;/div&gt;</code></pre>
+<p>...and ponder this simple question with regards to the <code>div</code>:</p>
+<blockquote><em>What styles are applied to this element?</em></blockquote>
+<p>We have no easy way of knowing! The elements are being shot at by CSS selectors somewhere out there in the dark. From this side we have no idea whether any of them are targetting this specific element.</p>
+<p>It is <em>likely</em> that there is a selector targetting the <code>.explanationBox</code> class in a selector somewhere. But because CSS selectors are global we'd have to <em>search </em><em><strong>all</strong></em><em> CSS</em> in order to know.</p>
+<p>And consider asking the same question about the <code>h2</code> - it doesn't have a class, which might imply it is not in the crosshairs, but it is in fact targeted by <em>two</em> selectors; <code>h2</code> and <code>.explanationBox &gt; h2</code>.</p>
+<p>Just by looking at the HTML we <strong>cannot know what styles, if any, are applied to an element</strong>.</p>
+<h3>Unanswerable question 2 - the unknown victim problem</h3>
+<p>We find the reverse of the same problem in the CSS file. Look for example at this part:</p>
+<pre><code>.explanationBox &gt; h2 {<br>
+ &nbsp;font-weight: normal;<br>
+ &nbsp;letter-spacing: 5px;<br>
+ &nbsp;padding-left: 15px;<br>
+ &nbsp;font-style: italic;<br>
+ &nbsp;font-size: 14px;<br>
+}</code></pre>
+<p>Now imagine trying to answer this question:</p>
+<blockquote><em>To which elements are these styles applied?</em></blockquote>
+<p>This is impossible to know. We'd have to search through all our HTML files, or templates in case of a dynamic app. And in a dynamic setting the <code>.explanationBox</code> element and the contained <code>h2</code> might live in completely different places, making it even harder to figure out the answer.</p>
+<p>This makes editing a CSS file really scary. Can we remove this part? If the question above was easy to answer then we could know whether it is safe to remove a certain part, but now we cannot!</p>
+<h3>Take 2 - using the BEM naming convention</h3>
+<p>There has been many attempts to mitigate the mess caused by the inability to answer these two questions. One such attempt is the <a href="https://en.bem.info/">BEM naming convention</a>, which basically boils down to...</p>
+<ul>
+  <li>have selectors consist of a single class always</li>
+  <li>name the classes according to a strict convention</li>
+</ul>
+<p>For our example, the explanation box would be a <strong>Block</strong>, while the <code>h2</code> inside of that would be an <strong>Element</strong> of that block. This is the <code>B</code> and <code>E</code> of <code>BEM</code> (the <code>M</code> stands for modifier but we don't need that here).</p>
+<p>Using BEM logic our markup would become:</p>
+<pre><code>&lt;div class="explanationBox"&gt;<br>
+ &nbsp;&lt;h2 class="explanationBox__headline"&gt;Did you know?&lt;/h2&gt;<br>
+ &nbsp;&lt;p&gt;Ozelots hate maccaws!&lt;/p&gt;<br>
+&lt;/div&gt;</code></pre>
+<p>The CSS would now be:</p>
+<pre><code>h2 {<br>
+ &nbsp;font-family: Verdana;<br>
+ &nbsp;font-size: 14px;<br>
+}<br>
+<br>
+.explanationBox {<br>
+ &nbsp;border-radius: 15px;<br>
+ &nbsp;padding: 10px;<br>
+ &nbsp;border: 2px solid springgreen;<br>
+ &nbsp;background-color: moccasin;<br>
+ &nbsp;color: magenta;<br>
+}<br>
+<br>
+.explanationBox__headline {<br>
+ &nbsp;font-weight: normal;<br>
+ &nbsp;letter-spacing: 5px;<br>
+ &nbsp;padding-left: 15px;<br>
+ &nbsp;font-style: italic;<br>
+}</code></pre>
+<p>It is now slightly more clear what styles are applied where. Both the earlier questions are easier to answer, since we can do a search for the more precise class names.</p>
+<p>But we still have the problem of the generic <code>h2</code> selector. Also class names might be dynamically created and/or added to an element, so again, in a dynamic setting it might still be hard to find out exactly what's going on.</p>
+<h3>Take 3 - inline styles in a React component</h3>
+<p>The basic idea in BEM, as well as in OOCSS or any of the other attempts at bringing structure to CSS, is to think in terms of <strong>components</strong>. All style definitions, as far as possible, should be tied to a certain component.</p>
+<p>This jives very well with modern JS frameworks, who (almost) all have a component-centric architecture. If components are our main abstraction, then it is very easy to make an API to style individual components.</p>
+<p>React (and most of the competition) does this by letting us provide a CSS-like JS object to the <code>style</code> prop:</p>
+<pre><code>const box = {<br>
+ &nbsp;borderRadius: "15px",<br>
+ &nbsp;padding: "10px",<br>
+ &nbsp;border: '2px solid springgreen',<br>
+ &nbsp;backgroundColor: 'moccasin',<br>
+ &nbsp;color: 'magenta'<br>
+};<br>
+<br>
+const headline = {<br>
+ &nbsp;fontFamily: 'Verdana', // should live in generic h2 styling, but we're cheating for now<br>
+ &nbsp;fontWeight: "normal",<br>
+ &nbsp;letterSpacing: "5px",<br>
+ &nbsp;paddingLeft: "15px",<br>
+ &nbsp;fontStyle: "italic",<br>
+ &nbsp;fontSize: '14px'<br>
+};<br>
+<br>
+export class ExplanationBox extends React.Component {<br>
+ &nbsp;render() {<br>
+ &nbsp;&nbsp;&nbsp;return (<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style={box}&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 style={headline}&gt;{this.props.title}&lt;/h2&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.props.children}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+ &nbsp;&nbsp;&nbsp;);<br>
+ &nbsp;}<br>
+}</code></pre>
+<p>Elsewhere in our React app we can now do this...</p>
+<pre><code>&lt;ExplanationBox title="Did you know?"&gt;<br>
+ &nbsp;&lt;p&gt;Ozelots hate maccaws!&lt;/p&gt;<br>
+&lt;/ExplanationBox&gt;</code></pre>
+<p>...and we have our reusable, styled component!</p>
+<h3>Take 4 - imported inline styles</h3>
+<p>However, what you just saw was really nothing but a regression to our <code>Take 0</code> attempt, where we put all styles inline. Like an <em>animal</em>.</p>
+<p>But we can improve on this super easily, simply by migrating the styles to a separate file! Imagine the following living in a file named <code>styles.js</code>:</p>
+<pre><code>export const typography = {<br>
+ &nbsp;h2: {<br>
+ &nbsp;&nbsp;&nbsp;fontFamily: 'Verdana',<br>
+ &nbsp;&nbsp;&nbsp;fontSize: '16px'<br>
+ &nbsp;}<br>
+};<br>
+<br>
+export const explanation = {<br>
+ &nbsp;box: {<br>
+ &nbsp;&nbsp;&nbsp;borderRadius: "15px",<br>
+ &nbsp;&nbsp;&nbsp;padding: "10px",<br>
+ &nbsp;&nbsp;&nbsp;border: '2px solid springgreen',<br>
+ &nbsp;&nbsp;&nbsp;backgroundColor: 'moccasin,<br>
+ &nbsp;&nbsp;&nbsp;color: 'magenta',<br>
+ &nbsp;},<br>
+ &nbsp;headline: {<br>
+ &nbsp;&nbsp;&nbsp;...typography.h2<br>
+ &nbsp;&nbsp;&nbsp;fontWeight: "normal",<br>
+ &nbsp;&nbsp;&nbsp;letterSpacing: "5px",<br>
+ &nbsp;&nbsp;&nbsp;paddingLeft: "15px",<br>
+ &nbsp;&nbsp;&nbsp;fontStyle: "italic",<br>
+ &nbsp;&nbsp;&nbsp;fontSize: '14px'<br>
+ &nbsp;}<br>
+};</code></pre>
+<p>Note the handling of the basic <code>h2</code> styles!</p>
+<p>Our React component now becomes this:</p>
+<pre><code>import {explanation} from styles;<br>
+<br>
+export class ExplanationBox extends React.Component {<br>
+ &nbsp;render() {<br>
+ &nbsp;&nbsp;&nbsp;return (<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div style={explanation.box}&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h2 style={explanation.headline}&gt;{this.props.title}&lt;/h2&gt;<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{this.props.children}<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+ &nbsp;&nbsp;&nbsp;);<br>
+ &nbsp;}<br>
+}</code></pre>
+<p>We have now sort of reinvented the stylesheet! Except, where before the stylesheet used selectors to fire blindly into the dark...</p>
+<p><br></p>
+<figure><img src="https://media.graphcms.com/d45z5AMwRnK95xidH4Ty" alt="cssinjs-selector.svg"/></figure>
+<p>...we now let the components go get exactly the styles they need via <code>import</code>s:</p>
+<p><br></p>
+<figure><img src="https://media.graphcms.com/5O7kcOADQBCVDTFCVCa3" alt="cssinjs-import.svg"/></figure>
+<p>It might not be immediately obvious, but the flipping of this arrow makes a world of difference!</p>
+<h3>Finding the killer</h3>
+<p>Remember the first unanswerable question?</p>
+<blockquote><em>What styles are applied to this element?</em></blockquote>
+<p>In our imported inline style setup, this becomes trivial to answer. I simply follow the thread backwards from the style prop!</p>
+<p><br></p>
+<figure><img src="https://media.graphcms.com/BwnkFjSLSmMMutw4XYfA" alt="cssinjs-findkiller.gif"/></figure>
+<p>Finding the victim</p>
+<p>Our second unanswerable question was:</p>
+<blockquote><em>To which elements are these styles applied?</em></blockquote>
+<p>Again, because of the explicit imports, this becomes very easy to answer (if you have a semi-competent editor):</p>
+<p><br></p>
+<figure><img src="https://media.graphcms.com/turP2y4TihGP78jafxAM" alt="cssinjs-findvictim.gif"/></figure>
+<p>LESS isn't more</p>
+<p>Through moving our style definitions to JS land, the need for CSS preprocessors goes out the window. Remember how we used the <code>...</code> spread operator to mix in the <code>h2</code> styles into our headline rules?</p>
+<pre><code>headline: {<br>
+ &nbsp;...typography.h2<br>
+ &nbsp;fontWeight: "normal",<br>
+ &nbsp;letterSpacing: "5px",<br>
+ &nbsp;paddingLeft: "15px",<br>
+ &nbsp;fontStyle: "italic",<br>
+ &nbsp;fontSize: '14px'<br>
+}</code></pre>
+<p>That was the equivalent of a LESS/SASS mixin! You'll quickly find that the other syntax they give us can be easily replicated with pure JS. For example, having global variables becomes trivial:</p>
+<pre><code>export const palette = {<br>
+ &nbsp;softcolor: 'moccasin',<br>
+ &nbsp;hardcolor: 'magenta',<br>
+ &nbsp;accentuationcolor: 'springgreen'<br>
+}<br>
+<br>
+export const explanationBlock = {<br>
+ &nbsp;box: {<br>
+ &nbsp;&nbsp;&nbsp;borderRadius: "15px",<br>
+ &nbsp;&nbsp;&nbsp;padding: "10px",<br>
+ &nbsp;&nbsp;&nbsp;border: '2px solid ' + palette.accentuationcolor,<br>
+ &nbsp;&nbsp;&nbsp;backgroundColor: palette.softcolor,<br>
+ &nbsp;&nbsp;&nbsp;color: palette.hardcolor,<br>
+ &nbsp;},<br>
+ &nbsp;// ...truncated</code></pre>
+<p>As do implementing helper functions to add vendor prefixes, saturate colours, etc.</p>
+<h3>Wrapping up</h3>
+<p>To recap; by turning the arrows around through using JS and inline styles, almost all opaqueness of regular CSS goes away. Previously difficult tasks such as...</p>
+<ul>
+  <li>renaming a CSS class</li>
+  <li>identifying and removing dead CSS code</li>
+  <li>hitting the correct elements with selectors</li>
+  <li>NOT hitting the wrong elements with selectors</li>
+</ul>
+<p>...suddenly become easy or entirely moot.</p>
+<p>While there are still a lot of questions to be answered regarding moving CSS to JS space, there's no doubt in my mind that just being able to flip the arrow of responsibility makes it all worth it.</p>
+<p>One of the primary downsides of inline JS styles is that we can't use pseudoselectors such as <code>:hover</code> or <code>@media</code>. I hope to show how we can get around that using helper libraries in an upcoming post.</p></div>
+
+            <div class="authorlist">
+                    <div class="teacher-info">
+                        <a href="../experts/david-waller.html" title="Read more about David Waller">
+                            <div><img src="https://media.graphcms.com/DXYVOViETVejAGb4mkcd"/></div>
+                            David Waller
+                        </a>
+                    </div>
+            </div>
+        <div>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&source=Edument+AB&url=undefined&title=CSS%20selectors%20are%20evil%20and%20JS%20is%20the%20solution&summary=%3Cp%3EA%20pragmatic%20demonstration%20of%20the%20drawbacks%20with%20CSS%20selectors%2C%20and%20how%20inline%20styles%20through%20JS%20solves%20these%20problems%3C%2Fp%3E" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linked in logo"></a>
+            <a href="http://www.twitter.com/share?url=undefined" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+            <a href="http://www.facebook.com/sharer/sharer.php?u=undefined" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+        </div>
+    </div>
+
+            </div>
+            <div class="col-sm-3 side-content-column">
+              <div class="right-hand-column">
+
+
+    <h2><span data-contentid="right-hand-column-news" data-contenttype="TEXT">
+                  News &amp; feeds
+              </span></h2>
+
+        <h3>CSS selectors are evil and JS is the solution</h3>
+        <p>A pragmatic demonstration of the drawbacks with CSS selectors, and how inline styles through JS solves these problems</p>
+        <a href="css-selectors-are-evil-and-js-is-the-cure.html"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+        <h3>Top 5 Podcasts during Christmas</h3>
+        <p>We at Edument would like to thank you for this year and wish you &nbsp;a Merry Christmas and a Happy New Year with our top 5 Podcasts list!</p>
+        <a href="top-5-Podcasts-during-christmas.html"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+        <h3>Invariants hidden in callbacks</h3>
+        <p>Callbacks might look simple and innocent, but they can be dangerous!</p>
+        <a href="invariants-in-callbacks.html"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+        <h3>Expanding boundaries</h3>
+        <p>What it means to boldly go where you have never been before</p>
+        <a href="expanding-boundaries.html"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+        <h3>How to create a course </h3>
+        <p>I’ve always admired my colleagues work they’ve put into creating great and rewarding courses, I imagined it was a challenging and time-consuming task. &nbsp;I can see the meaning of that now, because all of a sudden I am developing a course.</p>
+        <a href="course-developing.html"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+</div>
+
+            </div>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-content">
+      <div class="row newsletter-subscription">
+        <div class="col-md-6">
+              <h2><span data-contentid="master-footer-subscribe-headline" data-contenttype="TEXT">
+                  Edument news
+              </span></h2>
+              <p><span data-contentid="master-footer-subscribe-description" data-contenttype="TEXT">
+                  Subscribe and we'll keep you in the loop with our latest courses, news and thoughts.
+              </span></p>
+          </div>
+          <div class="col-md-6 subscription-right">
+              <div class="subscription-feedback">
+                  <span data-contentid="master-footer-subscribe-feedback" data-contenttype="TEXT">
+                  Subscribing...
+              </span>
+              </div>
+              <form class="subscription-form">
+                  <input type="email" value="" name="EMAIL" class="subscriber-email" placeholder="email address" required>
+                  <input type="submit" value="Subscribe" name="subscribe" class="actionlink">
+               </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h2><span data-contentid="master-footer-contact-us" data-contenttype="TEXT">
+                  Contact us
+              </span></h2>
+            Tel: <span data-contentid="master-phone" data-contenttype="TEXT">
+                  +46 40 - 61 70 720
+              </span><br>
+            <a href="mailto:info@edument.se" data-id-href="content.text.master-mailto-info">info@edument.se</a><br>
+          </div>
+          <div class="col-md-5">
+            <h2><span data-contentid="master-footer-visit-us" data-contenttype="TEXT">
+                  Visit us
+              </span></h2>
+            <div class="col-md-5 addresslist">
+              <ul data-contentid="master-address-helsingborg data-contenttype="LIST">
+          <li>Helsingborg office</li><li>Sundstorget 5</li><li>252 21 Helsingborg</li><li>Sweden</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument/@56.0484963,12.687333,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Find on map
+              </span></i></a>
+            </div>
+            <div class="col-md-7 addresslist">
+              <ul data-contentid="master-address-malmo data-contenttype="LIST">
+          <li>Malmö office</li><li>Stora varvsgatan 6A</li><li>211 19 Malmö</li><li>Sweden</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument+AB/@55.6122624,12.9895262,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Find on map
+              </span></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2><span data-contentid="master-footer-follow-us" data-contenttype="TEXT">
+                  Follow us
+              </span></h2>
+            <div class="follow-us">
+              <a target="_blank" href="https://www.linkedin.com/company/edument-ab"><img class="social" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linkedin logo"></a>
+              <a target="_blank" href="https://www.instagram.com/edument/"><img class="social" src="https://media.graphcms.com/3b8PshtAQGCKfiHNawk4" alt="Instagram logo"></a>
+              <a target="_blank" href="https://www.facebook.com/EdumentAB/"><img class="social" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+              <a target="_blank" href="https://twitter.com/edument"><img class="social" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <span data-contentid="master-footer-copyright" data-contenttype="TEXT">
+                  Copyright © Edument AB. All rights reserved.
+              </span>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../partners-and-resellers.html"><span data-contentid="master-footer-partners-link-text" data-contenttype="TEXT">
+                  Partners & resellers
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../terms-and-conditions.html"><span data-contentid="master-footer-termcond-link-text" data-contenttype="TEXT">
+                  Terms & conditions
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../privacy.html"><span data-contentid="master-footer-privacy-link-text" data-contenttype="TEXT">
+                  Privacy & disclaimers
+              </span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="../../scripts/newsletter-subscription.js"></script>
+  <script type="text/javascript" src="../../scripts/shrink-menu.js"></script>
+  <script type="text/javascript" src="../../scripts/expander.js"></script>
+
+  <!-- Apsis Tracking code for www.edument.se -->
+  <script type='text/javascript'>
+    var psSite = 'e285ed6809';
+    (function() {
+    var AL = document.createElement('script'); AL.type = 'text/javascript'; AL.async = true;
+    AL.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tr.apsislead.com/al_v2.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(AL, s)
+    })();
+  </script>
+  <noscript><img src='http://tr.apsislead.com/?id=e285ed6809' style='border:0;display:none;'></noscript>
+  <!-- End Tracking code -->
+
+</body>
+</html>

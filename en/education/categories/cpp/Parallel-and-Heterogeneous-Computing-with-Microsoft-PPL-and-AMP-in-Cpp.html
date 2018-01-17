@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+  <title>Parallel and Heterogeneous Computing with Microsoft PPL &amp; AMP in C++</title>
+  <link rel="alternate" hreflang="en" href="Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-Cpp.html" />
+  <link rel="alternate" hreflang="sv" href="../../../../utbildning/kursomraden/cpp/Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-C++.html" />
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Driven by the desire to educate and move people forward">
+
+  <link rel="stylesheet" href="../../../../styles/styles.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Lora">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+      window.cookieconsent_options = {
+          link: '/en/privacy',
+          theme: 'dark-bottom',
+          learnMore: 'More info',
+          dismiss: 'Got it!',
+          message: 'This website uses cookies to ensure you get the best experience.'
+      };
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111891505-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111891505-1');
+  </script>
+
+  <meta property="og:title" content="Parallel and Heterogeneous Computing with Microsoft PPL &amp; AMP in C++" />
+  <meta property="og:description" content="Driven by the desire to educate and move people forward" />
+    <meta property="og:url" content="http://localhost:8080/en/education/categories/cpp/Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-Cpp" />
+      <meta property="og:image" content="http://localhost:8080/images/Edument_logo-share.jpg" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="section-education page_education_categories_category_course">
+
+<!-- Modal background cover -->
+<div id="modal-collapse" class="modal-background"></div>
+
+  <header>
+    <nav class="navbar navbar-edument-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+        <div class="side-menu-wrapper">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../../../../en.1.html"></a>
+          </div>
+        </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-top">
+            <ul class="nav navbar-nav pull-right">
+                    <li class="active"><a href="../../../education.html">Education <span class="sr-only">(current)</span></a></li>
+                    <li><a href="../../../codebuddy.html">CodeBuddy</a></li>
+                    <li><a href="../../../concept-and-product-development.html">Concept &amp; Product Development</a></li>
+                    <li><a href="../../../about.html">About us</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+      <a class="langlink hidden-xs" href="../../../../utbildning/kursomraden/cpp/Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-C++.html">
+          <img src="https://media.graphcms.com/4FSF3OtzRk2bJv1kFkiD"/>
+      </a>
+      <div class="mobilehamburger visible-xs"></div>
+    </nav>
+
+    <nav class="navbar navbar-edument-submenu hidden-xs">
+      <div class="navbar-inner sub-menu">
+          <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse submenu" id="navbar-collapse-submenu">
+              <ul class="nav navbar-nav">
+                      <li><a href="../../categories.html">Categories</a></li>
+                      <li class="active"><a href="../../courses.html">Courses <span class="sr-only">(current)</span></a></li>
+                      <li><a href="../../events.html">Events</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </nav>
+
+    <nav class="visible-xs mobilenav">
+      <a class="langlink" href="../../../../utbildning/kursomraden/cpp/Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-C++.html">
+          <img src="https://media.graphcms.com/4FSF3OtzRk2bJv1kFkiD"/>
+      </a>
+      <ul>
+            <li class="mobtop">
+                <a href="../../../education.html">Education <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../categories.html">Categories <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a class="active" href="../../courses.html">Courses <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../events.html">Events <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../codebuddy.html">CodeBuddy <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../concept-and-product-development.html">Concept &amp; Product Development <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../about.html">About us <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../../articles.html">Blog <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../experts.html">Our Team <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../join-us.html">Join us <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content">
+    <main>
+      <div class="hero" style="background-image:url(https://media.graphcms.com/tAKfzZ7VT7S0IERnBQN6)">
+    <div class="container">
+        <h1><span data-contentid="master-eduhero-herotext" data-contenttype="TEXT">
+                  Search, explore and find the perfect course for you
+              </span></h1>
+
+        <form action="http://localhost:8080/en/education/courses/query" method="GET">
+            <div class="row course-search">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="q" placeholder="Search, explore and find the perfect course for you" value="">
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-default"><span data-contentid="master-eduhero-searchbuttontext" data-contenttype="TEXT">
+                  Search
+              </span></button>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+      <div class="container">
+        <div class="row main-content-row">
+            <div class="col-sm-8 main-content-column">
+
+              <div class="breadcrumbs">
+                      <span><a href="../../../education.html">Education</a></span>
+                      <span><a href="../../courses.html">Courses</a></span>
+                      <span><a href="../cpp.html">C++</a></span>
+                      <span>Parallel and Heterogeneous Computing with Microsoft PPL &amp; AMP in C++</span>
+              </div>
+
+              <div class="course-introduction">
+    <h1>Parallel and Heterogeneous Computing with Microsoft PPL &amp; AMP in C++</h1>
+    <div class="course-details">
+        <p><p>Computationally intensive work is often best solved by moving to parallel processing, to take advantage of multiple cores. In addition many developers are starting to look towards using different types of hardware to optimize their software further.</p>
+<p>Today many C++ programmers are looking to the Microsoft PPL (Parallel Patterns Library) and Microsoft AMP (Accelerated Massive Parallelism) to help them write parallel algorithms to run on both the CPU and GPU. Microsoft PPL is designed to help developers quickly get their code running on multiple cores, while the AMP libraries are intended to remove much of the complexity of heterogeneous computing (particularly around mixing hardware from different manufacturers). This course investigates both PPL and AMP, however it has a larger focus on the more advanced AMP functionality.</p>
+<p>You’ll come out of “Parallel and Heterogeneous Computing” knowing the following: * How to avoid common optimization pitfalls. * When to benefit from parallelism. * How the underlying hardware contributes to parallelism. * How to take advantage of multiple cores with C++ and Microsoft PPL. * How to take advantage of the GPU across multiple manufacturers with C++ and Microsoft AMP. * How to avoid common parallel and heterogeneous computing pitfalls. * How to debug and dig into parallel and heterogeneous programs.</p></p>
+    </div>
+
+</div>
+
+<h2><span data-contentid="education-course-target" data-contenttype="TEXT">
+                  Target audience
+              </span></h2>
+<p>Experienced C++ Developers.</p>
+
+
+<h2><span data-contentid="education-course-prereq" data-contenttype="TEXT">
+                  Pre-requisites
+              </span></h2>
+<p>Knowledge of multi-threaded programming using threads.</p>
+
+
+    <div class="graphcmsrich">
+        <p>What you will learn</p>
+<p>Day 1</p>
+<ul>
+  <li>Introduction to Parallelism</li>
+  <li>C++11 Refresher<br>
+
+    <ul>
+      <li>Move semantics</li>
+      <li>Deleted/Defaulted Functions</li>
+      <li>Lambdas</li>
+    </ul>
+  </li>
+  <li>Measuring Performance<br>
+
+    <ul>
+      <li>Types of performance</li>
+      <li>Taking good benchmarks</li>
+      <li>Accounting for error</li>
+    </ul>
+  </li>
+  <li>Hardware</li>
+  <li>CPU Internals</li>
+  <li>Instruction level parallelism<br>
+
+    <ul>
+      <li>Understanding Limitations</li>
+      <li>Caching (NUMA)</li>
+      <li>Cost of shared writes</li>
+      <li>Common Pitfalls</li>
+    </ul>
+  </li>
+  <li>Floating Point Numbers<br>
+
+    <ul>
+      <li>0.1 + 0.2 != 0.3</li>
+      <li>Limitations of floating point</li>
+      <li>Compiler optimizations with floating point</li>
+      <li>Parallel processing and accuracy</li>
+    </ul>
+  </li>
+  <li>Identifying algorithms that are parallelizable<br>
+
+    <ul>
+      <li>CPU bound Vs. IO bound</li>
+      <li>Re-writing for better parallelization.</li>
+      <li>Amdahl’s Law</li>
+    </ul>
+  </li>
+  <li>Parallel patterns and algorithms<br>
+
+    <ul>
+      <li>Map</li>
+      <li>Reduce</li>
+      <li>Scan</li>
+      <li>Pack</li>
+      <li>Command queues</li>
+      <li>Combined examples</li>
+    </ul>
+  </li>
+  <li>Introduction to PPL<br>
+
+    <ul>
+      <li>Why tasks instead of threads?</li>
+      <li>Runtime support</li>
+      <li>Primitives</li>
+      <li>parallel_for</li>
+      <li>non-determinism</li>
+    </ul>
+  </li>
+  <li>Synchronization in PPL<br>
+
+    <ul>
+      <li>critical_section</li>
+      <li>reader<em>writer</em>lock</li>
+      <li>scoped<em>lock/scoped</em>read</li>
+      <li>event</li>
+      <li>costs of synchronization</li>
+      <li>alternatives</li>
+    </ul>
+  </li>
+  <li>Visual Studio Debug Tools for Concurrency<br>
+
+    <ul>
+      <li>Concurrency Visualizer</li>
+      <li>Parallel Stacks</li>
+      <li>Parallel Tasks</li>
+      <li>Parallel Watch</li>
+      <li>Identifying anti-patterns</li>
+      <li>Debugging PPL Algorithms</li>
+      <li>Event Tracing</li>
+    </ul>
+  </li>
+  <li>Exception Handling<br>
+
+    <ul>
+      <li>Catching task::get/task::wait</li>
+      <li>Exceptions inside parallel_for vs for loops</li>
+    </ul>
+  </li>
+  <li>Similar Technologies to PPL<br>
+
+    <ul>
+      <li>pthread</li>
+      <li>Intel TBB</li>
+      <li>Boost</li>
+    </ul>
+  </li>
+</ul>
+<p>Day 2</p>
+<ul>
+  <li>Introduction to Vector programming<br>
+
+    <ul>
+      <li>What is SIMD</li>
+      <li>Masking and execution coherence</li>
+      <li>Memory Layout
+        <ul>
+          <li>Structure of Array</li>
+          <li>Array of Structs</li>
+        </ul>
+      </li>
+      <li>Auto vectorization</li>
+    </ul>
+  </li>
+  <li>Introduction to the GPU Hardware<br>
+
+    <ul>
+      <li>Hardware</li>
+      <li>Memory Types and Caching</li>
+      <li>Cores, Threads, Tiles and Warps</li>
+      <li>PCIe Bus</li>
+    </ul>
+  </li>
+  <li>Methods of writing code for the GPU<br>
+
+    <ul>
+      <li>OpenCL</li>
+      <li>CUDA</li>
+      <li>DirectCompute</li>
+      <li>Microsoft C++ AMP</li>
+    </ul>
+  </li>
+  <li>Introduction to AMP<br>
+
+    <ul>
+      <li>AMP Syntax and Data Types</li>
+      <li>array, array_view</li>
+      <li>index</li>
+      <li>extent</li>
+      <li>grid</li>
+      <li>restrict</li>
+    </ul>
+  </li>
+  <li>parallel<em>for</em>each<br>
+
+    <ul>
+      <li>How to use</li>
+      <li>Optimizing Memory Move/Copy</li>
+    </ul>
+  </li>
+  <li>Synchronizing memory with accelerators<br>
+
+    <ul>
+      <li>Implicit synchronization</li>
+      <li>synchronize*()</li>
+      <li>data()</li>
+      <li>Lost Exceptions</li>
+    </ul>
+  </li>
+  <li>Concurrency::fast<em>math and precise</em>math<br>
+
+    <ul>
+      <li>What’s inside</li>
+      <li>Comparison to “standard” math.</li>
+      <li>Precision</li>
+      <li>Accelerator requirements</li>
+      <li>Example</li>
+    </ul>
+  </li>
+  <li>Debugging with Warp<br>
+
+    <ul>
+      <li>Visual Studio Tools</li>
+      <li>GPU Threads</li>
+      <li>Parallel Stacks</li>
+      <li>Parallel Watch</li>
+    </ul>
+  </li>
+  <li>Floating Point Numbers<br>
+
+    <ul>
+      <li>How they are handled</li>
+      <li>Why they are different from CPU</li>
+      <li>Performance of float/double operations</li>
+    </ul>
+  </li>
+</ul>
+<p>Day 3</p>
+<ul>
+  <li>Tiling<br>
+
+    <ul>
+      <li>Syntax</li>
+      <li>Determining tile size</li>
+      <li>Memory Coalescence</li>
+      <li>Memory Collisions</li>
+      <li>Tile Synchronization</li>
+    </ul>
+  </li>
+  <li>AMP Atomic Operations<br>
+
+    <ul>
+      <li>atomic_exchange()</li>
+      <li>atomic_fetch*()</li>
+    </ul>
+  </li>
+  <li>Parallel patterns with AMP<br>
+
+    <ul>
+      <li>Map</li>
+      <li>Reduce</li>
+      <li>Scan</li>
+      <li>Pack</li>
+    </ul>
+  </li>
+  <li>AMP Accelerators<br>
+
+    <ul>
+      <li>Accelerator properties</li>
+      <li>Shared memory</li>
+      <li>Using multiple accelerators</li>
+    </ul>
+  </li>
+  <li>Concurrency::graphics<br>
+
+    <ul>
+      <li>Exploiting the texture cache.</li>
+    </ul>
+  </li>
+  <li>AMP Error Handling<br>
+
+    <ul>
+      <li>Exceptions</li>
+      <li>Detecting/Recovering from TDR</li>
+    </ul>
+  </li>
+</ul>
+    </div>
+
+            </div>
+            <div class="col-sm-4 side-content-column">
+              <div class="text-center">
+    <a href="Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-Cpp/book.html" class="actionlink top-book-button"><span data-contentid="education-course-side-book" data-contenttype="TEXT">
+                  BOOK
+              </span></a>
+</div>
+
+<div class="content">
+    <h3><span data-contentid="education-course-side-info" data-contenttype="TEXT">
+                  Course info
+              </span></h3>
+    <div>
+        <b><span data-contentid="education-course-side-code" data-contenttype="TEXT">
+                  Course code:
+              </span></b>
+        <span>T391</span>
+    </div>
+    <div>
+        <b><span data-contentid="education-course-side-duration" data-contenttype="TEXT">
+                  Duration:
+              </span></b>
+        <span>
+          3
+          <span data-contentid="education-course-side-days" data-contenttype="TEXT">
+                  days
+              </span>
+        </span>
+    </div>
+    <div>
+        <b><span data-contentid="education-course-side-price" data-contenttype="TEXT">
+                  Price:
+              </span></b>
+        <span>25 970<span data-contentid="sek" data-contenttype="TEXT">
+                   SEK
+              </span></span>
+    </div>
+        <div>
+            <b><span data-contentid="education-course-side-language" data-contenttype="TEXT">
+                  Language: 
+              </span></b>
+              <span>English<span>
+        </div>
+
+        <h3><span data-contentid="education-course-side-schedule" data-contenttype="TEXT">
+                  Course schedule
+              </span></h3>
+            <div class="schedule-location">
+                <b>Malmö</b>
+                    <div class="schedule">
+                        <span>14 Mar 2018</span>
+                        <a class="actionlink book_now_button" href="Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-Cpp/book%3Fdp=Malm%25C3%25B6-20180314.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>25 Apr 2018</span>
+                        <a class="actionlink book_now_button" href="Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-Cpp/book%3Fdp=Malm%25C3%25B6-20180425.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>17 Sep 2018</span>
+                        <a class="actionlink book_now_button" href="Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-Cpp/book%3Fdp=Malm%25C3%25B6-20180917.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>14 Nov 2018</span>
+                        <a class="actionlink book_now_button" href="Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-Cpp/book%3Fdp=Malm%25C3%25B6-20181114.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>17 Dec 2018</span>
+                        <a class="actionlink book_now_button" href="Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-Cpp/book%3Fdp=Malm%25C3%25B6-20181217.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+            </div>
+            <div class="schedule-location">
+                <b>Stockholm</b>
+                    <div class="schedule">
+                        <span>12 Feb 2018</span>
+                        <a class="actionlink book_now_button" href="Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-Cpp/book%3Fdp=Stockholm-20180212.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>2 May 2018</span>
+                        <a class="actionlink book_now_button" href="Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-Cpp/book%3Fdp=Stockholm-20180502.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>10 Oct 2018</span>
+                        <a class="actionlink book_now_button" href="Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-Cpp/book%3Fdp=Stockholm-20181010.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+            </div>
+
+
+        <h3><span data-contentid="education-course-side-teachers" data-contenttype="TEXT">
+                  Teachers
+              </span></h3>
+        <div class="teachers">
+                <div class="teacher-info">
+                        <a href="../../../experts/stephen-lau.html" title="Read more about Stephen Lau">
+                            <div><img src="https://media.graphcms.com/NDK4qUBRCSlIXXlgz4DR" alt="Stephen Lau"></div>
+                            Stephen Lau
+                        </a>
+                </div>
+                <div class="teacher-info">
+                        <a href="../../../experts/erik-man.html" title="Read more about Erik Man">
+                            <div><img src="https://media.graphcms.com/awqGFSuoQ3uyMTdIsDf5" alt="Erik Man"></div>
+                            Erik Man
+                        </a>
+                </div>
+        </div>
+
+    <div class="course-side-share">
+        <h3><span data-contentid="education-course-side-share" data-contenttype="TEXT">
+                  Share
+              </span></h3>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&source=Edument+AB&url=http://localhost:8080/en/education/categories/cpp/Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-Cpp&title=&summary=" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linked in logo"></a>
+        <a href="http://www.twitter.com/share?url=http://localhost:8080/en/education/categories/cpp/Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-Cpp" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http://localhost:8080/en/education/categories/cpp/Parallel-and-Heterogeneous-Computing-with-Microsoft-PPL-and-AMP-in-Cpp" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+    </div>
+
+
+
+    <h3><span data-contentid="education-course-side-contact-us" data-contenttype="TEXT">
+                  Contact us for details
+              </span></h3>
+    <span><span data-contentid="education-course-side-phone" data-contenttype="TEXT">
+                  +46 40 61 70 720
+              </span></span>
+    <br>
+    <a href="mailto:info@edument.se" data-id-href="content.text.education-course-side-mailto"><span data-contentid="education-course-side-mailto" data-contenttype="TEXT">
+                  info@edument.se
+              </span></a>
+    <br>
+    <br>
+    <br>
+    <span><span data-contentid="education-course-side-vat" data-contenttype="TEXT">
+                  All prices excluding VAT
+              </span></span>
+</div>
+
+            </div>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-content">
+      <div class="row newsletter-subscription">
+        <div class="col-md-6">
+              <h2><span data-contentid="master-footer-subscribe-headline" data-contenttype="TEXT">
+                  Edument news
+              </span></h2>
+              <p><span data-contentid="master-footer-subscribe-description" data-contenttype="TEXT">
+                  Subscribe and we'll keep you in the loop with our latest courses, news and thoughts.
+              </span></p>
+          </div>
+          <div class="col-md-6 subscription-right">
+              <div class="subscription-feedback">
+                  <span data-contentid="master-footer-subscribe-feedback" data-contenttype="TEXT">
+                  Subscribing...
+              </span>
+              </div>
+              <form class="subscription-form">
+                  <input type="email" value="" name="EMAIL" class="subscriber-email" placeholder="email address" required>
+                  <input type="submit" value="Subscribe" name="subscribe" class="actionlink">
+               </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h2><span data-contentid="master-footer-contact-us" data-contenttype="TEXT">
+                  Contact us
+              </span></h2>
+            Tel: <span data-contentid="master-phone" data-contenttype="TEXT">
+                  +46 40 - 61 70 720
+              </span><br>
+            <a href="mailto:info@edument.se" data-id-href="content.text.master-mailto-info">info@edument.se</a><br>
+          </div>
+          <div class="col-md-5">
+            <h2><span data-contentid="master-footer-visit-us" data-contenttype="TEXT">
+                  Visit us
+              </span></h2>
+            <div class="col-md-5 addresslist">
+              <ul data-contentid="master-address-helsingborg data-contenttype="LIST">
+          <li>Helsingborg office</li><li>Sundstorget 5</li><li>252 21 Helsingborg</li><li>Sweden</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument/@56.0484963,12.687333,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Find on map
+              </span></i></a>
+            </div>
+            <div class="col-md-7 addresslist">
+              <ul data-contentid="master-address-malmo data-contenttype="LIST">
+          <li>Malmö office</li><li>Stora varvsgatan 6A</li><li>211 19 Malmö</li><li>Sweden</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument+AB/@55.6122624,12.9895262,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Find on map
+              </span></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2><span data-contentid="master-footer-follow-us" data-contenttype="TEXT">
+                  Follow us
+              </span></h2>
+            <div class="follow-us">
+              <a target="_blank" href="https://www.linkedin.com/company/edument-ab"><img class="social" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linkedin logo"></a>
+              <a target="_blank" href="https://www.instagram.com/edument/"><img class="social" src="https://media.graphcms.com/3b8PshtAQGCKfiHNawk4" alt="Instagram logo"></a>
+              <a target="_blank" href="https://www.facebook.com/EdumentAB/"><img class="social" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+              <a target="_blank" href="https://twitter.com/edument"><img class="social" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <span data-contentid="master-footer-copyright" data-contenttype="TEXT">
+                  Copyright © Edument AB. All rights reserved.
+              </span>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../partners-and-resellers.html"><span data-contentid="master-footer-partners-link-text" data-contenttype="TEXT">
+                  Partners & resellers
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../terms-and-conditions.html"><span data-contentid="master-footer-termcond-link-text" data-contenttype="TEXT">
+                  Terms & conditions
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../privacy.html"><span data-contentid="master-footer-privacy-link-text" data-contenttype="TEXT">
+                  Privacy & disclaimers
+              </span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="../../../../scripts/newsletter-subscription.js"></script>
+  <script type="text/javascript" src="../../../../scripts/shrink-menu.js"></script>
+  <script type="text/javascript" src="../../../../scripts/expander.js"></script>
+
+  <!-- Apsis Tracking code for www.edument.se -->
+  <script type='text/javascript'>
+    var psSite = 'e285ed6809';
+    (function() {
+    var AL = document.createElement('script'); AL.type = 'text/javascript'; AL.async = true;
+    AL.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tr.apsislead.com/al_v2.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(AL, s)
+    })();
+  </script>
+  <noscript><img src='http://tr.apsislead.com/?id=e285ed6809' style='border:0;display:none;'></noscript>
+  <!-- End Tracking code -->
+
+</body>
+</html>

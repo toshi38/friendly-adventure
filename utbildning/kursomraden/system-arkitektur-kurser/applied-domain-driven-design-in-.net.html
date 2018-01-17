@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="sv">
+<head>
+  <title>Applied Domain-Driven Design i .NET</title>
+  <link rel="alternate" hreflang="sv" href="applied-domain-driven-design-in-.net.html" />
+  <link rel="alternate" hreflang="en" href="../../../en/education/categories/software-architecture-courses/applied-domain-driven-design-in-.net.html" />
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../../../styles/styles.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Lora">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+      window.cookieconsent_options = {
+          link: '/integritet',
+          theme: 'dark-bottom',
+          learnMore: 'Mer info',
+          dismiss: 'Jag förstår!',
+          message: 'Denna site använder cookies för att göra din upplevelse så smidig som möjligt.'
+      };
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111891505-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111891505-1');
+  </script>
+
+  <meta property="og:title" content="Applied Domain-Driven Design i .NET" />
+  <meta property="og:description" content="" />
+    <meta property="og:url" content="http://localhost:8080/utbildning/kursomraden/system-arkitektur-kurser/applied-domain-driven-design-in-.net" />
+      <meta property="og:image" content="http://localhost:8080/images/Edument_logo-share.jpg" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="section-education page_education_categories_category_course">
+
+<!-- Modal background cover -->
+<div id="modal-collapse" class="modal-background"></div>
+
+  <header>
+    <nav class="navbar navbar-edument-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+        <div class="side-menu-wrapper">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../../../index.html"></a>
+          </div>
+        </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-top">
+            <ul class="nav navbar-nav pull-right">
+                    <li class="active"><a href="../../../utbildning.html">Utbildning <span class="sr-only">(current)</span></a></li>
+                    <li><a href="../../../codebuddy.html">CodeBuddy</a></li>
+                    <li><a href="../../../koncept-och-produktutveckling.html">Koncept- och produktutveckling</a></li>
+                    <li><a href="../../../om-oss.html">Om oss</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+      <a class="langlink hidden-xs" href="../../../en/education/categories/software-architecture-courses/applied-domain-driven-design-in-.net.html">
+          <img src="https://media.graphcms.com/yfxSIxmAQ2WotdoDVewy"/>
+      </a>
+      <div class="mobilehamburger visible-xs"></div>
+    </nav>
+
+    <nav class="navbar navbar-edument-submenu hidden-xs">
+      <div class="navbar-inner sub-menu">
+          <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse submenu" id="navbar-collapse-submenu">
+              <ul class="nav navbar-nav">
+                      <li><a href="../../kursomraden.html">Kursområden</a></li>
+                      <li class="active"><a href="../../kurser.html">Kurser <span class="sr-only">(current)</span></a></li>
+                      <li><a href="../../events.html">Event</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </nav>
+
+    <nav class="visible-xs mobilenav">
+      <a class="langlink" href="../../../en/education/categories/software-architecture-courses/applied-domain-driven-design-in-.net.html">
+          <img src="https://media.graphcms.com/yfxSIxmAQ2WotdoDVewy"/>
+      </a>
+      <ul>
+            <li class="mobtop">
+                <a href="../../../utbildning.html">Utbildning <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../kursomraden.html">Kursområden <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a class="active" href="../../kurser.html">Kurser <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../events.html">Event <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../codebuddy.html">CodeBuddy <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../koncept-och-produktutveckling.html">Koncept- och produktutveckling <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../om-oss.html">Om oss <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../../artiklar.html">Blogg <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../vara-experter.html">Vårt team <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../karriar.html">Karriär <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content">
+    <main>
+      <div class="hero" style="background-image:url(https://media.graphcms.com/tAKfzZ7VT7S0IERnBQN6)">
+    <div class="container">
+        <h1><span data-contentid="master-eduhero-herotext" data-contenttype="TEXT">
+                  Sök bland alla våra kurser
+              </span></h1>
+
+        <form action="http://localhost:8080/utbildning/kurser/sokning" method="GET">
+            <div class="row course-search">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="q" placeholder="Sök bland alla våra kurser" value="">
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-default"><span data-contentid="master-eduhero-searchbuttontext" data-contenttype="TEXT">
+                  Sök
+              </span></button>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+      <div class="container">
+        <div class="row main-content-row">
+            <div class="col-sm-8 main-content-column">
+
+              <div class="breadcrumbs">
+                      <span><a href="../../../utbildning.html">Utbildning</a></span>
+                      <span><a href="../../kurser.html">Kurser</a></span>
+                      <span><a href="../system-arkitektur-kurser.html">System Arkitektur</a></span>
+                      <span>Applied Domain-Driven Design i .NET</span>
+              </div>
+
+              <div class="course-introduction">
+    <h1>Applied Domain-Driven Design i .NET</h1>
+    <div class="course-details">
+        <p><p>Kursen lär ut ett direkt, praktiskt sätt att närma sig arkitektur inom affärslivet. Fokus ligger på att producera affärsmjukvara som är mer användbar, testbar, och lättare att förvalta och förstå än konventionella sätt att bygga applikationer.</p>
+<p>Med hjälp av Domän-Driven Design (DDD) och Command/Query Responsibility Segregation (CQRS) ser vi hur vi kan applicera moderna lärdomar på vår design, för att kunna bygga mer hållbara, skalbara, och testbara system till lägre totalkostnad.</p>
+<p>Istället för att lära ut ett ramverk lär kursen ut en modern arkitektur, ett antal möjliga implementationer, och understryker de vanliga fallgroparna man kan undvika på vägen.</p>
+<p>Det här är en praktisk kurs, och vi håller oss nära programkoden hela vägen. Under kursen bygger vi successivt upp en mindre applikation från grunden. Kursen täcker även testning, hur man applicerar nyckelinsikterna från kursen på existerande system, och hur man skalar ut ett system byggt med CQRS.</p></p>
+    </div>
+
+</div>
+
+<h2><span data-contentid="education-course-target" data-contenttype="TEXT">
+                  Målgrupp
+              </span></h2>
+<p>Utvecklare och arkitekter som vill lära sig mer om att applicera Domän-Driven Design.&nbsp;</p>
+
+
+<h2><span data-contentid="education-course-prereq" data-contenttype="TEXT">
+                  Förhandskunskaper
+              </span></h2>
+<p>God kännedom om C# och gundläggande kunskaper i NUnit är en fördel, dock ej nödvändiga.&nbsp;</p>
+
+
+    <div class="graphcmsrich">
+        <h2><strong>What you will learn</strong></h2>
+<p>Dag 1</p>
+<p>Utmaningen med "databasdriven" mjukvaruutveckling</p>
+<ul>
+  <li>Olika sorters komplexitet</li>
+  <li>Skalbarhet och konsistens</li>
+  <li>Testning</li>
+  <li>Integration</li>
+</ul>
+<p>Introduktion till Domän-Driven Design</p>
+<ul>
+  <li>Domäner och domänmodeller</li>
+  <li>"Ubiquitous Language", ett gemensamt språk</li>
+  <li>Övning i att bygga en domänmodell</li>
+</ul>
+<p>Kontexter</p>
+<ul>
+  <li>Varför avgränsningar är viktiga</li>
+  <li>Kontextkartor</li>
+  <li>Att hålla isär koncept i domänen</li>
+  <li>Att mixa ihop koncept i gränssnittet</li>
+  <li>Övningar på gränsletande</li>
+</ul>
+<p>Kommandon, frågor och events</p>
+<ul>
+  <li>Normalisering och denormalisering</li>
+  <li>Skrivmodeller och läsmodeller</li>
+  <li>Events som länk mellan skrivsida och lässida</li>
+  <li>Eventuell konsistens och vad det innebär</li>
+  <li>Design av kommandon</li>
+  <li>Design av frågor</li>
+  <li>Övning i design av kommandon och frågor</li>
+</ul>
+<p>Meddelandebussar</p>
+<ul>
+  <li>Meddelanden som frikoppling</li>
+  <li>Publish/Subscribe</li>
+  <li>Att "sända" vs att "publicera"</li>
+  <li>Bygga en enkel meddelandebuss</li>
+  <li>Övning i implementation av en meddelandebuss</li>
+</ul>
+<p>Dag 2</p>
+<p>Skrivsidearkitektur</p>
+<ul>
+  <li>Kommandohanterare</li>
+  <li>"State sourcing" gentemot "event sourcing"</li>
+  <li>Introduktion till aggregat</li>
+  <li>Att bygga upp aggregat från tidigare events</li>
+  <li>Transaktionssäkerhet</li>
+  <li>Övning i kommandohanterare och aggregat</li>
+</ul>
+<p>BDD-testning</p>
+<ul>
+  <li>Introduktion till BDD</li>
+  <li>Kommandon, events och BDD</li>
+  <li>Att bygga ett enkelt testramverk</li>
+  <li>Övning i BDD</li>
+</ul>
+<p>Eventdatabaser</p>
+<ul>
+  <li>Existerande alternativ</li>
+  <li>Att bygga en eventdatabas ovanpå en relationsdatabas</li>
+  <li>Att implementera ett repository med hjälp av en eventdatabas</li>
+  <li>FÖrdelar med att befria aggregatens representation från persistens</li>
+  <li>Optimeringar med hjälp av snapshots</li>
+  <li>Övning i att bygga en eventdatabas</li>
+</ul>
+<p>Avancerad aggregatdesign</p>
+<ul>
+  <li>Att hitta aggregatgränser</li>
+  <li>Att hantera relationer</li>
+  <li>Övning i aggregatdesign</li>
+</ul>
+<p>Dag 3</p>
+<p>Att bygga lässidor</p>
+<ul>
+  <li>Övergripande angreppssätt</li>
+  <li>Relationella databaser som lässida</li>
+  <li>NoSQL-lässidor</li>
+  <li>Andra alternativ</li>
+  <li>Att rekonstruera och bygga upp nya lässidor</li>
+  <li>Övning i att bygga lässidor</li>
+</ul>
+<p>Processhanterare</p>
+<ul>
+  <li>Vad är en processhanterare? Vad är en saga?</li>
+  <li>Olika typer av processhanterare</li>
+  <li>Att hantera processhanterarens tillstånd</li>
+  <li>Att bygga ett enkelt ramverk för processhanterare</li>
+  <li>Övning i processhanterare</li>
+</ul>
+<p>Att utveckla ett system</p>
+<ul>
+  <li>Att förfina domänmodeller</li>
+  <li>Att hantera kommandon som evolverar</li>
+  <li>Versionshantering av events</li>
+  <li>Hantering av uppgradering av events</li>
+  <li>Övning i event-uppgradering</li>
+</ul>
+<p>CQRS, DDD och existerande kodbaser</p>
+<ul>
+  <li>Att introducera kontexter i ett existerande system</li>
+  <li>Separering av kommandon och frågor</li>
+  <li>Att migrera mot event sourcing</li>
+</ul>
+<p>Att skala ut</p>
+<ul>
+  <li>Man kan dra nytta av läs/skriv-separationen för att skala</li>
+  <li>Att skala skrivsidor enligt kontext och enligt aggregat</li>
+  <li>Att skala inom ett aggregat</li>
+  <li>Distribuering av meddelanden och tillförlitlighet</li>
+  <li>Köer och "enterprise service busses"</li>
+</ul>
+<p>Andra möjligheter</p>
+<ul>
+  <li>Parallell utveckling och outsourcing</li>
+  <li>Att återskapa tidigare tillstånd för debugging</li>
+</ul>
+    </div>
+
+            </div>
+            <div class="col-sm-4 side-content-column">
+              <div class="text-center">
+    <a href="applied-domain-driven-design-in-.net/boka.html" class="actionlink top-book-button"><span data-contentid="education-course-side-book" data-contenttype="TEXT">
+                  BOKA
+              </span></a>
+</div>
+
+<div class="content">
+    <h3><span data-contentid="education-course-side-info" data-contenttype="TEXT">
+                  Kursinformation 
+              </span></h3>
+    <div>
+        <b><span data-contentid="education-course-side-code" data-contenttype="TEXT">
+                  Kurskod:
+              </span></b>
+        <span>T201</span>
+    </div>
+    <div>
+        <b><span data-contentid="education-course-side-duration" data-contenttype="TEXT">
+                  Kurslängd:
+              </span></b>
+        <span>
+          3
+          <span data-contentid="education-course-side-days" data-contenttype="TEXT">
+                  dagar
+              </span>
+        </span>
+    </div>
+    <div>
+        <b><span data-contentid="education-course-side-price" data-contenttype="TEXT">
+                  Pris:
+              </span></b>
+        <span>25 970<span data-contentid="sek" data-contenttype="TEXT">
+                   SEK
+              </span></span>
+    </div>
+        <div>
+            <b><span data-contentid="education-course-side-language" data-contenttype="TEXT">
+                  Språk:
+              </span></b>
+              <span>Engelska<span>
+        </div>
+
+        <h3><span data-contentid="education-course-side-schedule" data-contenttype="TEXT">
+                  Kurs schema 
+              </span></h3>
+            <div class="schedule-location">
+                <b>Malmö</b>
+                    <div class="schedule">
+                        <span>28 maj 2018</span>
+                        <a class="actionlink book_now_button" href="applied-domain-driven-design-in-.net/boka%3Fdp=Malm%25C3%25B6-20180528.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>15 okt 2018</span>
+                        <a class="actionlink book_now_button" href="applied-domain-driven-design-in-.net/boka%3Fdp=Malm%25C3%25B6-20181015.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+            </div>
+            <div class="schedule-location">
+                <b>Stockholm</b>
+                    <div class="schedule">
+                        <span>19 mar 2018</span>
+                        <a class="actionlink book_now_button" href="applied-domain-driven-design-in-.net/boka%3Fdp=Stockholm-20180319.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>16 apr 2018</span>
+                        <a class="actionlink book_now_button" href="applied-domain-driven-design-in-.net/boka%3Fdp=Stockholm-20180416.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>17 sep 2018</span>
+                        <a class="actionlink book_now_button" href="applied-domain-driven-design-in-.net/boka%3Fdp=Stockholm-20180917.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+            </div>
+
+
+        <h3><span data-contentid="education-course-side-teachers" data-contenttype="TEXT">
+                  Lärare
+              </span></h3>
+        <div class="teachers">
+                <div class="teacher-info">
+                        <a href="../../../vara-experter/tore-nestenius.html" title="Läs mer Tore Nestenius">
+                            <div><img src="https://media.graphcms.com/0NFdrk5gQEm9HCNs5DnU" alt="Tore Nestenius"></div>
+                            Tore Nestenius
+                        </a>
+                </div>
+        </div>
+
+    <div class="course-side-share">
+        <h3><span data-contentid="education-course-side-share" data-contenttype="TEXT">
+                  Dela
+              </span></h3>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&source=Edument+AB&url=http://localhost:8080/utbildning/kursomraden/system-arkitektur-kurser/applied-domain-driven-design-in-.net&title=undefined&summary=" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt=""></a>
+        <a href="http://www.twitter.com/share?url=http://localhost:8080/utbildning/kursomraden/system-arkitektur-kurser/applied-domain-driven-design-in-.net" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="undefined"></a>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http://localhost:8080/utbildning/kursomraden/system-arkitektur-kurser/applied-domain-driven-design-in-.net" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="undefined"></a>
+    </div>
+
+
+
+    <h3><span data-contentid="education-course-side-contact-us" data-contenttype="TEXT">
+                  Kontakta oss för mer information
+              </span></h3>
+    <span><span data-contentid="education-course-side-phone" data-contenttype="TEXT">
+                  040 61 70 720
+              </span></span>
+    <br>
+    <a href="mailto:info@edument.se" data-id-href="content.text.education-course-side-mailto"><span data-contentid="education-course-side-mailto" data-contenttype="TEXT">
+                  info@edument.se
+              </span></a>
+    <br>
+    <br>
+    <br>
+    <span><span data-contentid="education-course-side-vat" data-contenttype="TEXT">
+                  Alla priser är exkl. moms
+              </span></span>
+</div>
+
+            </div>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-content">
+      <div class="row newsletter-subscription">
+        <div class="col-md-6">
+              <h2><span data-contentid="master-footer-subscribe-headline" data-contenttype="TEXT">
+                  Nyheter från Edument
+              </span></h2>
+              <p><span data-contentid="master-footer-subscribe-description" data-contenttype="TEXT">
+                  Prenumerera på vårt nyhetsbrev och ta del av våra tips, trendspaningar och kurser.
+              </span></p>
+          </div>
+          <div class="col-md-6 subscription-right">
+              <div class="subscription-feedback">
+                  <span data-contentid="master-footer-subscribe-feedback" data-contenttype="TEXT">
+                  Prenumererar...
+              </span>
+              </div>
+              <form class="subscription-form">
+                  <input type="email" value="" name="EMAIL" class="subscriber-email" placeholder="epostadress" required>
+                  <input type="submit" value="Prenumerera" name="subscribe" class="actionlink">
+               </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h2><span data-contentid="master-footer-contact-us" data-contenttype="TEXT">
+                  Kontakta oss
+              </span></h2>
+            Tel: <span data-contentid="master-phone" data-contenttype="TEXT">
+                  040 - 61 70 720
+              </span><br>
+            <a href="mailto:info@edument.se" data-id-href="content.text.master-mailto-info">info@edument.se</a><br>
+          </div>
+          <div class="col-md-5">
+            <h2><span data-contentid="master-footer-visit-us" data-contenttype="TEXT">
+                  Besök oss
+              </span></h2>
+            <div class="col-md-5 addresslist">
+              <ul data-contentid="master-address-helsingborg data-contenttype="LIST">
+          <li>Helsingborgskontoret</li><li>Sundstorget 5</li><li>252 21 Helsingborg</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument/@56.0484963,12.687333,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Se karta
+              </span></i></a>
+            </div>
+            <div class="col-md-7 addresslist">
+              <ul data-contentid="master-address-malmo data-contenttype="LIST">
+          <li>Malmökontoret</li><li>Stora varvsgatan 6A</li><li>211 19 Malmö</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument+AB/@55.6122624,12.9895262,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Se karta
+              </span></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2><span data-contentid="master-footer-follow-us" data-contenttype="TEXT">
+                  Följ oss
+              </span></h2>
+            <div class="follow-us">
+              <a target="_blank" href="https://www.linkedin.com/company/edument-ab"><img class="social" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linkedin logo"></a>
+              <a target="_blank" href="https://www.instagram.com/edument/"><img class="social" src="https://media.graphcms.com/3b8PshtAQGCKfiHNawk4" alt="Instagram logo"></a>
+              <a target="_blank" href="https://www.facebook.com/EdumentAB/"><img class="social" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+              <a target="_blank" href="https://twitter.com/edument"><img class="social" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <span data-contentid="master-footer-copyright" data-contenttype="TEXT">
+                  Copyright © Edument AB. Alla rättigheter reserverade.
+              </span>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../partners-och-aterforsaljare.html"><span data-contentid="master-footer-partners-link-text" data-contenttype="TEXT">
+                  Partners & återförsäljare
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../villkor.html"><span data-contentid="master-footer-termcond-link-text" data-contenttype="TEXT">
+                  Villkor
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../integritet.html"><span data-contentid="master-footer-privacy-link-text" data-contenttype="TEXT">
+                  Integritet
+              </span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="../../../scripts/newsletter-subscription.js"></script>
+  <script type="text/javascript" src="../../../scripts/shrink-menu.js"></script>
+  <script type="text/javascript" src="../../../scripts/expander.js"></script>
+
+  <!-- Apsis Tracking code for www.edument.se -->
+  <script type='text/javascript'>
+    var psSite = 'e285ed6809';
+    (function() {
+    var AL = document.createElement('script'); AL.type = 'text/javascript'; AL.async = true;
+    AL.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tr.apsislead.com/al_v2.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(AL, s)
+    })();
+  </script>
+  <noscript><img src='http://tr.apsislead.com/?id=e285ed6809' style='border:0;display:none;'></noscript>
+  <!-- End Tracking code -->
+
+</body>
+</html>

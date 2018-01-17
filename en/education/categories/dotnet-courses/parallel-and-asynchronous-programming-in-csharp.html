@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+  <title>Parallel and Asynchronous Programming in C#</title>
+  <link rel="alternate" hreflang="en" href="parallel-and-asynchronous-programming-in-csharp.html" />
+  <link rel="alternate" hreflang="sv" href="../../../../utbildning/kursomraden/net-kurser/Parallel-och-Asynchronous-Programmering-i-C.html" />
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Driven by the desire to educate and move people forward">
+
+  <link rel="stylesheet" href="../../../../styles/styles.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Lora">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+      window.cookieconsent_options = {
+          link: '/en/privacy',
+          theme: 'dark-bottom',
+          learnMore: 'More info',
+          dismiss: 'Got it!',
+          message: 'This website uses cookies to ensure you get the best experience.'
+      };
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111891505-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111891505-1');
+  </script>
+
+  <meta property="og:title" content="Parallel and Asynchronous Programming in C#" />
+  <meta property="og:description" content="Driven by the desire to educate and move people forward" />
+    <meta property="og:url" content="http://localhost:8080/en/education/categories/dotnet-courses/parallel-and-asynchronous-programming-in-csharp" />
+      <meta property="og:image" content="http://localhost:8080/images/Edument_logo-share.jpg" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="section-education page_education_categories_category_course">
+
+<!-- Modal background cover -->
+<div id="modal-collapse" class="modal-background"></div>
+
+  <header>
+    <nav class="navbar navbar-edument-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+        <div class="side-menu-wrapper">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../../../../en.1.html"></a>
+          </div>
+        </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-top">
+            <ul class="nav navbar-nav pull-right">
+                    <li class="active"><a href="../../../education.html">Education <span class="sr-only">(current)</span></a></li>
+                    <li><a href="../../../codebuddy.html">CodeBuddy</a></li>
+                    <li><a href="../../../concept-and-product-development.html">Concept &amp; Product Development</a></li>
+                    <li><a href="../../../about.html">About us</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+      <a class="langlink hidden-xs" href="../../../../utbildning/kursomraden/net-kurser/Parallel-och-Asynchronous-Programmering-i-C.html">
+          <img src="https://media.graphcms.com/4FSF3OtzRk2bJv1kFkiD"/>
+      </a>
+      <div class="mobilehamburger visible-xs"></div>
+    </nav>
+
+    <nav class="navbar navbar-edument-submenu hidden-xs">
+      <div class="navbar-inner sub-menu">
+          <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse submenu" id="navbar-collapse-submenu">
+              <ul class="nav navbar-nav">
+                      <li><a href="../../categories.html">Categories</a></li>
+                      <li class="active"><a href="../../courses.html">Courses <span class="sr-only">(current)</span></a></li>
+                      <li><a href="../../events.html">Events</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </nav>
+
+    <nav class="visible-xs mobilenav">
+      <a class="langlink" href="../../../../utbildning/kursomraden/net-kurser/Parallel-och-Asynchronous-Programmering-i-C.html">
+          <img src="https://media.graphcms.com/4FSF3OtzRk2bJv1kFkiD"/>
+      </a>
+      <ul>
+            <li class="mobtop">
+                <a href="../../../education.html">Education <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../categories.html">Categories <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a class="active" href="../../courses.html">Courses <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../events.html">Events <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../codebuddy.html">CodeBuddy <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../concept-and-product-development.html">Concept &amp; Product Development <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../about.html">About us <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../../articles.html">Blog <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../experts.html">Our Team <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../join-us.html">Join us <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content">
+    <main>
+      <div class="hero" style="background-image:url(https://media.graphcms.com/tAKfzZ7VT7S0IERnBQN6)">
+    <div class="container">
+        <h1><span data-contentid="master-eduhero-herotext" data-contenttype="TEXT">
+                  Search, explore and find the perfect course for you
+              </span></h1>
+
+        <form action="http://localhost:8080/en/education/courses/query" method="GET">
+            <div class="row course-search">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="q" placeholder="Search, explore and find the perfect course for you" value="">
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-default"><span data-contentid="master-eduhero-searchbuttontext" data-contenttype="TEXT">
+                  Search
+              </span></button>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+      <div class="container">
+        <div class="row main-content-row">
+            <div class="col-sm-8 main-content-column">
+
+              <div class="breadcrumbs">
+                      <span><a href="../../../education.html">Education</a></span>
+                      <span><a href="../../courses.html">Courses</a></span>
+                      <span><a href="../dotnet-courses.html">.NET</a></span>
+                      <span>Parallel and Asynchronous Programming in C#</span>
+              </div>
+
+              <div class="course-introduction">
+    <h1>Parallel and Asynchronous Programming in C#</h1>
+    <div class="course-details">
+        <p><p>In recent years, parallel hardware has become the norm. It's not unusual to discover that one's smartphone has a multi-core CPU these days! At the same time, making calls to remote services has become common and users have come to expect highly responsive interfaces - both of which push developers towards asynchronous programming.</p><p>Thankfully, the .Net Framework and C# language have been evolving to help us cope with these new realities and expectations. Of course, there have always been threads and locks - but today, we've many, many more options: concurrent collections, parallel looping constructs, PLINQ, Tasks, the new async/await keywords in C# 5, the Reactive Extensions (Rx), the TPL Dataflow library with its Actor-based approach... Each of them are suitable for different problems. So how do you know what to use when, and how to use them effectively?</p><p>That's where this course comes in. It won't just teach you how to use all of these exciting new libraries. It will also help you to understand what kind of problem each one is aimed at, so that you can pick the appropriate solution to the challenges you face. It also provides clear explanations of pertinent theory and terminology, including a dive all the way down to the hardware level, so you'll have a strong grasp on what's really going on! Labs will provide an opportunity for you to try things out for yourself.</p></p>
+    </div>
+
+        <ul class="tagList">
+                <li>.NET</li>
+                <li>C#</li>
+        </ul>
+</div>
+
+<h2><span data-contentid="education-course-target" data-contenttype="TEXT">
+                  Target audience
+              </span></h2>
+<p>Experienced C# / .Net developers who need to learn about asynchronous and parallel programming.</p>
+
+
+<h2><span data-contentid="education-course-prereq" data-contenttype="TEXT">
+                  Pre-requisites
+              </span></h2>
+<p>Good knowledge of C#, especially generics, lambdas and LINQ. Previous experience of parallel or async programming is not required.</p>
+
+
+    <div class="graphcmsrich">
+        <h2><strong>Day 1</strong></h2><h3><strong>Classifying Concurrency</strong></h3><ul>  <li>Parallel vs. asynchronous</li>  <li>Task parallel vs. data parallel</li>  <li>CPU-bound vs. IO-bound</li>  <li>Shared vs. thread-local data</li>  <li>Blocking, lock-free, wait-free, and progress bounds</li></ul><h3><strong>Understanding The Hardware</strong></h3><ul>  <li>Why did CPUs go multi-core?</li>  <li>How CPU caches work with multi-core, and why it matters</li>  <li>Why thread-local storage helps</li>  <li>Why immutability helps</li>  <li>The problem of false sharing</li></ul><h3><strong>Building Blocks</strong></h3><ul>  <li>Threads</li>  <li>How many threads?</li>  <li>The thread pool</li>  <li>The Task abstraction</li></ul><h3><strong>Locking</strong></h3><ul>  <li>Monitors, the lock keyword</li>  <li>Multiple Reader, Single Writer locks</li>  <li>Deadlock</li>  <li>Lock granularity</li>  <li>The cost of locking</li>  <li>Avoiding locking</li></ul><h3><strong>Concurrent Collections</strong></h3><ul>  <li>What are the concurrent collections?</li>  <li>Concurrent queues, stacks, bags and dictionaries</li>  <li>The blocking collection</li>  <li>Queues and Staged Event Driven Architecture</li>  <li>Other use cases</li>  <li>Performance compared to locking the non-concurrent collections</li></ul><h3><strong>The Parallel Class</strong></h3><ul>  <li>Parallel for</li>  <li>Parallel foreach</li>  <li>Flow control in parallel loops</li>  <li>Keeping thread local state in parallel loops</li>  <li>Exceptions and parallel loops</li>  <li>Cancellation</li>  <li>Parallel invoke</li></ul><h2><strong>Day 2</strong></h2><h3><strong>Asynchronous Programming</strong></h3><ul>  <li>Why threads aren't ideal for blocking operations</li>  <li>ContinueWith and CPS (Continuation Passing Style)</li>  <li>Why CPS transforms hurt, and how async/await help</li>  <li>Exploring the new Async methods in .Net 4.5</li>  <li>Task combinators</li></ul><h3><strong>More On Asynchrony</strong></h3><ul>  <li>Understanding synchronization contexts</li>  <li>Cancellation</li>  <li>Task completion sources</li>  <li>Integrating asynchrony and parallelism</li></ul><h3><strong>Introducing Rx</strong></h3><ul>  <li>The Enumerable/Observable duality</li>  <li>IObserver and IObservable</li>  <li>Producing and consuming simple event streams</li>  <li>Subscription and unsubscription</li>  <li>Familiar Linq Operators, the Rx way</li>  <li>Converting enumerables to observables, and vice versa</li></ul><h3><strong>Applying Rx</strong></h3><ul>  <li>Using Rx with Windows Forms</li>  <li>Using Rx with WPF</li>  <li>Using Rx with async/await</li>  <li>Understanding schedulers</li>  <li>Writing tests for Rx code</li>  <li>Other useful Rx bits</li></ul><h2><strong>Day 3</strong></h2><h3><strong>TPL DataFlow</strong></h3><ul>  <li>Agents and actors: the ideas behind dataflow parallelism</li>  <li>Sources, targets and propagators</li>  <li>Transforming</li>  <li>Joining</li>  <li>Batching</li>  <li>Schedulers</li>  <li>Implementing custom blocks</li></ul><h3><strong>Parallel LINQ</strong></h3><ul>  <li>A quick LINQ refresher</li>  <li>Using PLINQ</li>  <li>Understanding how PLINQ parallelizes queries</li>  <li>Order (non-)preservation</li>  <li>Merge options</li>  <li>Cancellation</li>  <li>Dealing with exceptions</li>  <li>Custom aggregation functions</li></ul><h3><strong>Atomic Operations and Lock-Free Data Structures</strong></h3><ul>  <li>The Interlocked class</li>  <li>Basic atomic operations</li>  <li>Atomic Compare And Swap (CAS)</li>  <li>How to make any data structure lock free - at a cost</li>  <li>Livelock, and the contrast with wait freedom</li>  <li>The A-B problem</li></ul><h3><strong>Putting It All Together</strong></h3><ul>  <li>Mapping problems to suitable concurrent mechanisms</li>  <li>Integrating approaches</li>  <li>The importance of immutability</li>  <li>Trends so far, and how the future may look</li></ul>
+    </div>
+
+            </div>
+            <div class="col-sm-4 side-content-column">
+              <div class="text-center">
+    <a href="parallel-and-asynchronous-programming-in-csharp/book.html" class="actionlink top-book-button"><span data-contentid="education-course-side-book" data-contenttype="TEXT">
+                  BOOK
+              </span></a>
+</div>
+
+<div class="content">
+    <h3><span data-contentid="education-course-side-info" data-contenttype="TEXT">
+                  Course info
+              </span></h3>
+    <div>
+        <b><span data-contentid="education-course-side-code" data-contenttype="TEXT">
+                  Course code:
+              </span></b>
+        <span>T331</span>
+    </div>
+    <div>
+        <b><span data-contentid="education-course-side-duration" data-contenttype="TEXT">
+                  Duration:
+              </span></b>
+        <span>
+          3
+          <span data-contentid="education-course-side-days" data-contenttype="TEXT">
+                  days
+              </span>
+        </span>
+    </div>
+    <div>
+        <b><span data-contentid="education-course-side-price" data-contenttype="TEXT">
+                  Price:
+              </span></b>
+        <span>25 970<span data-contentid="sek" data-contenttype="TEXT">
+                   SEK
+              </span></span>
+    </div>
+        <div>
+            <b><span data-contentid="education-course-side-language" data-contenttype="TEXT">
+                  Language: 
+              </span></b>
+              <span>English<span>
+        </div>
+
+        <h3><span data-contentid="education-course-side-schedule" data-contenttype="TEXT">
+                  Course schedule
+              </span></h3>
+            <div class="schedule-location">
+                <b>Malmö</b>
+                    <div class="schedule">
+                        <span>14 Mar 2018</span>
+                        <a class="actionlink book_now_button" href="parallel-and-asynchronous-programming-in-csharp/book%3Fdp=Malm%25C3%25B6-20180314.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>17 Sep 2018</span>
+                        <a class="actionlink book_now_button" href="parallel-and-asynchronous-programming-in-csharp/book%3Fdp=Malm%25C3%25B6-20180917.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>17 Dec 2018</span>
+                        <a class="actionlink book_now_button" href="parallel-and-asynchronous-programming-in-csharp/book%3Fdp=Malm%25C3%25B6-20181217.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+            </div>
+            <div class="schedule-location">
+                <b>Stockholm</b>
+                    <div class="schedule">
+                        <span>12 Feb 2018</span>
+                        <a class="actionlink book_now_button" href="parallel-and-asynchronous-programming-in-csharp/book%3Fdp=Stockholm-20180212.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>2 May 2018</span>
+                        <a class="actionlink book_now_button" href="parallel-and-asynchronous-programming-in-csharp/book%3Fdp=Stockholm-20180502.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>10 Oct 2018</span>
+                        <a class="actionlink book_now_button" href="parallel-and-asynchronous-programming-in-csharp/book%3Fdp=Stockholm-20181010.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+            </div>
+
+
+        <h3><span data-contentid="education-course-side-teachers" data-contenttype="TEXT">
+                  Teachers
+              </span></h3>
+        <div class="teachers">
+                <div class="teacher-info">
+                        <a href="../../../experts/jonathan-worthington.html" title="Read more about Jonathan Worthington">
+                            <div><img src="https://media.graphcms.com/ooHLlWVFTyR8BpseyEVb" alt="Jonathan Worthington"></div>
+                            Jonathan Worthington
+                        </a>
+                </div>
+                <div class="teacher-info">
+                        <a href="../../../experts/eric-lavesson.html" title="Read more about Eric Lavesson">
+                            <div><img src="https://media.graphcms.com/2JMaTSWTQJiyTGt7vxwe" alt="Eric Lavesson"></div>
+                            Eric Lavesson
+                        </a>
+                </div>
+        </div>
+
+    <div class="course-side-share">
+        <h3><span data-contentid="education-course-side-share" data-contenttype="TEXT">
+                  Share
+              </span></h3>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&source=Edument+AB&url=http://localhost:8080/en/education/categories/dotnet-courses/parallel-and-asynchronous-programming-in-csharp&title=&summary=" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linked in logo"></a>
+        <a href="http://www.twitter.com/share?url=http://localhost:8080/en/education/categories/dotnet-courses/parallel-and-asynchronous-programming-in-csharp" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http://localhost:8080/en/education/categories/dotnet-courses/parallel-and-asynchronous-programming-in-csharp" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+    </div>
+
+
+
+    <h3><span data-contentid="education-course-side-contact-us" data-contenttype="TEXT">
+                  Contact us for details
+              </span></h3>
+    <span><span data-contentid="education-course-side-phone" data-contenttype="TEXT">
+                  +46 40 61 70 720
+              </span></span>
+    <br>
+    <a href="mailto:info@edument.se" data-id-href="content.text.education-course-side-mailto"><span data-contentid="education-course-side-mailto" data-contenttype="TEXT">
+                  info@edument.se
+              </span></a>
+    <br>
+    <br>
+    <br>
+    <span><span data-contentid="education-course-side-vat" data-contenttype="TEXT">
+                  All prices excluding VAT
+              </span></span>
+</div>
+
+            </div>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-content">
+      <div class="row newsletter-subscription">
+        <div class="col-md-6">
+              <h2><span data-contentid="master-footer-subscribe-headline" data-contenttype="TEXT">
+                  Edument news
+              </span></h2>
+              <p><span data-contentid="master-footer-subscribe-description" data-contenttype="TEXT">
+                  Subscribe and we'll keep you in the loop with our latest courses, news and thoughts.
+              </span></p>
+          </div>
+          <div class="col-md-6 subscription-right">
+              <div class="subscription-feedback">
+                  <span data-contentid="master-footer-subscribe-feedback" data-contenttype="TEXT">
+                  Subscribing...
+              </span>
+              </div>
+              <form class="subscription-form">
+                  <input type="email" value="" name="EMAIL" class="subscriber-email" placeholder="email address" required>
+                  <input type="submit" value="Subscribe" name="subscribe" class="actionlink">
+               </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h2><span data-contentid="master-footer-contact-us" data-contenttype="TEXT">
+                  Contact us
+              </span></h2>
+            Tel: <span data-contentid="master-phone" data-contenttype="TEXT">
+                  +46 40 - 61 70 720
+              </span><br>
+            <a href="mailto:info@edument.se" data-id-href="content.text.master-mailto-info">info@edument.se</a><br>
+          </div>
+          <div class="col-md-5">
+            <h2><span data-contentid="master-footer-visit-us" data-contenttype="TEXT">
+                  Visit us
+              </span></h2>
+            <div class="col-md-5 addresslist">
+              <ul data-contentid="master-address-helsingborg data-contenttype="LIST">
+          <li>Helsingborg office</li><li>Sundstorget 5</li><li>252 21 Helsingborg</li><li>Sweden</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument/@56.0484963,12.687333,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Find on map
+              </span></i></a>
+            </div>
+            <div class="col-md-7 addresslist">
+              <ul data-contentid="master-address-malmo data-contenttype="LIST">
+          <li>Malmö office</li><li>Stora varvsgatan 6A</li><li>211 19 Malmö</li><li>Sweden</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument+AB/@55.6122624,12.9895262,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Find on map
+              </span></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2><span data-contentid="master-footer-follow-us" data-contenttype="TEXT">
+                  Follow us
+              </span></h2>
+            <div class="follow-us">
+              <a target="_blank" href="https://www.linkedin.com/company/edument-ab"><img class="social" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linkedin logo"></a>
+              <a target="_blank" href="https://www.instagram.com/edument/"><img class="social" src="https://media.graphcms.com/3b8PshtAQGCKfiHNawk4" alt="Instagram logo"></a>
+              <a target="_blank" href="https://www.facebook.com/EdumentAB/"><img class="social" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+              <a target="_blank" href="https://twitter.com/edument"><img class="social" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <span data-contentid="master-footer-copyright" data-contenttype="TEXT">
+                  Copyright © Edument AB. All rights reserved.
+              </span>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../partners-and-resellers.html"><span data-contentid="master-footer-partners-link-text" data-contenttype="TEXT">
+                  Partners & resellers
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../terms-and-conditions.html"><span data-contentid="master-footer-termcond-link-text" data-contenttype="TEXT">
+                  Terms & conditions
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../privacy.html"><span data-contentid="master-footer-privacy-link-text" data-contenttype="TEXT">
+                  Privacy & disclaimers
+              </span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="../../../../scripts/newsletter-subscription.js"></script>
+  <script type="text/javascript" src="../../../../scripts/shrink-menu.js"></script>
+  <script type="text/javascript" src="../../../../scripts/expander.js"></script>
+
+  <!-- Apsis Tracking code for www.edument.se -->
+  <script type='text/javascript'>
+    var psSite = 'e285ed6809';
+    (function() {
+    var AL = document.createElement('script'); AL.type = 'text/javascript'; AL.async = true;
+    AL.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tr.apsislead.com/al_v2.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(AL, s)
+    })();
+  </script>
+  <noscript><img src='http://tr.apsislead.com/?id=e285ed6809' style='border:0;display:none;'></noscript>
+  <!-- End Tracking code -->
+
+</body>
+</html>

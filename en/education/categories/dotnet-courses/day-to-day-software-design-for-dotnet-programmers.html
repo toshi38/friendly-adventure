@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+  <title>Day to day software design for .Net programmers</title>
+  <link rel="alternate" hreflang="en" href="day-to-day-software-design-for-dotnet-programmers.html" />
+  <link rel="alternate" hreflang="sv" href="../../../../utbildning/kursomraden/net-kurser/dag-till-dag-mjukvarudesign-till-dotnet-programmerare.html" />
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Driven by the desire to educate and move people forward">
+
+  <link rel="stylesheet" href="../../../../styles/styles.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Lora">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+      window.cookieconsent_options = {
+          link: '/en/privacy',
+          theme: 'dark-bottom',
+          learnMore: 'More info',
+          dismiss: 'Got it!',
+          message: 'This website uses cookies to ensure you get the best experience.'
+      };
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111891505-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111891505-1');
+  </script>
+
+  <meta property="og:title" content="Day to day software design for .Net programmers" />
+  <meta property="og:description" content="Driven by the desire to educate and move people forward" />
+    <meta property="og:url" content="http://localhost:8080/en/education/categories/dotnet-courses/day-to-day-software-design-for-dotnet-programmers" />
+      <meta property="og:image" content="http://localhost:8080/images/Edument_logo-share.jpg" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="section-education page_education_categories_category_course">
+
+<!-- Modal background cover -->
+<div id="modal-collapse" class="modal-background"></div>
+
+  <header>
+    <nav class="navbar navbar-edument-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+        <div class="side-menu-wrapper">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../../../../en.1.html"></a>
+          </div>
+        </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-top">
+            <ul class="nav navbar-nav pull-right">
+                    <li class="active"><a href="../../../education.html">Education <span class="sr-only">(current)</span></a></li>
+                    <li><a href="../../../codebuddy.html">CodeBuddy</a></li>
+                    <li><a href="../../../concept-and-product-development.html">Concept &amp; Product Development</a></li>
+                    <li><a href="../../../about.html">About us</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+      <a class="langlink hidden-xs" href="../../../../utbildning/kursomraden/net-kurser/dag-till-dag-mjukvarudesign-till-dotnet-programmerare.html">
+          <img src="https://media.graphcms.com/4FSF3OtzRk2bJv1kFkiD"/>
+      </a>
+      <div class="mobilehamburger visible-xs"></div>
+    </nav>
+
+    <nav class="navbar navbar-edument-submenu hidden-xs">
+      <div class="navbar-inner sub-menu">
+          <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse submenu" id="navbar-collapse-submenu">
+              <ul class="nav navbar-nav">
+                      <li><a href="../../categories.html">Categories</a></li>
+                      <li class="active"><a href="../../courses.html">Courses <span class="sr-only">(current)</span></a></li>
+                      <li><a href="../../events.html">Events</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </nav>
+
+    <nav class="visible-xs mobilenav">
+      <a class="langlink" href="../../../../utbildning/kursomraden/net-kurser/dag-till-dag-mjukvarudesign-till-dotnet-programmerare.html">
+          <img src="https://media.graphcms.com/4FSF3OtzRk2bJv1kFkiD"/>
+      </a>
+      <ul>
+            <li class="mobtop">
+                <a href="../../../education.html">Education <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../categories.html">Categories <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a class="active" href="../../courses.html">Courses <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../events.html">Events <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../codebuddy.html">CodeBuddy <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../concept-and-product-development.html">Concept &amp; Product Development <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../about.html">About us <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../../articles.html">Blog <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../experts.html">Our Team <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../join-us.html">Join us <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content">
+    <main>
+      <div class="hero" style="background-image:url(https://media.graphcms.com/tAKfzZ7VT7S0IERnBQN6)">
+    <div class="container">
+        <h1><span data-contentid="master-eduhero-herotext" data-contenttype="TEXT">
+                  Search, explore and find the perfect course for you
+              </span></h1>
+
+        <form action="http://localhost:8080/en/education/courses/query" method="GET">
+            <div class="row course-search">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="q" placeholder="Search, explore and find the perfect course for you" value="">
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-default"><span data-contentid="master-eduhero-searchbuttontext" data-contenttype="TEXT">
+                  Search
+              </span></button>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+      <div class="container">
+        <div class="row main-content-row">
+            <div class="col-sm-8 main-content-column">
+
+              <div class="breadcrumbs">
+                      <span><a href="../../../education.html">Education</a></span>
+                      <span><a href="../../courses.html">Courses</a></span>
+                      <span><a href="../dotnet-courses.html">.NET</a></span>
+                      <span>Day to day software design for .Net programmers</span>
+              </div>
+
+              <div class="course-introduction">
+    <h1>Day to day software design for .Net programmers</h1>
+        <div class="coming-soon"><span data-contentid="education-course-coming-soon" data-contenttype="TEXT">
+                  Coming Soon
+              </span></div>
+    <div class="course-details">
+        <p><p>Day by day, software programmers make all kinds of little design decisions. Software architects may determine the high-level organization of a system and its key abstractions - but high quality software depends on those implementing it making good choices too. Individually these choices are small, however put together they have a large impact on software quality.</p><p>It's not easy to make all of these small, but significant, design choices - in no small part because there are so many factors. How does modern hardware actually work? What does the CLR do with .Net bytecode? Does encapsulation and abstraction have a cost? How does the behavior of the garbage collector impact programs? What data structures are appropriate in what situations? How can we actually use OO effectively? When are mutable and immutable designs preferable? How can software be extensible and composable? How should dates and times be handled?</p><p>There are courses that teach you software architecture at a high level, others that teach you how to use a programming language and its libraries effectively, and yet more covering specific frameworks or tools. Instead, this course takes on the gritty, tricky, day-to-day choices that developers are expected to make, as they go about the heroic task of transforming usually ill-defined and ever-changing needs into working software that solves problems. It juggles a dozen topics. Because that's exactly what good software developers have to do.</p></p>
+    </div>
+
+        <ul class="tagList">
+                <li>.NET</li>
+                <li>C#</li>
+        </ul>
+</div>
+
+<h2><span data-contentid="education-course-target" data-contenttype="TEXT">
+                  Target audience
+              </span></h2>
+<p>You're already a decent C# programmer - but you know there's more to software than writing the code. You know you have to make dozens of little decisions in your day to day work: about performance trade-offs, data structures, and OO design. And you'd like to deepen your knowledge in a range of areas to help you make better decisions.</p>
+
+
+<h2><span data-contentid="education-course-prereq" data-contenttype="TEXT">
+                  Pre-requisites
+              </span></h2>
+<p>This course assumes that participants are able to follow and write code using modern C# language features, including Linq and lambda expressions. Taking our C# Intermediate course is suitable preparation, otherwise you should have at least the skills covered by the C# Intermediate course.</p>
+
+
+    <div class="graphcmsrich">
+        <h2><strong>Day 1</strong></h2><h3><strong>The environment we build for</strong></h3><p>It's important to understand what we're running on, and what we're building in terms of. This section takes a deep dive down to the hardware, and then back up through the .NET CLR.</p><ul>  <li>CPU essentials: pipelining, micro-ops, branches, data dependencies, instruction level parallelism</li>  <li>Memory essentials: virtual memory, CPU caches, cache lines</li>  <li>The nature of .Net IL and JIT compilation</li>  <li>The cost of calls: inlining, interface call optimization, lambdas</li>  <li>Cost of field accesses</li>  <li>Cost of exceptions</li></ul><h3><strong>Garbage Collection and Resource Management</strong></h3><p>Programs need to store information as they execute. Managing memory is a decades-old problem. The CLR offers garbage collection, which takes away many potential opportunities for mistakes - but is certainly not magical. In this section its behavior and expectations are considered, along with the need to manage things that have limited lifetime, but are not good to leave to the GC.</p><ul>  <li>Exploring the stack</li>  <li>Exploring the heap</li>  <li>Value types vs. reference types</li>  <li>The challenge garbage collection takes on</li>  <li>The illusion of resizing</li>  <li>Boxing and unboxing</li>  <li>The effect of generational GC</li>  <li>The large object heap</li>  <li>Local to heap promotion</li>  <li>Finalizers</li>  <li>The disposable pattern</li></ul><h2><strong>Day 2</strong></h2><h3><strong>Selecting Data Structures</strong></h3><p>There are a huge number of built-in data types in the .Net framework. Many are useful, but rarely used. Furthermore, there are a number of data structures not found in the class library that are incredibly useful, can be built with relative ease or found on NuGet, and are widely recognized and formalized. Choosing appropriate data structures is a huge part of effective program design.</p><ul>  <li>A quick guide to time complexity</li>  <li>A small guide to space complexity</li>  <li>The importance of constant factors</li>  <li>Choosing appropriate numeric types</li>  <li>List vs. Array</li>  <li>When to turn to linked lists, queues, and stacks</li>  <li>Dictionaries, and making objects suitable for use as keys</li>  <li>When bits are enough</li>  <li>Trees</li>  <li>Graphs</li></ul><h3><strong>Object orientation</strong></h3><p>The idea of objects has been around for decades, yet understanding of their power is still very unevenly distributed. Programming languages giving the illusion that classes are really just containers for procedures or useful for building record types has not helped matters. In this section we'll look at how objects can be used more effectively, and how understanding messaging is at the heart of good OO design.</p><ul>  <li>The origins of object orientation</li>  <li>Encapsulation, messaging, and late binding</li>  <li>Method-first object design</li>  <li>The importance of invariants</li>  <li>Introducing late binding</li>  <li>Tell, don't ask</li>  <li>Testing</li>  <li>Properties: the good and the bad</li>  <li>OO and performance</li></ul><h3><strong>Mutability, Immutability, and what lies between</strong></h3><p>For years, imperative programming - centered around manipulating state - has been contrasted with functional programming - centered around computing values. The former is sometimes said to perform better and be easier to learn, while the latter is said to produce code that is easier to reason about, compose, and parallelize. Both have something to offer.</p><ul>  <li>Mutability: the good and the bad</li>  <li>Immutability: the good and the bad</li>  <li>Value objects</li>  <li>Study: Linq queries vs. imperative code</li>  <li>The immutable collections, and when to consider them</li>  <li>Persistent data structures</li></ul><h2><strong>Day 3</strong></h2><h3><strong>Extensibility and Composability</strong></h3><p>Over time, needs change. We have to grow our software, and we'd like to try and minimize risk as we do so. Since changing working code is risky, we tend to prefer designs that allow extension without modification. We sometimes also need designs that let us compose building blocks together in a safe and simple way. This section considers some strategies for achieving these goals.</p><ul>  <li>Examples of extensibility</li>  <li>Examples of composability</li>  <li>Inheritance vs. composition</li>  <li>Inversion of control</li>  <li>A composable approach</li></ul><h3><strong>Coping with, and tolerating, failures</strong></h3><p>Our software often must work with inherently unreliable components. Networks can fail, we can be handed corrupt data, databases can pick us as transaction deadlock victims, and so forth. How can we cope?</p><ul>  <li>Sources of failure</li>  <li>Exceptions: when to use them and when to avoid them</li>  <li>Domain exceptions</li>  <li>Validation: domain and UI</li>  <li>Kinds of exception handler</li>  <li>Transient failures and retries</li>  <li>Persist stuff early</li></ul><h3><strong>Working with time</strong></h3><p>Time is a gnarly domain. Humans talk plenty about dates and times, but often without precision and relying on context to resolve ambiguities. To make things worse, the .Net date/time API makes it all to easy for these ambiguities to make their way into software - often leading to difficult bugs. How can we do better?</p><ul>  <li>Instantaneous time and elapsed time</li>  <li>DateTime and TimeSpan</li>  <li>Local times, timezones, and DST</li>  <li>The pain of DateTime.Now</li>  <li>Floating dates and times</li>  <li>NodaTime</li>  <li>Scheduling</li>  <li>Sending messages to the future</li></ul><h3><strong>Measuring and logging</strong></h3><p>Feedback loops are essential to a designer. These can occur at many levels. Key to all of them is ensuring the data obtained is reliable and complete enough.</p><ul>  <li>Feedback cycles and staying on course</li>  <li>Benchmarking and its pitfalls</li>  <li>Profiling time and memory</li>  <li>Performance counters</li>  <li>A few thoughts on logging</li></ul><h3><strong>Warning signs</strong></h3><p>After looking at a bunch of ideas for producing good designs, we'll spend a little time considering some problems to be on the watch for.</p><ul>  <li>Changes touching many places in the code</li>  <li>ThingyManager, DoodahService, getters/setters everywhere, etc.</li>  <li>Comment deodorant</li>  <li>Surprise mutation</li>  <li>Repeated mistakes</li>  <li>Fear</li></ul>
+    </div>
+
+            </div>
+            <div class="col-sm-4 side-content-column">
+              <div class="text-center">
+    <a href="day-to-day-software-design-for-dotnet-programmers/book.html" class="actionlink top-book-button"><span data-contentid="education-course-side-book" data-contenttype="TEXT">
+                  BOOK
+              </span></a>
+</div>
+
+<div class="content">
+    <h3><span data-contentid="education-course-side-info" data-contenttype="TEXT">
+                  Course info
+              </span></h3>
+    <div>
+        <b><span data-contentid="education-course-side-code" data-contenttype="TEXT">
+                  Course code:
+              </span></b>
+        <span>T332</span>
+    </div>
+    <div>
+        <b><span data-contentid="education-course-side-duration" data-contenttype="TEXT">
+                  Duration:
+              </span></b>
+        <span>
+          3
+          <span data-contentid="education-course-side-days" data-contenttype="TEXT">
+                  days
+              </span>
+        </span>
+    </div>
+    <div>
+        <b><span data-contentid="education-course-side-price" data-contenttype="TEXT">
+                  Price:
+              </span></b>
+        <span>26 000<span data-contentid="sek" data-contenttype="TEXT">
+                   SEK
+              </span></span>
+    </div>
+        <div>
+            <b><span data-contentid="education-course-side-language" data-contenttype="TEXT">
+                  Language: 
+              </span></b>
+              <span>English<span>
+        </div>
+
+        <h3><span data-contentid="education-course-side-schedule" data-contenttype="TEXT">
+                  Course schedule
+              </span></h3>
+            <div class="schedule-location">
+                <b>Stockholm</b>
+                    <div class="schedule">
+                        <span>22 Jan 2018</span>
+                        <a class="actionlink book_now_button" href="day-to-day-software-design-for-dotnet-programmers/book%3Fdp=Stockholm-20180122.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>22 Jan 2018</span>
+                        <a class="actionlink book_now_button" href="day-to-day-software-design-for-dotnet-programmers/book%3Fdp=Stockholm-20180122.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>5 Feb 2018</span>
+                        <a class="actionlink book_now_button" href="day-to-day-software-design-for-dotnet-programmers/book%3Fdp=Stockholm-20180205.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>19 Feb 2018</span>
+                        <a class="actionlink book_now_button" href="day-to-day-software-design-for-dotnet-programmers/book%3Fdp=Stockholm-20180219.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>24 Sep 2018</span>
+                        <a class="actionlink book_now_button" href="day-to-day-software-design-for-dotnet-programmers/book%3Fdp=Stockholm-20180924.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Book now
+              </span></a>
+                    </div>
+            </div>
+
+
+        <h3><span data-contentid="education-course-side-teachers" data-contenttype="TEXT">
+                  Teachers
+              </span></h3>
+        <div class="teachers">
+                <div class="teacher-info">
+                        <a href="../../../experts/jonathan-worthington.html" title="Read more about Jonathan Worthington">
+                            <div><img src="https://media.graphcms.com/ooHLlWVFTyR8BpseyEVb" alt="Jonathan Worthington"></div>
+                            Jonathan Worthington
+                        </a>
+                </div>
+        </div>
+
+    <div class="course-side-share">
+        <h3><span data-contentid="education-course-side-share" data-contenttype="TEXT">
+                  Share
+              </span></h3>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&source=Edument+AB&url=http://localhost:8080/en/education/categories/dotnet-courses/day-to-day-software-design-for-dotnet-programmers&title=&summary=" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linked in logo"></a>
+        <a href="http://www.twitter.com/share?url=http://localhost:8080/en/education/categories/dotnet-courses/day-to-day-software-design-for-dotnet-programmers" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http://localhost:8080/en/education/categories/dotnet-courses/day-to-day-software-design-for-dotnet-programmers" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+    </div>
+
+
+
+    <h3><span data-contentid="education-course-side-contact-us" data-contenttype="TEXT">
+                  Contact us for details
+              </span></h3>
+    <span><span data-contentid="education-course-side-phone" data-contenttype="TEXT">
+                  +46 40 61 70 720
+              </span></span>
+    <br>
+    <a href="mailto:info@edument.se" data-id-href="content.text.education-course-side-mailto"><span data-contentid="education-course-side-mailto" data-contenttype="TEXT">
+                  info@edument.se
+              </span></a>
+    <br>
+    <br>
+    <br>
+    <span><span data-contentid="education-course-side-vat" data-contenttype="TEXT">
+                  All prices excluding VAT
+              </span></span>
+</div>
+
+            </div>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-content">
+      <div class="row newsletter-subscription">
+        <div class="col-md-6">
+              <h2><span data-contentid="master-footer-subscribe-headline" data-contenttype="TEXT">
+                  Edument news
+              </span></h2>
+              <p><span data-contentid="master-footer-subscribe-description" data-contenttype="TEXT">
+                  Subscribe and we'll keep you in the loop with our latest courses, news and thoughts.
+              </span></p>
+          </div>
+          <div class="col-md-6 subscription-right">
+              <div class="subscription-feedback">
+                  <span data-contentid="master-footer-subscribe-feedback" data-contenttype="TEXT">
+                  Subscribing...
+              </span>
+              </div>
+              <form class="subscription-form">
+                  <input type="email" value="" name="EMAIL" class="subscriber-email" placeholder="email address" required>
+                  <input type="submit" value="Subscribe" name="subscribe" class="actionlink">
+               </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h2><span data-contentid="master-footer-contact-us" data-contenttype="TEXT">
+                  Contact us
+              </span></h2>
+            Tel: <span data-contentid="master-phone" data-contenttype="TEXT">
+                  +46 40 - 61 70 720
+              </span><br>
+            <a href="mailto:info@edument.se" data-id-href="content.text.master-mailto-info">info@edument.se</a><br>
+          </div>
+          <div class="col-md-5">
+            <h2><span data-contentid="master-footer-visit-us" data-contenttype="TEXT">
+                  Visit us
+              </span></h2>
+            <div class="col-md-5 addresslist">
+              <ul data-contentid="master-address-helsingborg data-contenttype="LIST">
+          <li>Helsingborg office</li><li>Sundstorget 5</li><li>252 21 Helsingborg</li><li>Sweden</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument/@56.0484963,12.687333,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Find on map
+              </span></i></a>
+            </div>
+            <div class="col-md-7 addresslist">
+              <ul data-contentid="master-address-malmo data-contenttype="LIST">
+          <li>Malmö office</li><li>Stora varvsgatan 6A</li><li>211 19 Malmö</li><li>Sweden</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument+AB/@55.6122624,12.9895262,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Find on map
+              </span></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2><span data-contentid="master-footer-follow-us" data-contenttype="TEXT">
+                  Follow us
+              </span></h2>
+            <div class="follow-us">
+              <a target="_blank" href="https://www.linkedin.com/company/edument-ab"><img class="social" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linkedin logo"></a>
+              <a target="_blank" href="https://www.instagram.com/edument/"><img class="social" src="https://media.graphcms.com/3b8PshtAQGCKfiHNawk4" alt="Instagram logo"></a>
+              <a target="_blank" href="https://www.facebook.com/EdumentAB/"><img class="social" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+              <a target="_blank" href="https://twitter.com/edument"><img class="social" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <span data-contentid="master-footer-copyright" data-contenttype="TEXT">
+                  Copyright © Edument AB. All rights reserved.
+              </span>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../partners-and-resellers.html"><span data-contentid="master-footer-partners-link-text" data-contenttype="TEXT">
+                  Partners & resellers
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../terms-and-conditions.html"><span data-contentid="master-footer-termcond-link-text" data-contenttype="TEXT">
+                  Terms & conditions
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../privacy.html"><span data-contentid="master-footer-privacy-link-text" data-contenttype="TEXT">
+                  Privacy & disclaimers
+              </span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="../../../../scripts/newsletter-subscription.js"></script>
+  <script type="text/javascript" src="../../../../scripts/shrink-menu.js"></script>
+  <script type="text/javascript" src="../../../../scripts/expander.js"></script>
+
+  <!-- Apsis Tracking code for www.edument.se -->
+  <script type='text/javascript'>
+    var psSite = 'e285ed6809';
+    (function() {
+    var AL = document.createElement('script'); AL.type = 'text/javascript'; AL.async = true;
+    AL.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tr.apsislead.com/al_v2.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(AL, s)
+    })();
+  </script>
+  <noscript><img src='http://tr.apsislead.com/?id=e285ed6809' style='border:0;display:none;'></noscript>
+  <!-- End Tracking code -->
+
+</body>
+</html>

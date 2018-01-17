@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="sv">
+<head>
+  <title>Introduktion till C#</title>
+  <link rel="alternate" hreflang="sv" href="introduktion-till-csharp.html" />
+  <link rel="alternate" hreflang="en" href="../../../en/education/categories/dotnet-courses/beginning-csharp.html" />
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../../../styles/styles.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Lora">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+      window.cookieconsent_options = {
+          link: '/integritet',
+          theme: 'dark-bottom',
+          learnMore: 'Mer info',
+          dismiss: 'Jag förstår!',
+          message: 'Denna site använder cookies för att göra din upplevelse så smidig som möjligt.'
+      };
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111891505-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111891505-1');
+  </script>
+
+  <meta property="og:title" content="Introduktion till C#" />
+  <meta property="og:description" content="" />
+    <meta property="og:url" content="http://localhost:8080/utbildning/kursomraden/net-kurser/introduktion-till-csharp" />
+      <meta property="og:image" content="http://localhost:8080/images/Edument_logo-share.jpg" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="section-education page_education_categories_category_course">
+
+<!-- Modal background cover -->
+<div id="modal-collapse" class="modal-background"></div>
+
+  <header>
+    <nav class="navbar navbar-edument-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+        <div class="side-menu-wrapper">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../../../index.html"></a>
+          </div>
+        </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-top">
+            <ul class="nav navbar-nav pull-right">
+                    <li class="active"><a href="../../../utbildning.html">Utbildning <span class="sr-only">(current)</span></a></li>
+                    <li><a href="../../../codebuddy.html">CodeBuddy</a></li>
+                    <li><a href="../../../koncept-och-produktutveckling.html">Koncept- och produktutveckling</a></li>
+                    <li><a href="../../../om-oss.html">Om oss</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+      <a class="langlink hidden-xs" href="../../../en/education/categories/dotnet-courses/beginning-csharp.html">
+          <img src="https://media.graphcms.com/yfxSIxmAQ2WotdoDVewy"/>
+      </a>
+      <div class="mobilehamburger visible-xs"></div>
+    </nav>
+
+    <nav class="navbar navbar-edument-submenu hidden-xs">
+      <div class="navbar-inner sub-menu">
+          <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse submenu" id="navbar-collapse-submenu">
+              <ul class="nav navbar-nav">
+                      <li><a href="../../kursomraden.html">Kursområden</a></li>
+                      <li class="active"><a href="../../kurser.html">Kurser <span class="sr-only">(current)</span></a></li>
+                      <li><a href="../../events.html">Event</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </nav>
+
+    <nav class="visible-xs mobilenav">
+      <a class="langlink" href="../../../en/education/categories/dotnet-courses/beginning-csharp.html">
+          <img src="https://media.graphcms.com/yfxSIxmAQ2WotdoDVewy"/>
+      </a>
+      <ul>
+            <li class="mobtop">
+                <a href="../../../utbildning.html">Utbildning <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../kursomraden.html">Kursområden <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a class="active" href="../../kurser.html">Kurser <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../events.html">Event <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../codebuddy.html">CodeBuddy <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../koncept-och-produktutveckling.html">Koncept- och produktutveckling <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../om-oss.html">Om oss <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../../artiklar.html">Blogg <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../vara-experter.html">Vårt team <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../karriar.html">Karriär <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content">
+    <main>
+      <div class="hero" style="background-image:url(https://media.graphcms.com/tAKfzZ7VT7S0IERnBQN6)">
+    <div class="container">
+        <h1><span data-contentid="master-eduhero-herotext" data-contenttype="TEXT">
+                  Sök bland alla våra kurser
+              </span></h1>
+
+        <form action="http://localhost:8080/utbildning/kurser/sokning" method="GET">
+            <div class="row course-search">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="q" placeholder="Sök bland alla våra kurser" value="">
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-default"><span data-contentid="master-eduhero-searchbuttontext" data-contenttype="TEXT">
+                  Sök
+              </span></button>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+      <div class="container">
+        <div class="row main-content-row">
+            <div class="col-sm-8 main-content-column">
+
+              <div class="breadcrumbs">
+                      <span><a href="../../../utbildning.html">Utbildning</a></span>
+                      <span><a href="../../kurser.html">Kurser</a></span>
+                      <span><a href="../net-kurser.html">.Net</a></span>
+                      <span>Introduktion till C#</span>
+              </div>
+
+              <div class="course-introduction">
+    <h1>Introduktion till C#</h1>
+    <div class="course-details">
+        <p><p>Den här kursen hjälper dig att komma igång med språket C# och .NET-ramverket. Den hjälper dig att förstå grundläggande syntax, och täcker de &nbsp;viktigaste delarna av klassbiblioteket. Den ger dig också en solid grund &nbsp;i objektorienterad utveckling, och täcker både arv och &nbsp;interface-implementation. Kursen levereras av erfarna utvecklare som &nbsp;visar dig det bästa sättet att skriva C# enligt moderna riktlinjer.</p></p>
+    </div>
+
+        <ul class="tagList">
+                <li>.NET</li>
+                <li>C#</li>
+        </ul>
+</div>
+
+<h2><span data-contentid="education-course-target" data-contenttype="TEXT">
+                  Målgrupp
+              </span></h2>
+<p>Utvecklare som vill börja utveckla på .NET-plattformen i C# version 6.0.</p>
+
+
+<h2><span data-contentid="education-course-prereq" data-contenttype="TEXT">
+                  Förhandskunskaper
+              </span></h2>
+<p>Inga .NET-förkunskaper krävs, men du ska ha programmerat i något språk tidigare.</p>
+
+
+    <div class="graphcmsrich">
+        <h2>Detta kommer du att lära dig:<br>
+</h2>
+<h3>Dag 1</h3>
+<p><br></p>
+<h3>The .NET platform and Visual Studio</h3>
+<p><br></p>
+<ul>
+  <li>Overview of the .NET framework and C#</li>
+  <li>Different project templates</li>
+  <li>Building and running projects</li>
+</ul>
+<h3>Language constructs</h3>
+<p><br></p>
+<ul>
+  <li>Basic data types</li>
+  <li>Operators</li>
+  <li>Declaring and using variables</li>
+  <li>Namespaces</li>
+  <li>Arrays</li>
+  <li>Flow control and loops</li>
+</ul>
+<h3>Classes</h3>
+<p><br></p>
+<ul>
+  <li>Writing your own classes</li>
+  <li>Adding behaviour through methods</li>
+</ul>
+<h3>Dag 2</h3>
+<p><br></p>
+<h3>Generic collections</h3>
+<p><br></p>
+<ul>
+  <li>Lists, queues and stacks</li>
+  <li>Dictionaries</li>
+  <li>IEnumerables and foreach loops</li>
+</ul>
+<h3>OOP basics</h3>
+<p><br></p>
+<ul>
+  <li>Member access modifiers</li>
+  <li>Data encapsulation</li>
+  <li>Writing properties and get/set accessors</li>
+  <li>Constructors</li>
+  <li>Designing with objects</li>
+</ul>
+<h3>Inheritance</h3>
+<p><br></p>
+<ul>
+  <li>Inheriting behaviour from base classes</li>
+  <li>Virtual methods and overriding</li>
+  <li>Abstract classes and methods</li>
+  <li>How to use inheritance appropriately</li>
+</ul>
+<h3>Interfaces</h3>
+<p><br></p>
+<ul>
+  <li>What interfaces are</li>
+  <li>Implementing interfaces</li>
+  <li>Class inheritance vs interface implementation</li>
+</ul>
+<h3>Dag 3</h3>
+<p><br></p>
+<h3>Garbage Collection and memory management</h3>
+<p><br></p>
+<ul>
+  <li>Garbage collection overview</li>
+  <li>Memory heaps and stacks</li>
+  <li>Using ref and out parameters</li>
+  <li>Structs vs classes</li>
+  <li>Boxing and unboxing</li>
+</ul>
+<h3>Type conversion</h3>
+<p><br></p>
+<ul>
+  <li>Type conversions</li>
+  <li>Implicit and explicit conversion</li>
+  <li>The Convert class</li>
+</ul>
+<h3>Exceptions and error handling</h3>
+<p><br></p>
+<ul>
+  <li>Try ... Catch ... Finally syntax</li>
+  <li>Catching multiple exception types</li>
+  <li>Throwing exceptions</li>
+  <li>Creating your own exception types</li>
+</ul>
+<h3>Built-in types</h3>
+<p><br></p>
+<ul>
+  <li>Date and time</li>
+  <li>Manipulating strings</li>
+  <li>Reading from and writing to files</li>
+  <li>Streams</li>
+</ul>
+    </div>
+
+            </div>
+            <div class="col-sm-4 side-content-column">
+              <div class="text-center">
+    <a href="introduktion-till-csharp/boka.html" class="actionlink top-book-button"><span data-contentid="education-course-side-book" data-contenttype="TEXT">
+                  BOKA
+              </span></a>
+</div>
+
+<div class="content">
+    <h3><span data-contentid="education-course-side-info" data-contenttype="TEXT">
+                  Kursinformation 
+              </span></h3>
+    <div>
+        <b><span data-contentid="education-course-side-code" data-contenttype="TEXT">
+                  Kurskod:
+              </span></b>
+        <span>T120</span>
+    </div>
+    <div>
+        <b><span data-contentid="education-course-side-duration" data-contenttype="TEXT">
+                  Kurslängd:
+              </span></b>
+        <span>
+          3
+          <span data-contentid="education-course-side-days" data-contenttype="TEXT">
+                  dagar
+              </span>
+        </span>
+    </div>
+    <div>
+        <b><span data-contentid="education-course-side-price" data-contenttype="TEXT">
+                  Pris:
+              </span></b>
+        <span>25 970<span data-contentid="sek" data-contenttype="TEXT">
+                   SEK
+              </span></span>
+    </div>
+        <div>
+            <b><span data-contentid="education-course-side-language" data-contenttype="TEXT">
+                  Språk:
+              </span></b>
+              <span>Engelska<span>
+              <span>Svenska<span>
+        </div>
+
+        <h3><span data-contentid="education-course-side-schedule" data-contenttype="TEXT">
+                  Kurs schema 
+              </span></h3>
+            <div class="schedule-location">
+                <b>Malmö</b>
+                    <div class="schedule">
+                        <span>12 mar 2018</span>
+                        <a class="actionlink book_now_button" href="introduktion-till-csharp/boka%3Fdp=Malm%25C3%25B6-20180312.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>22 okt 2018</span>
+                        <a class="actionlink book_now_button" href="introduktion-till-csharp/boka%3Fdp=Malm%25C3%25B6-20181022.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+                    <div class="schedule">
+                        <span>19 nov 2018</span>
+                        <a class="actionlink book_now_button" href="introduktion-till-csharp/boka%3Fdp=Malm%25C3%25B6-20181119.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+            </div>
+            <div class="schedule-location">
+                <b>Stockholm</b>
+                    <div class="schedule">
+                        <span>22 aug 2018</span>
+                        <a class="actionlink book_now_button" href="introduktion-till-csharp/boka%3Fdp=Stockholm-20180822.html"><span data-contentid="education-course-side-book-now" data-contenttype="TEXT">
+                  Boka nu
+              </span></a>
+                    </div>
+            </div>
+
+
+        <h3><span data-contentid="education-course-side-teachers" data-contenttype="TEXT">
+                  Lärare
+              </span></h3>
+        <div class="teachers">
+                <div class="teacher-info">
+                        <a href="../../../vara-experter/martin-andersson.html" title="Läs mer Martin Andersson">
+                            <div><img src="https://media.graphcms.com/tRJFZPB0Q0KYKACAFy4h" alt="Martin Andersson"></div>
+                            Martin Andersson
+                        </a>
+                </div>
+        </div>
+
+    <div class="course-side-share">
+        <h3><span data-contentid="education-course-side-share" data-contenttype="TEXT">
+                  Dela
+              </span></h3>
+        <a href="https://www.linkedin.com/shareArticle?mini=true&source=Edument+AB&url=http://localhost:8080/utbildning/kursomraden/net-kurser/introduktion-till-csharp&title=undefined&summary=" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt=""></a>
+        <a href="http://www.twitter.com/share?url=http://localhost:8080/utbildning/kursomraden/net-kurser/introduktion-till-csharp" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="undefined"></a>
+        <a href="http://www.facebook.com/sharer/sharer.php?u=http://localhost:8080/utbildning/kursomraden/net-kurser/introduktion-till-csharp" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="undefined"></a>
+    </div>
+
+
+
+    <h3><span data-contentid="education-course-side-contact-us" data-contenttype="TEXT">
+                  Kontakta oss för mer information
+              </span></h3>
+    <span><span data-contentid="education-course-side-phone" data-contenttype="TEXT">
+                  040 61 70 720
+              </span></span>
+    <br>
+    <a href="mailto:info@edument.se" data-id-href="content.text.education-course-side-mailto"><span data-contentid="education-course-side-mailto" data-contenttype="TEXT">
+                  info@edument.se
+              </span></a>
+    <br>
+    <br>
+    <br>
+    <span><span data-contentid="education-course-side-vat" data-contenttype="TEXT">
+                  Alla priser är exkl. moms
+              </span></span>
+</div>
+
+            </div>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-content">
+      <div class="row newsletter-subscription">
+        <div class="col-md-6">
+              <h2><span data-contentid="master-footer-subscribe-headline" data-contenttype="TEXT">
+                  Nyheter från Edument
+              </span></h2>
+              <p><span data-contentid="master-footer-subscribe-description" data-contenttype="TEXT">
+                  Prenumerera på vårt nyhetsbrev och ta del av våra tips, trendspaningar och kurser.
+              </span></p>
+          </div>
+          <div class="col-md-6 subscription-right">
+              <div class="subscription-feedback">
+                  <span data-contentid="master-footer-subscribe-feedback" data-contenttype="TEXT">
+                  Prenumererar...
+              </span>
+              </div>
+              <form class="subscription-form">
+                  <input type="email" value="" name="EMAIL" class="subscriber-email" placeholder="epostadress" required>
+                  <input type="submit" value="Prenumerera" name="subscribe" class="actionlink">
+               </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h2><span data-contentid="master-footer-contact-us" data-contenttype="TEXT">
+                  Kontakta oss
+              </span></h2>
+            Tel: <span data-contentid="master-phone" data-contenttype="TEXT">
+                  040 - 61 70 720
+              </span><br>
+            <a href="mailto:info@edument.se" data-id-href="content.text.master-mailto-info">info@edument.se</a><br>
+          </div>
+          <div class="col-md-5">
+            <h2><span data-contentid="master-footer-visit-us" data-contenttype="TEXT">
+                  Besök oss
+              </span></h2>
+            <div class="col-md-5 addresslist">
+              <ul data-contentid="master-address-helsingborg data-contenttype="LIST">
+          <li>Helsingborgskontoret</li><li>Sundstorget 5</li><li>252 21 Helsingborg</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument/@56.0484963,12.687333,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Se karta
+              </span></i></a>
+            </div>
+            <div class="col-md-7 addresslist">
+              <ul data-contentid="master-address-malmo data-contenttype="LIST">
+          <li>Malmökontoret</li><li>Stora varvsgatan 6A</li><li>211 19 Malmö</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument+AB/@55.6122624,12.9895262,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Se karta
+              </span></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2><span data-contentid="master-footer-follow-us" data-contenttype="TEXT">
+                  Följ oss
+              </span></h2>
+            <div class="follow-us">
+              <a target="_blank" href="https://www.linkedin.com/company/edument-ab"><img class="social" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linkedin logo"></a>
+              <a target="_blank" href="https://www.instagram.com/edument/"><img class="social" src="https://media.graphcms.com/3b8PshtAQGCKfiHNawk4" alt="Instagram logo"></a>
+              <a target="_blank" href="https://www.facebook.com/EdumentAB/"><img class="social" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+              <a target="_blank" href="https://twitter.com/edument"><img class="social" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <span data-contentid="master-footer-copyright" data-contenttype="TEXT">
+                  Copyright © Edument AB. Alla rättigheter reserverade.
+              </span>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../partners-och-aterforsaljare.html"><span data-contentid="master-footer-partners-link-text" data-contenttype="TEXT">
+                  Partners & återförsäljare
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../villkor.html"><span data-contentid="master-footer-termcond-link-text" data-contenttype="TEXT">
+                  Villkor
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../integritet.html"><span data-contentid="master-footer-privacy-link-text" data-contenttype="TEXT">
+                  Integritet
+              </span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="../../../scripts/newsletter-subscription.js"></script>
+  <script type="text/javascript" src="../../../scripts/shrink-menu.js"></script>
+  <script type="text/javascript" src="../../../scripts/expander.js"></script>
+
+  <!-- Apsis Tracking code for www.edument.se -->
+  <script type='text/javascript'>
+    var psSite = 'e285ed6809';
+    (function() {
+    var AL = document.createElement('script'); AL.type = 'text/javascript'; AL.async = true;
+    AL.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tr.apsislead.com/al_v2.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(AL, s)
+    })();
+  </script>
+  <noscript><img src='http://tr.apsislead.com/?id=e285ed6809' style='border:0;display:none;'></noscript>
+  <!-- End Tracking code -->
+
+</body>
+</html>
