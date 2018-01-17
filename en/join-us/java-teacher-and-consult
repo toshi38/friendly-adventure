@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+  <title>Java - Teacher and consultant</title>
+  <link rel="alternate" hreflang="en" href="java-teacher-and-consult" />
+  <link rel="alternate" hreflang="sv" href="../../karriar/Java-Utbildare-and-Konsult" />
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Driven by the desire to educate and move people forward">
+
+  <link rel="stylesheet" href="../../styles/styles.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Lora">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+      window.cookieconsent_options = {
+          link: '/en/privacy',
+          theme: 'dark-bottom',
+          learnMore: 'More info',
+          dismiss: 'Got it!',
+          message: 'This website uses cookies to ensure you get the best experience.'
+      };
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111891505-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111891505-1');
+  </script>
+
+  <meta property="og:title" content="Java - Teacher and consultant" />
+  <meta property="og:description" content="Driven by the desire to educate and move people forward" />
+    <meta property="og:url" content="http://localhost:8080/en/join-us/java-teacher-and-consult" />
+      <meta property="og:image" content="http://localhost:8080/images/Edument_logo-share.jpg" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="section-start page_career_job_ad">
+
+<!-- Modal background cover -->
+<div id="modal-collapse" class="modal-background"></div>
+
+  <header>
+    <nav class="navbar navbar-edument-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+        <div class="side-menu-wrapper">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../../en.1"></a>
+          </div>
+        </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-top">
+            <ul class="nav navbar-nav pull-right">
+                    <li><a href="../education">Education</a></li>
+                    <li><a href="../codebuddy">CodeBuddy</a></li>
+                    <li><a href="../concept-and-product-development">Concept &amp; Product Development</a></li>
+                    <li class="active"><a href="../about">About us <span class="sr-only">(current)</span></a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+      <a class="langlink hidden-xs" href="../../karriar/Java-Utbildare-and-Konsult">
+          <img src="https://media.graphcms.com/4FSF3OtzRk2bJv1kFkiD"/>
+      </a>
+      <div class="mobilehamburger visible-xs"></div>
+    </nav>
+
+    <nav class="navbar navbar-edument-submenu hidden-xs">
+      <div class="navbar-inner sub-menu">
+          <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse submenu" id="navbar-collapse-submenu">
+              <ul class="nav navbar-nav">
+                      <li><a href="../articles">Blog</a></li>
+                      <li><a href="../experts">Our Team</a></li>
+                      <li class="active"><a href="../join-us">Join us <span class="sr-only">(current)</span></a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </nav>
+
+    <nav class="visible-xs mobilenav">
+      <a class="langlink" href="../../karriar/Java-Utbildare-and-Konsult">
+          <img src="https://media.graphcms.com/4FSF3OtzRk2bJv1kFkiD"/>
+      </a>
+      <ul>
+            <li class="mobtop">
+                <a href="../education">Education <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../education/categories">Categories <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../education/courses">Courses <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../education/events">Events <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../codebuddy">CodeBuddy <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../concept-and-product-development">Concept &amp; Product Development <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../about">About us <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../articles">Blog <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../experts">Our Team <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a class="active" href="../join-us">Join us <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content">
+    <main>
+      
+
+      <div class="container">
+        <div class="row main-content-row">
+            <div class="col-sm-9 main-content-column">
+
+              <div class="breadcrumbs">
+                      <span><a href="../about">About us</a></span>
+                      <span><a href="../join-us">Join us</a></span>
+                      <span>Java - Teacher and consultant</span>
+              </div>
+
+              <div class="job_ad">
+    <h1>Java - Teacher and consultant</h1>
+    <p>Edument is a company that knows that expertise is the key to success. Therefore, we choose to spend 40% of our working hours developing Edument and ourselves. Other 60% we devote to our customers and work with education, idea generation, concept development and projects.</p>
+<p><br></p>
+<p><strong>WHO ARE YOU?</strong></p>
+<p>Edument is a company that believes in self-organization. We avoid hierarchies and choose to build small groups, Tribes, which have clear focus (NET, Java Script, Java, Marketing, Sell etc). For you, it means you should be curious, knowledgeable, want to take your own initiative and not wait for someone to tell you what needs to be done. <br>
+Number of years as a developer is irrelevant. What determines is what knowledge you have filled your years with. Probably you have worked on different development projects and have real interest in programming. Perhaps you also have own projects besides your current job.<br>
+Educational experience is no requirement. You should feel confident of standing in front of a group and explaining complicated things in an easy way,</p>
+<p><br></p>
+<p><strong>THE FIRST 6 MONTHS<br>
+</strong>To enter the role of educator, you will focus on education. If you wish, you will be able to participate in minor development projects.<br>
+The goal is to drive the first course within one month. Parallel with you studying more courses, you also have the opportunity to research for new ones and further develop the existing ones within your Tribe.<br>
+You will drive courses across the country and the biggest focus is on the cities of Malmö, Stockholm, Gothenburg and Oslo. You can count on around 30 days / year and there is the possibility to travel more than you wish.</p>
+<p><br></p>
+<p>We wish your first course delivery is a part of:</p>
+<ul>
+  <li>Modern TDD with Java&nbsp;</li>
+  <li>Intermediate Java</li>
+</ul>
+<p>Do you feel that Edument is a workplace for you but that the above courses do not match your profile? For example, do you want to create Java Master or any other exciting course? Do not hesitate to contact us and tell us what course you want to deliver!</p>
+<p><br></p>
+<p><strong>FUTURE</strong><br>
+There are different ways to go when you start getting warm in your training clothes. You can focus more on education and teaching or take more role in the concept &amp; product development business area. We create your future plan based on what you want expert on!<br>
+</p>
+<p><strong>EMPLOYMENT</strong><br>
+Would you like Helsingborg or Malmö, but if you live elsewhere and the puzzle pieces fit, we can open an office where you are.<br>
+</p>
+<p><strong>ABOUT US</strong><br>
+Today we have 30 Edumentare and have offices in Helsingborg, Malmö, Falkenberg and Prague. We are a knowledge company and the red thread among us Edumentare is that we think knowledge and skills are some of the finest things available. We do not believe in hierarchies and give all employees the same promise: "Together, we'll make sure you get the best you can become!"<br>
+</p>
+<p><strong>APPLICATION<br>
+</strong>If you are curious about Edument and want to know more, the easiest way to contact Björn is at bjorn@edument.se / 0733-514830. You can send a classic application with CV / personal letter, ask Björn to invite coffee, create a vision board or do something exciting to tell who you are and why we will work together.</p>
+    <a class="actionlink contact_button" href="mailto:bjorn@edument.se" data-id-href="content.text.career-ad-mailto"><span data-contentid="career-ad-apply" data-contenttype="TEXT">
+                  Apply for this job
+              </span></a>
+</div>
+            </div>
+            <div class="col-sm-3 side-content-column">
+              <div class="right-hand-column">
+
+
+    <h2><span data-contentid="right-hand-column-news" data-contenttype="TEXT">
+                  News &amp; feeds
+              </span></h2>
+
+        <h3>CSS selectors are evil and JS is the solution</h3>
+        <p>A pragmatic demonstration of the drawbacks with CSS selectors, and how inline styles through JS solves these problems</p>
+        <a href="../articles/css-selectors-are-evil-and-js-is-the-cure"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+        <h3>Top 5 Podcasts during Christmas</h3>
+        <p>We at Edument would like to thank you for this year and wish you &nbsp;a Merry Christmas and a Happy New Year with our top 5 Podcasts list!</p>
+        <a href="../articles/top-5-Podcasts-during-christmas"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+        <h3>Invariants hidden in callbacks</h3>
+        <p>Callbacks might look simple and innocent, but they can be dangerous!</p>
+        <a href="../articles/invariants-in-callbacks"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+        <h3>Expanding boundaries</h3>
+        <p>What it means to boldly go where you have never been before</p>
+        <a href="../articles/expanding-boundaries"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+        <h3>How to create a course </h3>
+        <p>I’ve always admired my colleagues work they’ve put into creating great and rewarding courses, I imagined it was a challenging and time-consuming task. &nbsp;I can see the meaning of that now, because all of a sudden I am developing a course.</p>
+        <a href="../articles/course-developing"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+</div>
+
+            </div>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-content">
+      <div class="row newsletter-subscription">
+        <div class="col-md-6">
+              <h2><span data-contentid="master-footer-subscribe-headline" data-contenttype="TEXT">
+                  Edument news
+              </span></h2>
+              <p><span data-contentid="master-footer-subscribe-description" data-contenttype="TEXT">
+                  Subscribe and we'll keep you in the loop with our latest courses, news and thoughts.
+              </span></p>
+          </div>
+          <div class="col-md-6 subscription-right">
+              <div class="subscription-feedback">
+                  <span data-contentid="master-footer-subscribe-feedback" data-contenttype="TEXT">
+                  Subscribing...
+              </span>
+              </div>
+              <form class="subscription-form">
+                  <input type="email" value="" name="EMAIL" class="subscriber-email" placeholder="email address" required>
+                  <input type="submit" value="Subscribe" name="subscribe" class="actionlink">
+               </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h2><span data-contentid="master-footer-contact-us" data-contenttype="TEXT">
+                  Contact us
+              </span></h2>
+            Tel: <span data-contentid="master-phone" data-contenttype="TEXT">
+                  +46 40 - 61 70 720
+              </span><br>
+            <a href="mailto:info@edument.se" data-id-href="content.text.master-mailto-info">info@edument.se</a><br>
+          </div>
+          <div class="col-md-5">
+            <h2><span data-contentid="master-footer-visit-us" data-contenttype="TEXT">
+                  Visit us
+              </span></h2>
+            <div class="col-md-5 addresslist">
+              <ul data-contentid="master-address-helsingborg data-contenttype="LIST">
+          <li>Helsingborg office</li><li>Sundstorget 5</li><li>252 21 Helsingborg</li><li>Sweden</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument/@56.0484963,12.687333,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Find on map
+              </span></i></a>
+            </div>
+            <div class="col-md-7 addresslist">
+              <ul data-contentid="master-address-malmo data-contenttype="LIST">
+          <li>Malmö office</li><li>Stora varvsgatan 6A</li><li>211 19 Malmö</li><li>Sweden</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument+AB/@55.6122624,12.9895262,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Find on map
+              </span></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2><span data-contentid="master-footer-follow-us" data-contenttype="TEXT">
+                  Follow us
+              </span></h2>
+            <div class="follow-us">
+              <a target="_blank" href="https://www.linkedin.com/company/edument-ab"><img class="social" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linkedin logo"></a>
+              <a target="_blank" href="https://www.instagram.com/edument/"><img class="social" src="https://media.graphcms.com/3b8PshtAQGCKfiHNawk4" alt="Instagram logo"></a>
+              <a target="_blank" href="https://www.facebook.com/EdumentAB/"><img class="social" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+              <a target="_blank" href="https://twitter.com/edument"><img class="social" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <span data-contentid="master-footer-copyright" data-contenttype="TEXT">
+                  Copyright © Edument AB. All rights reserved.
+              </span>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../partners-and-resellers"><span data-contentid="master-footer-partners-link-text" data-contenttype="TEXT">
+                  Partners & resellers
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../terms-and-conditions"><span data-contentid="master-footer-termcond-link-text" data-contenttype="TEXT">
+                  Terms & conditions
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../privacy"><span data-contentid="master-footer-privacy-link-text" data-contenttype="TEXT">
+                  Privacy & disclaimers
+              </span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="../../scripts/newsletter-subscription.js"></script>
+  <script type="text/javascript" src="../../scripts/shrink-menu.js"></script>
+  <script type="text/javascript" src="../../scripts/expander.js"></script>
+
+  <!-- Apsis Tracking code for www.edument.se -->
+  <script type='text/javascript'>
+    var psSite = 'e285ed6809';
+    (function() {
+    var AL = document.createElement('script'); AL.type = 'text/javascript'; AL.async = true;
+    AL.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tr.apsislead.com/al_v2.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(AL, s)
+    })();
+  </script>
+  <noscript><img src='http://tr.apsislead.com/?id=e285ed6809' style='border:0;display:none;'></noscript>
+  <!-- End Tracking code -->
+
+</body>
+</html>

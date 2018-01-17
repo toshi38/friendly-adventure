@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="en">
+<head>
+  <title>This is why TypeScript is worth looking into</title>
+  <link rel="alternate" hreflang="en" href="why-looking-into-TypeScript" />
+  <link rel="alternate" hreflang="sv" href="../../artiklar/Varfor-ar-TypeScript-vart-att-kika-narmare-pa" />
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="&lt;p&gt;TypeScript is a &quot;superset&quot; of JavaScript; A program written in JavaScript is already a valid TypeScript code. In addition to its usual code, you can add type annotations, and declare variables like &quot;string&quot;, &quot;number&quot;, etc. &amp;nbsp;We&#x27;ll explore why you&#x27;d want this together.&lt;/p&gt;">
+
+  <link rel="stylesheet" href="../../styles/styles.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Lora">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+      window.cookieconsent_options = {
+          link: '/en/privacy',
+          theme: 'dark-bottom',
+          learnMore: 'More info',
+          dismiss: 'Got it!',
+          message: 'This website uses cookies to ensure you get the best experience.'
+      };
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111891505-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111891505-1');
+  </script>
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@edument">
+      <meta name="twitter:title" content="This is why TypeScript is worth looking into">
+      <meta name="twitter:description" content="&lt;p&gt;TypeScript is a &quot;superset&quot; of JavaScript; A program written in JavaScript is already a valid TypeScript code. In addition to its usual code, you can add type annotations, and declare variables like &quot;string&quot;, &quot;number&quot;, etc. &amp;nbsp;We&#x27;ll explore why you&#x27;d want this together.&lt;/p&gt;">
+      <meta name="twitter:image" content="/images/Edument_logo-share.jpg">
+  <meta property="og:title" content="This is why TypeScript is worth looking into" />
+  <meta property="og:description" content="&lt;p&gt;TypeScript is a &quot;superset&quot; of JavaScript; A program written in JavaScript is already a valid TypeScript code. In addition to its usual code, you can add type annotations, and declare variables like &quot;string&quot;, &quot;number&quot;, etc. &amp;nbsp;We&#x27;ll explore why you&#x27;d want this together.&lt;/p&gt;" />
+    <meta property="og:url" content="http://localhost:8080/en/articles/why-looking-into-TypeScript" />
+      <meta property="og:image" content="http://localhost:8080/images/Edument_logo-share.jpg" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="section-start page_news_details">
+
+<!-- Modal background cover -->
+<div id="modal-collapse" class="modal-background"></div>
+
+  <header>
+    <nav class="navbar navbar-edument-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+        <div class="side-menu-wrapper">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../../en.1"></a>
+          </div>
+        </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-top">
+            <ul class="nav navbar-nav pull-right">
+                    <li><a href="../education">Education</a></li>
+                    <li><a href="../codebuddy">CodeBuddy</a></li>
+                    <li><a href="../concept-and-product-development">Concept &amp; Product Development</a></li>
+                    <li class="active"><a href="../about">About us <span class="sr-only">(current)</span></a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+      <a class="langlink hidden-xs" href="../../artiklar/Varfor-ar-TypeScript-vart-att-kika-narmare-pa">
+          <img src="https://media.graphcms.com/4FSF3OtzRk2bJv1kFkiD"/>
+      </a>
+      <div class="mobilehamburger visible-xs"></div>
+    </nav>
+
+    <nav class="navbar navbar-edument-submenu hidden-xs">
+      <div class="navbar-inner sub-menu">
+          <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse submenu" id="navbar-collapse-submenu">
+              <ul class="nav navbar-nav">
+                      <li class="active"><a href="../articles">Blog <span class="sr-only">(current)</span></a></li>
+                      <li><a href="../experts">Our Team</a></li>
+                      <li><a href="../join-us">Join us</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </nav>
+
+    <nav class="visible-xs mobilenav">
+      <a class="langlink" href="../../artiklar/Varfor-ar-TypeScript-vart-att-kika-narmare-pa">
+          <img src="https://media.graphcms.com/4FSF3OtzRk2bJv1kFkiD"/>
+      </a>
+      <ul>
+            <li class="mobtop">
+                <a href="../education">Education <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../education/categories">Categories <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../education/courses">Courses <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../education/events">Events <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../codebuddy">CodeBuddy <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../concept-and-product-development">Concept &amp; Product Development <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../about">About us <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a class="active" href="../articles">Blog <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../experts">Our Team <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../join-us">Join us <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content">
+    <main>
+      
+
+      <div class="container">
+        <div class="row main-content-row">
+            <div class="col-sm-9 main-content-column">
+
+              <div class="breadcrumbs">
+                      <span><a href="../about">About us</a></span>
+                      <span><a href="../articles">Blog</a></span>
+                      <span>This is why TypeScript is worth looking into</span>
+              </div>
+
+              <div class="news-details">
+        <span>11 Aug 2017</span>
+        <h1>This is why TypeScript is worth looking into</h1>
+
+        <div class="graphcmsrich"><p>It may seem strange to introduce "more compilation errors" as an advantage. But in recent years, JavaScript is increasingly used for the development of large applications and libraries - the language that was adapted to write small scripts on a handful of lines is beginning to seriously grow out of their shoes in dealing with issues like modularity, complex dependencies, and thousands or hundreds of thousands of lines of code. In such a situation, it is good to have early errors in compilation than to break things while driving.<br>
+<br>
+Imagine JavaScript is a pen. You're not so excited about it, but it can at least put ink on paper so you can do your job. TypeScript is when someone says to you "Here, use this pen instead: it does the same things as your old pen, but it helps you write correctly and also gives you some handy tips on what works and what needs to be fixed".<br>
+<br>
+<strong>TypeScript is a better version of JavaScript?</strong><br>
+In the end, you will be able to submit higher quality work, as TypeScript has already found a lot of mistakes along the way that you do not need to run the program to detect. And you can work faster, more efficiently, and with greater confidence that things get right.<br>
+<br>
+One thing I've realized on the road is that there's not much about "errors found during compilation" like "errors found while writing the code." Modern development environments like Visual Studio and WebStorm have excellent support for finding errors and giving tips about one's code while writing. People who come from the major static languages ​​are already familiar with this, and it is usually felt like TypeScript restores the order a little after missing IntelliSense in regular JavaScript.<br>
+<br>
+In StackOverflow's survey 2016, TypeScript came one in response to the question "Which technology would you prefer to use?". It is remarkable for a language to climb to first place in just a few years. It shows little that there is a real need for TypeScript; that you see the value.<br>
+<br>
+Okay, but what's the chin? Why do not all TypeScript use? Are there any disadvantages?<br>
+Anders Hejlsberg (Creator of TypeScript) got that issue in a podcast once. His response was "TypeScript is a value proposition that is not rational to say no to". You can type the same JavaScript code as you did before, but you get early warnings about things that can go wrong or will go wrong, or just be risky or problematic in any way.<br>
+<br>
+In reality, a decision like "switch to TypeScript" is always taken in a context. You have existing JavaScript code, external dependencies, etc. Even in such a situation, there are good opportunities to consider TypeScript. For example, an existing project can choose to migrate source file for source file; TypeScript is smooth enough to manage a code base with a mix of JavaScript and TypeScript code. You also choose to use different configuration flags how strictly you want TypeScript to be with one's code. There, one can balance between stricter / better type controls on the one hand, and easier migration on the other hand.<br>
+<br>
+<strong>I've heard that using Flow instead. Is it true?</strong><br>
+Flow is an interesting option with about the same selling points as TypeScript. (Flow is developed by Facebook and TypeScript by Microsoft. Both are open source.) However, it is quite clear that TypeScript has "won" in the sense that it has a large community and lots of support from all directions. A little like the situation with Git and Mercurial; The latter is a good alternative, but it has a significantly smaller market share.<br>
+<br>
+<strong>You have done a course for people who want to know more about TypeScript?</strong><br>
+Yes! In this course you can clearly see how JavaScript has grown, and how to combine the best of TypeScript, modern tools, test-driven development, and modern development methods to build non-trivial software for the browser and for Node.js.</p></div>
+
+            <div class="authorlist">
+                    <div class="teacher-info">
+                        <a href="../experts/carl-masak" title="Read more about Carl Mäsak">
+                            <div><img src="https://media.graphcms.com/wTa8ha1hRdm0tlNEfOgq"/></div>
+                            Carl Mäsak
+                        </a>
+                    </div>
+            </div>
+        <div>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&source=Edument+AB&url=undefined&title=This%20is%20why%20TypeScript%20is%20worth%20looking%20into&summary=%3Cp%3ETypeScript%20is%20a%20%22superset%22%20of%20JavaScript%3B%20A%20program%20written%20in%20JavaScript%20is%20already%20a%20valid%20TypeScript%20code.%20In%20addition%20to%20its%20usual%20code%2C%20you%20can%20add%20type%20annotations%2C%20and%20declare%20variables%20like%20%22string%22%2C%20%22number%22%2C%20etc.%20%26nbsp%3BWe'll%20explore%20why%20you'd%20want%20this%20together.%3C%2Fp%3E" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linked in logo"></a>
+            <a href="http://www.twitter.com/share?url=undefined" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+            <a href="http://www.facebook.com/sharer/sharer.php?u=undefined" target="_blank"><img class="social_media_icons" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+        </div>
+    </div>
+
+            </div>
+            <div class="col-sm-3 side-content-column">
+              <div class="right-hand-column">
+
+
+    <h2><span data-contentid="right-hand-column-news" data-contenttype="TEXT">
+                  News &amp; feeds
+              </span></h2>
+
+        <h3>CSS selectors are evil and JS is the solution</h3>
+        <p>A pragmatic demonstration of the drawbacks with CSS selectors, and how inline styles through JS solves these problems</p>
+        <a href="css-selectors-are-evil-and-js-is-the-cure"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+        <h3>Top 5 Podcasts during Christmas</h3>
+        <p>We at Edument would like to thank you for this year and wish you &nbsp;a Merry Christmas and a Happy New Year with our top 5 Podcasts list!</p>
+        <a href="top-5-Podcasts-during-christmas"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+        <h3>Invariants hidden in callbacks</h3>
+        <p>Callbacks might look simple and innocent, but they can be dangerous!</p>
+        <a href="invariants-in-callbacks"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+        <h3>Expanding boundaries</h3>
+        <p>What it means to boldly go where you have never been before</p>
+        <a href="expanding-boundaries"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+        <h3>How to create a course </h3>
+        <p>I’ve always admired my colleagues work they’ve put into creating great and rewarding courses, I imagined it was a challenging and time-consuming task. &nbsp;I can see the meaning of that now, because all of a sudden I am developing a course.</p>
+        <a href="course-developing"><span data-contentid="right-hand-read-more-croc" data-contenttype="TEXT">
+                  Read more >
+              </span></a>
+</div>
+
+            </div>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-content">
+      <div class="row newsletter-subscription">
+        <div class="col-md-6">
+              <h2><span data-contentid="master-footer-subscribe-headline" data-contenttype="TEXT">
+                  Edument news
+              </span></h2>
+              <p><span data-contentid="master-footer-subscribe-description" data-contenttype="TEXT">
+                  Subscribe and we'll keep you in the loop with our latest courses, news and thoughts.
+              </span></p>
+          </div>
+          <div class="col-md-6 subscription-right">
+              <div class="subscription-feedback">
+                  <span data-contentid="master-footer-subscribe-feedback" data-contenttype="TEXT">
+                  Subscribing...
+              </span>
+              </div>
+              <form class="subscription-form">
+                  <input type="email" value="" name="EMAIL" class="subscriber-email" placeholder="email address" required>
+                  <input type="submit" value="Subscribe" name="subscribe" class="actionlink">
+               </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h2><span data-contentid="master-footer-contact-us" data-contenttype="TEXT">
+                  Contact us
+              </span></h2>
+            Tel: <span data-contentid="master-phone" data-contenttype="TEXT">
+                  +46 40 - 61 70 720
+              </span><br>
+            <a href="mailto:info@edument.se" data-id-href="content.text.master-mailto-info">info@edument.se</a><br>
+          </div>
+          <div class="col-md-5">
+            <h2><span data-contentid="master-footer-visit-us" data-contenttype="TEXT">
+                  Visit us
+              </span></h2>
+            <div class="col-md-5 addresslist">
+              <ul data-contentid="master-address-helsingborg data-contenttype="LIST">
+          <li>Helsingborg office</li><li>Sundstorget 5</li><li>252 21 Helsingborg</li><li>Sweden</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument/@56.0484963,12.687333,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Find on map
+              </span></i></a>
+            </div>
+            <div class="col-md-7 addresslist">
+              <ul data-contentid="master-address-malmo data-contenttype="LIST">
+          <li>Malmö office</li><li>Stora varvsgatan 6A</li><li>211 19 Malmö</li><li>Sweden</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument+AB/@55.6122624,12.9895262,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Find on map
+              </span></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2><span data-contentid="master-footer-follow-us" data-contenttype="TEXT">
+                  Follow us
+              </span></h2>
+            <div class="follow-us">
+              <a target="_blank" href="https://www.linkedin.com/company/edument-ab"><img class="social" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linkedin logo"></a>
+              <a target="_blank" href="https://www.instagram.com/edument/"><img class="social" src="https://media.graphcms.com/3b8PshtAQGCKfiHNawk4" alt="Instagram logo"></a>
+              <a target="_blank" href="https://www.facebook.com/EdumentAB/"><img class="social" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+              <a target="_blank" href="https://twitter.com/edument"><img class="social" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <span data-contentid="master-footer-copyright" data-contenttype="TEXT">
+                  Copyright © Edument AB. All rights reserved.
+              </span>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../partners-and-resellers"><span data-contentid="master-footer-partners-link-text" data-contenttype="TEXT">
+                  Partners & resellers
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../terms-and-conditions"><span data-contentid="master-footer-termcond-link-text" data-contenttype="TEXT">
+                  Terms & conditions
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../privacy"><span data-contentid="master-footer-privacy-link-text" data-contenttype="TEXT">
+                  Privacy & disclaimers
+              </span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="../../scripts/newsletter-subscription.js"></script>
+  <script type="text/javascript" src="../../scripts/shrink-menu.js"></script>
+  <script type="text/javascript" src="../../scripts/expander.js"></script>
+
+  <!-- Apsis Tracking code for www.edument.se -->
+  <script type='text/javascript'>
+    var psSite = 'e285ed6809';
+    (function() {
+    var AL = document.createElement('script'); AL.type = 'text/javascript'; AL.async = true;
+    AL.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tr.apsislead.com/al_v2.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(AL, s)
+    })();
+  </script>
+  <noscript><img src='http://tr.apsislead.com/?id=e285ed6809' style='border:0;display:none;'></noscript>
+  <!-- End Tracking code -->
+
+</body>
+</html>

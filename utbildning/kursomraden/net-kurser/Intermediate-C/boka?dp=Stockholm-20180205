@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="sv">
+<head>
+  <title>Boka Intermediate C#</title>
+  <link rel="alternate" hreflang="sv" href="boka?dp=Stockholm-20180205" />
+  <link rel="alternate" hreflang="en" href="../../../../en/education/categories/dotnet-courses/intermediate-csharp/book" />
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../../../../styles/styles.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300|Lora">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script>
+      window.cookieconsent_options = {
+          link: '/integritet',
+          theme: 'dark-bottom',
+          learnMore: 'Mer info',
+          dismiss: 'Jag förstår!',
+          message: 'Denna site använder cookies för att göra din upplevelse så smidig som möjligt.'
+      };
+  </script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111891505-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-111891505-1');
+  </script>
+
+  <meta property="og:title" content="Boka Intermediate C#" />
+  <meta property="og:description" content="" />
+    <meta property="og:url" content="http://localhost:8080/utbildning/kursomraden/net-kurser/Intermediate-C/boka?dp&#x3D;Stockholm-20180205" />
+      <meta property="og:image" content="http://localhost:8080/images/Edument_logo-share.jpg" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body class="section-education page_education_categories_category_course_book">
+
+<!-- Modal background cover -->
+<div id="modal-collapse" class="modal-background"></div>
+
+  <header>
+    <nav class="navbar navbar-edument-top">
+      <div class="navbar-inner">
+        <div class="container">
+
+        <div class="side-menu-wrapper">
+
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <a class="navbar-brand" href="../../../../index.html"></a>
+          </div>
+        </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-top">
+            <ul class="nav navbar-nav pull-right">
+                    <li class="active"><a href="../../../../utbildning">Utbildning <span class="sr-only">(current)</span></a></li>
+                    <li><a href="../../../../codebuddy">CodeBuddy</a></li>
+                    <li><a href="../../../../koncept-och-produktutveckling">Koncept- och produktutveckling</a></li>
+                    <li><a href="../../../../om-oss">Om oss</a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+      <a class="langlink hidden-xs" href="../../../../en/education/categories/dotnet-courses/intermediate-csharp/book">
+          <img src="https://media.graphcms.com/yfxSIxmAQ2WotdoDVewy"/>
+      </a>
+      <div class="mobilehamburger visible-xs"></div>
+    </nav>
+
+    <nav class="navbar navbar-edument-submenu hidden-xs">
+      <div class="navbar-inner sub-menu">
+          <div class="container">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse submenu" id="navbar-collapse-submenu">
+              <ul class="nav navbar-nav">
+                      <li><a href="../../../kursomraden">Kursområden</a></li>
+                      <li class="active"><a href="../../../kurser">Kurser <span class="sr-only">(current)</span></a></li>
+                      <li><a href="../../../events">Event</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container -->
+      </div><!-- /.navbar-inner -->
+    </nav>
+
+    <nav class="visible-xs mobilenav">
+      <a class="langlink" href="../../../../en/education/categories/dotnet-courses/intermediate-csharp/book">
+          <img src="https://media.graphcms.com/yfxSIxmAQ2WotdoDVewy"/>
+      </a>
+      <ul>
+            <li class="mobtop">
+                <a href="../../../../utbildning">Utbildning <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../../kursomraden">Kursområden <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a class="active" href="../../../kurser">Kurser <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../events">Event <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../../codebuddy">CodeBuddy <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../../koncept-och-produktutveckling">Koncept- och produktutveckling <span class="sr-only">(current)</span></a>
+              <ul>
+              </ul>
+            </li>
+            <li class="mobtop">
+                <a href="../../../../om-oss">Om oss <span class="sr-only">(current)</span></a>
+              <ul>
+                    <li>
+                        <a href="../../../../artiklar">Blogg <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../../vara-experter">Vårt team <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="../../../../karriar">Karriär <span class="sr-only">(current)</span></a>
+                    </li>
+              </ul>
+            </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="content">
+    <main>
+      <div class="hero" style="background-image:url(https://media.graphcms.com/tAKfzZ7VT7S0IERnBQN6)">
+    <div class="container">
+        <h1><span data-contentid="master-eduhero-herotext" data-contenttype="TEXT">
+                  Sök bland alla våra kurser
+              </span></h1>
+
+        <form action="http://localhost:8080/utbildning/kurser/sokning" method="GET">
+            <div class="row course-search">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" name="q" placeholder="Sök bland alla våra kurser" value="">
+                </div>
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-default"><span data-contentid="master-eduhero-searchbuttontext" data-contenttype="TEXT">
+                  Sök
+              </span></button>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+      <div class="container">
+        <div class="row main-content-row">
+            <div class="col-sm-12">
+
+              <div class="breadcrumbs">
+                      <span><a href="../../../../utbildning">Utbildning</a></span>
+                      <span><a href="../../../kurser">Kurser</a></span>
+                      <span><a href="../../net-kurser">.Net</a></span>
+                      <span><a href="../Intermediate-C">Intermediate C#</a></span>
+                      <span>Boka</span>
+              </div>
+
+              <script src='https://www.google.com/recaptcha/api.js'></script>
+<div class="row">
+	<div class="col-sm-8">
+		<h1><span data-contentid="course-book-title" data-contenttype="TEXT">
+                  Boka
+              </span><i>"Intermediate C#"</i></h1>
+		<p>
+			<span><span data-contentid="course-book-code" data-contenttype="TEXT">
+                  Kurskod:
+              </span>T220</span>
+			<br>
+			<span><span data-contentid="course-book-duration" data-contenttype="TEXT">
+                  Kurslängd:
+              </span>3<span data-contentid="course-book-days" data-contenttype="TEXT">
+                  dagar
+              </span></span>
+			<br>
+			<span><span data-contentid="course-book-price" data-contenttype="TEXT">
+                  Pris:
+              </span>25 970<span data-contentid="course-book-sek" data-contenttype="TEXT">
+                  SEK
+              </span></span>
+			    <br>
+			    <span><span data-contentid="course-book-language" data-contenttype="TEXT">
+                  Språk:
+              </span>Engelska </span>
+		</p>
+
+		<form class="book-course-form" id="book-course-form" action="http://localhost:8080/book/course/net-kurser/Intermediate-C" method="POST">
+
+			<div class="section">
+
+				<!-- Date and Place & Location -->
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label for="dateAndPlace"><span data-contentid="course-book-date-place" data-contenttype="TEXT">
+                  Datum och ort
+              </span></label>
+						<select class="form-control" id="dateAndPlace" name="dateAndPlace">
+                            <option value=""><span data-contentid="course-book-date-place" data-contenttype="TEXT">
+                  Datum och ort
+              </span></option>
+                                        <option>Malmö 19 mar 2018</option>
+                                        <option>Malmö 10 okt 2018</option>
+                                        <option>Malmö 17 dec 2018</option>
+                                        <option selected="selected">Stockholm 5 feb 2018</option>
+                                        <option>Stockholm 18 apr 2018</option>
+                        </select>
+					</div>
+					<div class="col-sm-6 form-group">
+						<label for="discountCode"><span data-contentid="course-book-discount" data-contenttype="TEXT">
+                  Rabattkod
+              </span></label>
+						<input type="text" class="form-control" id="discountCode" name="discountCode" placeholder="Rabattkod" />
+					</div>
+				</div>
+
+				<!-- First Name & Last Name -->
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label for="firstName"><span data-contentid="course-book-first-star" data-contenttype="TEXT">
+                  Förnamn *
+              </span></label>
+						<input type="text" class="form-control" id="firstName" name="firstName" placeholder="Förnamn" minlength="2" required />
+					</div>
+					<div class="col-sm-6 form-group">
+						<label for="lastName"><span data-contentid="course-book-last-star" data-contenttype="TEXT">
+                  Efternamn *
+              </span></label>
+						<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Efternamn" minlength="2" required />
+					</div>
+				</div>
+
+				<!-- E-mail & Phone -->
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label for="email"><span data-contentid="course-book-email-star" data-contenttype="TEXT">
+                  E-postadress *
+              </span></label>
+						<input type="email" class="form-control" id="email" name="email" placeholder="ex. sven@example.com" required />
+					</div>
+					<div class="col-sm-6 form-group">
+						<label for="phone"><span data-contentid="course-book-phone" data-contenttype="TEXT">
+                  Telefon
+              </span></label>
+						<input type="text" class="form-control" id="phone" name="phone" placeholder="ex. +46 700 12 34 56" />
+					</div>
+				</div>
+
+				<!-- Company & Title -->
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label for="company"><span data-contentid="course-book-company" data-contenttype="TEXT">
+                  Företag *
+              </span></label>
+						<input type="text" class="form-control" id="company" name="company" placeholder="Företagsnamn" minlength="2" required />
+					</div>
+					<div class="col-sm-6 form-group">
+						<label for="title"><span data-contentid="course-booker-title" data-contenttype="TEXT">
+                  Titel
+              </span></label>
+						<input type="text" class="form-control" id="title" name="title" placeholder="ex. Mjukvaruutvecklare" />
+					</div>
+				</div>
+
+				<!-- Address & Title -->
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label for="address"><span data-contentid="course-book-address" data-contenttype="TEXT">
+                  Adress
+              </span></label>
+						<input type="text" class="form-control" id="address" name="address" placeholder="Adress" />
+					</div>
+					<div class="col-sm-6 form-group">
+						<label for="zipCode"><span data-contentid="course-book-zip" data-contenttype="TEXT">
+                  Postnr
+              </span></label>
+						<input type="text" class="form-control" id="zipCode" name="zipCode" placeholder="Postnr" />
+					</div>
+				</div>
+
+				<!-- City & Title -->
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label for="city"><span data-contentid="course-book-city" data-contenttype="TEXT">
+                  Stad
+              </span></label>
+						<input type="text" class="form-control" id="city" name="city" placeholder="Stad" />
+					</div>
+					<div class="col-sm-6 form-group">
+						<label for="country"><span data-contentid="course-book-country" data-contenttype="TEXT">
+                  Land
+              </span></label>
+						<input type="text" class="form-control" id="country" name="country" placeholder="Land" />
+					</div>
+				</div>
+
+			</div>
+
+			<div class="section">
+
+				<!-- Book more than one participant -->
+				<div class="row">
+					<div class="col-sm-12">
+						<label class="checkbox">
+                            <input type="checkbox" id="multipleParticipants" name="multipleParticipants">
+                            <img src="../../../../images/checkbox-empty.svg" alt="">
+                            <span data-contentid="course-book-more-than" data-contenttype="TEXT">
+                  Boka fler än en kursdeltagare
+              </span>
+                        </label>
+					</div>
+				</div>
+
+				<!-- Participants -->
+				<div class="participants" style="display: none;">
+					<div class="row" id="participantTemplate" style="display: none;">
+						<div>
+							<div class="col-sm-6 form-group">
+								<label for="participantFullName"><span data-contentid="course-book-full-name" data-contenttype="TEXT">
+                  Fullständigt namn *
+              </span></label>
+								<input type="text" class="form-control" id="participantFullName" name="participantFullName[]" placeholder="Kursdeltagarens fullständiga namn" />
+							</div>
+							<div class="col-sm-6">
+								<div class="form-group">
+									<label for="participantEmail"><span data-contentid="course-book-email-star" data-contenttype="TEXT">
+                  E-postadress *
+              </span></label>
+									<input type="email" class="form-control" id="participantEmail" name="participantEmail[]" placeholder="Kursdeltagarens E-postadress" />
+								</div>
+							</div>
+						</div>
+						<a href="boka?dp=Stockholm-20180205#" id="participant_remove" class="participant_remove"><span data-contentid="course-book-remove" data-contenttype="TEXT">
+                  Tag bort kursdeltagare
+              </span></a>
+					</div>
+
+					<a href="boka?dp=Stockholm-20180205#" id="addParticipant"><span data-contentid="course-book-add" data-contenttype="TEXT">
+                  + Lägg till fler kursdeltagare
+              </span></a>
+				</div>
+			</div>
+
+			<div class="section">
+
+				<!-- Invoice Address -->
+				<div class="row">
+					<div class="col-sm-12">
+						<label class="checkbox">
+                            <input checked type="checkbox" id="invoiceAddress" name="sameAddressForInvoice">
+                            <img src="../../../../images/checkbox-checked.svg" alt="">
+                            <span data-contentid="course-book-invoice-same" data-contenttype="TEXT">
+                  Faktureringsadressen (samma som ovan)
+              </span>
+                        </label>
+					</div>
+				</div>
+
+				<!-- Invoice Address -->
+				<div class="invoiceAddress" style="display: none">
+
+					<!-- First Name & Last Name -->
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label for="invoiceAddressFullName"><span data-contentid="course-book-invoice-name" data-contenttype="TEXT">
+                  Fullständigt namn
+              </span></label>
+							<input type="text" class="form-control" id="invoiceAddressFullName" name="invoiceAddressFullName" placeholder="Fullständigt namn"
+							/>
+						</div>
+						<div class="col-sm-6 form-group">
+							<label for="invoiceAddressEmail"><span data-contentid="course-book-invoice-email" data-contenttype="TEXT">
+                  E-postadress
+              </span></label>
+							<input type="text" class="form-control" id="invoiceAddressEmail" name="invoiceAddressEmail" placeholder="ex. sven@example.com"
+							/>
+						</div>
+					</div>
+
+					<!-- Company & Title -->
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label for="invoiceAddressCompany"><span data-contentid="course-book-invoice-company" data-contenttype="TEXT">
+                  Företag
+              </span></label>
+							<input type="text" class="form-control" id="invoiceAddressCompany" name="invoiceAddressCompany" placeholder="Företagsnamn"
+							/>
+						</div>
+						<div class="col-sm-6 form-group">
+							<label for="invoiceAddressAddress"><span data-contentid="course-book-invoice-address" data-contenttype="TEXT">
+                  Adress
+              </span></label>
+							<input type="text" class="form-control" id="invoiceAddressAddress" name="invoiceAddressAddress" placeholder="Adress" />
+						</div>
+					</div>
+
+					<!-- ZipCode & City -->
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label for="invoiceAddressZipCode"><span data-contentid="course-book-invoice-zip" data-contenttype="TEXT">
+                  Postnr
+              </span></label>
+							<input type="text" class="form-control" id="invoiceAddressZipCode" name="invoiceAddressZipCode" placeholder="Postnr:" />
+						</div>
+						<div class="col-sm-6 form-group">
+							<label for="invoiceAddressCity"><span data-contentid="course-book-invoice-city" data-contenttype="TEXT">
+                  Stad
+              </span></label>
+							<input type="text" class="form-control" id="invoiceAddressCity" name="invoiceAddressCity" placeholder="Stad" />
+						</div>
+					</div>
+
+					<!-- Country & Phone -->
+					<div class="row">
+						<div class="col-sm-6 form-group">
+							<label for="invoiceAddressCountry"><span data-contentid="course-book-invoice-country" data-contenttype="TEXT">
+                  Land
+              </span></label>
+							<input type="text" class="form-control" id="invoiceAddressCountry" name="invoiceAddressCountry" placeholder="Land" />
+						</div>
+						<div class="col-sm-6 form-group">
+							<label for="invoiceAddressPhone"><span data-contentid="course-book-invoice-phone" data-contenttype="TEXT">
+                  Telefon
+              </span></label>
+							<input type="text" class="form-control" id="invoiceAddressPhone" name="invoiceAddressPhone" placeholder="ex. +46 700 12 34 56"
+							/>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="extra_messages">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							<label for="anythingElse"><span data-contentid="course-book-anything-else" data-contenttype="TEXT">
+                  Något annat?
+              </span></label>
+							<input type="text" class="form-control" id="anythingElse" name="anythingElse" placeholder="Har du några preferenser om mat, dryck etc.">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="form-group">
+							<label for="howDidYouHearAboutUs"><span data-contentid="course-book-how-hear" data-contenttype="TEXT">
+                  Hur fick du höra talas om oss
+              </span></label>
+							<input type="text" class="form-control" id="howDidYouHearAboutUs" name="howDidYouHearAboutUs" placeholder="Sociala medier, vänner, kollegor, reklam etc.">
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- EULA -->
+			<div class="row">
+				<div class="form-group col-sm-12">
+					<label class="checkbox">
+                        <input type="checkbox" id="iAcceptEULA" name="iAcceptEULA" required>
+                        <img src="../../../../images/checkbox-empty.svg" alt="">
+                        <span data-contentid="course-book-read-accepted" data-contenttype="TEXT">
+                  Jag har läst och accepterar 
+              </span>
+                        <a target="_blank" class="vcenter" href="../../../../villkor"><span data-contentid="course-book-tc" data-contenttype="TEXT">
+                  villkoren
+              </span></a>
+                    </label>
+				</div>
+			</div>
+
+			<!-- Subscribe to newsletter -->
+			<div class="row">
+				<div class="form-group col-sm-12">
+					<label class="checkbox">
+                        <input type="checkbox" id="iSubscribeToNewsletter" name="iSubscribeToNewsletter" checked>
+                        <img src="../../../../images/checkbox-checked.svg" alt="">
+                        <span data-contentid="course-book-newsletter" data-contenttype="TEXT">
+                  Ja, jag vill få Eduments nyhetsbrev
+              </span>
+                    </label>
+				</div>
+			</div>
+
+			<!-- recaptcha -->
+			<div class="form-group">
+				<div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LeHFwkUAAAAABjmJVBo1nJzhvtHhKpFdYfac81Z"></div>
+				<input type="hidden" class="hiddenRecaptcha" name="hiddenRecaptcha" id="hiddenRecaptcha">
+			</div>
+
+			<!-- Send booking -->
+			<div class="row">
+				<div class="col-sm-12">
+					<button class="button_send"><span data-contentid="course-book-send" data-contenttype="TEXT">
+                  BOKA
+              </span></button>
+				</div>
+			</div>
+
+      <!-- language -->
+      <input type="hidden" class="hiddenLanguage" name="language" id="hiddenLanguage" value="SV">
+
+		</form>
+	</div>
+	<div class="col-sm-4 FAQ">
+		
+      <div data-contentid="course-book-faq" data-contenttype="HTML">
+          <h2>Kontakta oss</h2>
+<p>Har du några frågor, kontakta gärna oss.<br>
+Tel: 040 - 61 70 720<br>
+E-post: info@edument.se</p>
+<h2><br></h2>
+<h2>Vanliga frågor</h2>
+<p><strong>Hur vet jag om min jag fick plats på den bokade kursen?<br>
+</strong>Strax efter att du har skickat din bokning, kommer du att få en bokningsbekräftelse via mejl. 14 dagar innan kursstart får du en kallelse till den bokade kursen med detaljerad information.</p>
+<p><strong>Vad behöver jag inför kursen?<br>
+</strong>Vi tillhandahåller kursmaterial. I våra moderna lokaler har vi all nödvändig utrustning, som datorer och projektorer. Skulle kursen hållas på ett annat ställe kommer vi att lösa frågan om lokaler och utrustning tillsammans.</p>
+      </div>
+	</div>
+</div>
+
+<script>
+
+    function recaptchaCallback() {
+         if (grecaptcha.getResponse() === '') {
+            $(".g-recaptcha").parent().addClass("has-error");
+        } else {
+            $(".g-recaptcha").parent().removeClass("has-error");
+        }
+    }
+    
+    $(function() {
+        $("#addParticipant").click(function(){
+            var p = $(".participants #participantTemplate").first().clone();
+           
+            p.find("#participantEmail").attr("required", "true");
+            p.find("#participantFullName").attr("required", "true");
+            p.find("#participant_remove").click(function()
+            {
+                $(this).closest(".row").remove();
+                return false;
+            });
+
+            p.insertBefore("#addParticipant").show();
+            return false;
+        });
+
+        $("#book-course-form").validate({
+            highlight: function(element) {
+                $(element).closest('.form-group').addClass('has-error');
+            },
+            unhighlight: function(element) {
+                $(element).closest('.form-group').removeClass('has-error');
+            },
+            errorPlacement: function(error, element) { },
+            ignore: [],
+            rules: {
+                hiddenRecaptcha: {
+                    required: function () {
+                        return grecaptcha.getResponse() === '';
+                    }
+                }
+            },
+            submitHandler: function(form) {
+                form.submit();
+            }
+        });
+
+        $("#multipleParticipants").click(function() {
+            this.checked
+                ? $(".participants").show()
+                : $(".participants").hide()
+        });
+
+        $("#invoiceAddress").click(function() {
+            this.checked
+                ? $(".invoiceAddress").hide()
+                : $(".invoiceAddress").show();
+        });
+
+        $(".checkbox").click(function() {
+            var cb = $(this).children("input[type=checkbox]")[0];
+            var img = $(this).children("img")[0];
+
+            cb.checked
+                ? img.src = "/images/checkbox-checked.svg"
+                : img.src =  "/images/checkbox-empty.svg";
+        });
+    });
+</script>
+
+            </div>
+        </div>
+
+      </div>
+    </main>
+    <footer>
+      <div class="container footer-content">
+      <div class="row newsletter-subscription">
+        <div class="col-md-6">
+              <h2><span data-contentid="master-footer-subscribe-headline" data-contenttype="TEXT">
+                  Nyheter från Edument
+              </span></h2>
+              <p><span data-contentid="master-footer-subscribe-description" data-contenttype="TEXT">
+                  Prenumerera på vårt nyhetsbrev och ta del av våra tips, trendspaningar och kurser.
+              </span></p>
+          </div>
+          <div class="col-md-6 subscription-right">
+              <div class="subscription-feedback">
+                  <span data-contentid="master-footer-subscribe-feedback" data-contenttype="TEXT">
+                  Prenumererar...
+              </span>
+              </div>
+              <form class="subscription-form">
+                  <input type="email" value="" name="EMAIL" class="subscriber-email" placeholder="epostadress" required>
+                  <input type="submit" value="Prenumerera" name="subscribe" class="actionlink">
+               </form>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <h2><span data-contentid="master-footer-contact-us" data-contenttype="TEXT">
+                  Kontakta oss
+              </span></h2>
+            Tel: <span data-contentid="master-phone" data-contenttype="TEXT">
+                  040 - 61 70 720
+              </span><br>
+            <a href="mailto:info@edument.se" data-id-href="content.text.master-mailto-info">info@edument.se</a><br>
+          </div>
+          <div class="col-md-5">
+            <h2><span data-contentid="master-footer-visit-us" data-contenttype="TEXT">
+                  Besök oss
+              </span></h2>
+            <div class="col-md-5 addresslist">
+              <ul data-contentid="master-address-helsingborg data-contenttype="LIST">
+          <li>Helsingborgskontoret</li><li>Sundstorget 5</li><li>252 21 Helsingborg</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument/@56.0484963,12.687333,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Se karta
+              </span></i></a>
+            </div>
+            <div class="col-md-7 addresslist">
+              <ul data-contentid="master-address-malmo data-contenttype="LIST">
+          <li>Malmökontoret</li><li>Stora varvsgatan 6A</li><li>211 19 Malmö</li>
+        </ul>
+              <a class="mapurl" href="https://www.google.com/maps/place/Edument+AB/@55.6122624,12.9895262,17z/" target="_blank"><i><span data-contentid="master-footer-find-on-map" data-contenttype="TEXT">
+                  Se karta
+              </span></i></a>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <h2><span data-contentid="master-footer-follow-us" data-contenttype="TEXT">
+                  Följ oss
+              </span></h2>
+            <div class="follow-us">
+              <a target="_blank" href="https://www.linkedin.com/company/edument-ab"><img class="social" src="https://media.graphcms.com/1upE2T1wQ8u4EqDFBvRo" alt="Linkedin logo"></a>
+              <a target="_blank" href="https://www.instagram.com/edument/"><img class="social" src="https://media.graphcms.com/3b8PshtAQGCKfiHNawk4" alt="Instagram logo"></a>
+              <a target="_blank" href="https://www.facebook.com/EdumentAB/"><img class="social" src="https://media.graphcms.com/YUirH01BTaacmUSVSuZf" alt="Facebook logo"></a>
+              <a target="_blank" href="https://twitter.com/edument"><img class="social" src="https://media.graphcms.com/23CqzyNDTCq0xPAWpObq" alt="Twitter logo"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="privacy">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-6">
+              <span data-contentid="master-footer-copyright" data-contenttype="TEXT">
+                  Copyright © Edument AB. Alla rättigheter reserverade.
+              </span>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../../partners-och-aterforsaljare"><span data-contentid="master-footer-partners-link-text" data-contenttype="TEXT">
+                  Partners & återförsäljare
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../../villkor"><span data-contentid="master-footer-termcond-link-text" data-contenttype="TEXT">
+                  Villkor
+              </span></a>
+            </div>
+            <div class="col-xs-2 privacy-disclaimers">
+              <a href="../../../../integritet"><span data-contentid="master-footer-privacy-link-text" data-contenttype="TEXT">
+                  Integritet
+              </span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script type="text/javascript" src="../../../../scripts/newsletter-subscription.js"></script>
+  <script type="text/javascript" src="../../../../scripts/shrink-menu.js"></script>
+  <script type="text/javascript" src="../../../../scripts/expander.js"></script>
+
+  <!-- Apsis Tracking code for www.edument.se -->
+  <script type='text/javascript'>
+    var psSite = 'e285ed6809';
+    (function() {
+    var AL = document.createElement('script'); AL.type = 'text/javascript'; AL.async = true;
+    AL.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'tr.apsislead.com/al_v2.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(AL, s)
+    })();
+  </script>
+  <noscript><img src='http://tr.apsislead.com/?id=e285ed6809' style='border:0;display:none;'></noscript>
+  <!-- End Tracking code -->
+
+</body>
+</html>
